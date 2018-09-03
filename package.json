@@ -7,12 +7,18 @@
         "nohoist": [
             "**/react-native",
             "**/react-native/**",
-            "**/common"
+            "**/common",
+            "**/react-native-typescript-transformer",
+            "**/react-native-typescript-transformer/**"
         ]
     },
     "scripts": {
-        "dev": "yarn --cwd packages/web dev",
+        "dev": "lerna run --parallel dev",
         "build": "yarn --cwd packages/web build",
         "start": "yarn --cwd packages/web start"
+    },
+    "name": "app",
+    "devDependencies": {
+        "lerna": "^3.2.1"
     }
 }

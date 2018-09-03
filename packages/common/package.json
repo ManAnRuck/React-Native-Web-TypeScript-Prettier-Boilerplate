@@ -1,6 +1,16 @@
 {
   "name": "@greatgift/common",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.9.4",
+    "typescript": "^3.0.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "yarn build:watch"
+  }
 }

@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "dev": "yarn start"
   },
   "dependencies": {
     "@greatgift/common": "1.0.0",
@@ -11,10 +12,14 @@
     "react-native": "0.56.0"
   },
   "devDependencies": {
+    "@types/react": "^16.4.13",
+    "@types/react-native": "^0.56.15",
     "babel-jest": "23.4.2",
     "babel-preset-react-native": "^5",
     "jest": "23.5.0",
-    "react-test-renderer": "16.4.1"
+    "react-native-typescript-transformer": "^1.2.10",
+    "react-test-renderer": "16.4.1",
+    "typescript": "^3.0.3"
   },
   "jest": {
     "preset": "react-native"

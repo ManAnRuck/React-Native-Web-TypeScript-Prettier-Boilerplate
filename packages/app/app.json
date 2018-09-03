@@ -1,4 +1,9 @@
 {
   "name": "app",
-  "displayName": "app"
+  "displayName": "app",
+  "ignoreNodeModulesValidation": true,
+  "packagerOpts": {
+    "config": "rn-cli.config.js",
+    "projectRoots": ""
+  }
 }

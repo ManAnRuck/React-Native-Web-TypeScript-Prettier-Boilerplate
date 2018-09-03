@@ -1,10 +1,10 @@
-const commonFunction = require('@greatgift/common')
+const {add} = require('@greatgift/common')
 
 
  export default () => {
-    commonFunction();
+    ;
     return (
     <div>
-        Imported modules from another workspace:
+        Imported modules from another workspace: {add(2,9)}
     </div>
  )}

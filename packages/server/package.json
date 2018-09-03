@@ -5,5 +5,15 @@
   "license": "MIT",
   "dependencies": {
     "@greatgift/common": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "ts-node index.js"
   }
 }

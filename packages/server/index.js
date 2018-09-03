@@ -1,3 +1,3 @@
-const commonFunction = require('@greatgift/common')
+const {add} = require('@greatgift/common')
 
-commonFunction();
+console.log(add(4,5));
