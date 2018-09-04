@@ -14,11 +14,13 @@
     },
     "scripts": {
         "dev": "lerna run --parallel dev",
+        "lint": "lerna run --parallel lint",
         "build": "yarn --cwd packages/web build",
         "start": "yarn --cwd packages/web start"
     },
     "name": "app",
     "devDependencies": {
-        "lerna": "^3.2.1"
+        "lerna": "^3.2.1",
+        "tslint": "^5.11.0"
     }
 }

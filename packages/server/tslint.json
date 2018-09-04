@@ -1,0 +1,14 @@
+{
+    "extends": [
+        "tslint:latest",
+        "tslint-config-airbnb"
+    ],
+    "rulesDirectory": [
+        "tslint-plugin-prettier"
+    ],
+    "rules": {
+        "prettier": true,
+        "jsx-no-multiline-js": false,
+        "no-boolean-literal-compare": true
+    }
+}

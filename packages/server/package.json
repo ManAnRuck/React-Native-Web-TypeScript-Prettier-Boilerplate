@@ -1,19 +1,27 @@
 {
   "name": "@greatgift/server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "dependencies": {
     "@greatgift/common": "1.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
     "@types/node": "^10.9.4",
+    "prettier": "^1.14.2",
     "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^1.3.0",
     "typescript": "^3.0.3"
   },
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "dev": "ts-node index.tsx"
+    "dev": "ts-node src/index.ts",
+    "lint": "eslint ."
   }
 }
