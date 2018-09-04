@@ -1,7 +1,10 @@
+const withPlugins = require('next-compose-plugins');
 const withTM = require('next-plugin-transpile-modules')
+const withTypescript = require('@zeit/next-typescript')
 
- // Tell webpack to compile the "bar" package
- // https://www.npmjs.com/package/next-plugin-transpile-modules
- module.exports = withTM({
-   transpileModules: ['@greatgift/common']
- })
+ module.exports = withPlugins([
+   [withTM, {
+    transpileModules: ['@greatgift/common']
+  }],
+  [withTypescript]
+ ])
