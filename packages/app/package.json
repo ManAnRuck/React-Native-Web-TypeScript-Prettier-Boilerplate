@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "dev": "yarn start"
+    "dev": "yarn start",
+    "lint": "tslint --project tsconfig.json"
   },
   "dependencies": {
     "@greatgift/common": "1.0.0",

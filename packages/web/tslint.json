@@ -8,9 +8,12 @@
     ],
     "rules": {
         "prettier": true,
-        "jsx-no-multiline-js": false
+        "jsx-no-multiline-js": false,
+        "no-boolean-literal-compare": true,
+        "import-name": false,
+        "no-submodule-imports": false
     },
     "exclude": [
-        "node_modules", "dist"
+        "node_modules", ".next"
     ]
 }

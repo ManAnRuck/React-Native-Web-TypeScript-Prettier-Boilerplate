@@ -4,13 +4,15 @@
     "scripts": {
         "dev": "nodemon server/index.ts",
         "build": "next build && tsc --project tsconfig.server.json",
-        "start": "NODE_ENV=production node .next/production-server/index.js"
+        "start": "NODE_ENV=production node .next/production-server/index.js",
+        "lint": "tslint --project tsconfig.json"
     },
     "dependencies": {
         "@babel/core": "^7.0.0-rc.1",
+        "@greatgift/common": "1.0.0",
         "@zeit/next-typescript": "1.1.0",
         "babel-loader": "^7.1.4",
-        "next": "latest",
+        "next": "^6.1.2",
         "next-compose-plugins": "^2.1.1",
         "next-plugin-transpile-modules": "0.1.1",
         "react": "^16.0.0",

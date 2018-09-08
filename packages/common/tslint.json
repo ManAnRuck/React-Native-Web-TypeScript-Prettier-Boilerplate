@@ -9,8 +9,5 @@
     "rules": {
         "prettier": true,
         "jsx-no-multiline-js": false
-    },
-    "exclude": [
-        "node_modules", "dist"
-    ]
+    }
 }
