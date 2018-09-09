@@ -1,5 +1,11 @@
 import { add } from '@greatgift/common';
 import Link from 'next/link';
+import styled from 'styled-components';
+
+const Test = styled.div`
+  font-size: 28px;
+  color: red;
+`;
 
 export default () => (
   <ul>
@@ -13,6 +19,8 @@ export default () => (
         <a>b</a>
       </Link>
     </li>
-    <li>{add(43, 8)}</li>
+    <li>
+      <Test>{add(43, 8)}</Test>
+    </li>
   </ul>
 );

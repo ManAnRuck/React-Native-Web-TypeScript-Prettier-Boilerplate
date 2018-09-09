@@ -25,7 +25,7 @@ export default class App extends Component<IProps> {
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Text style={styles.instructions}>{add(3, 3)}</Text>
+        <Text style={styles.instructions}>{add(3, 9)}</Text>
       </View>
     );
   }

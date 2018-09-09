@@ -12,7 +12,8 @@
         "no-boolean-literal-compare": true,
         "import-name": false,
         "no-submodule-imports": false,
-        "ter-arrow-parens": [true, "as-needed"]
+        "ter-arrow-parens": [true, "as-needed"],
+        "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
     },
     "exclude": [
         "node_modules", ".next"
