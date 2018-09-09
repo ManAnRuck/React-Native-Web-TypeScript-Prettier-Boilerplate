@@ -11,7 +11,8 @@
         "jsx-no-multiline-js": false,
         "no-boolean-literal-compare": true,
         "import-name": false,
-        "no-submodule-imports": false
+        "no-submodule-imports": false,
+        "ter-arrow-parens": [true, "as-needed"]
     },
     "exclude": [
         "node_modules", ".next"
