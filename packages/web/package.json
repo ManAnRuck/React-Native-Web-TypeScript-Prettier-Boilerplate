@@ -8,7 +8,6 @@
         "lint": "tslint --project tsconfig.json"
     },
     "dependencies": {
-        "@babel/core": "^7.0.0-rc.1",
         "@greatgift/common": "1.0.0",
         "@zeit/next-typescript": "1.1.0",
         "babel-loader": "^7.1.4",
@@ -22,6 +21,7 @@
         "typescript-babel-jest": "^1.0.5"
     },
     "devDependencies": {
+        "@babel/core": "^7.0.0",
         "@types/next": "^2.4.11",
         "@types/react": "^16.0.36",
         "babel-plugin-styled-components": "^1.6.4",
