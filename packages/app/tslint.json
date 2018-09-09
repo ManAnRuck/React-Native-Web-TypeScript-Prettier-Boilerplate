@@ -1,18 +1,7 @@
 {
     "extends": [
-        "tslint:latest",
-        "tslint-config-airbnb"
+        "../../tslint.json"
     ],
-    "rulesDirectory": [
-        "tslint-plugin-prettier"
-    ],
-    "rules": {
-        "prettier": true,
-        "jsx-no-multiline-js": false,
-        "no-boolean-literal-compare": true,
-        "import-name": false,
-        "no-submodule-imports": false
-    },
     "exclude": [
         "node_modules", "ios", "android"
     ]

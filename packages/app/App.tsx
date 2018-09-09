@@ -9,6 +9,7 @@
 import { add } from '@greatgift/common';
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+import styled from 'styled-components/native';
 
 const instructions = Platform.select({
   android:
@@ -16,13 +17,20 @@ const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\nCmd+D or shake for dev menu',
 });
 
+const Welcome = styled.Text`
+  font-size: 20;
+  margin-vertical: 10;
+  text-align: center;
+  color: green;
+`;
+
 // tslint:disable-next-line:no-empty-interface
 interface IProps {}
 export default class App extends Component<IProps> {
   public render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
+        <Welcome>Welcome to React Native!</Welcome>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
         <Text style={styles.instructions}>{add(3, 9)}</Text>
@@ -43,9 +51,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     textAlign: 'center',
   },
-  welcome: {
-    fontSize: 20,
-    margin: 10,
-    textAlign: 'center',
-  },
+  welcome: {},
 });

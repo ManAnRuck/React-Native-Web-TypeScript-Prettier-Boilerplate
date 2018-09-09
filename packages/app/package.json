@@ -1,6 +1,7 @@
 {
   "name": "@greatgift/app",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
@@ -10,7 +11,8 @@
   "dependencies": {
     "@greatgift/common": "1.0.0",
     "react": "16.4.1",
-    "react-native": "0.56.0"
+    "react-native": "0.56.0",
+    "styled-components": "^3.4.5"
   },
   "devDependencies": {
     "@types/react": "^16.4.13",
