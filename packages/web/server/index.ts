@@ -19,7 +19,7 @@ app.prepare().then(() => {
     } else {
       handle(req, res, parsedUrl);
     }
-  }).listen((err) => {
+  }).listen(err => {
     if (err) throw err;
     // tslint:disable-next-line:no-console
     console.log(`> Ready on http://localhost:${port}`);
