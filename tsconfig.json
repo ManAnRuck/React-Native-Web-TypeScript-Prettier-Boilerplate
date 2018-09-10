@@ -1,1 +1,7 @@
-{}
+{
+    "compilerOptions": {
+        // TODO unused vars workaround -> https://github.com/Microsoft/vscode-tslint/blob/master/tslint/README.md#faq
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    }
+}

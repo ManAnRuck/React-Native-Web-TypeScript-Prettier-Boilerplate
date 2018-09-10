@@ -1,4 +1,5 @@
 {
+    "project": "./tsconfig.json",
     "extends": [
         "tslint:latest",
         "tslint-config-airbnb",

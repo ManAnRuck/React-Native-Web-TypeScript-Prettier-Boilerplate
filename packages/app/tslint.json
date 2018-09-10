@@ -2,7 +2,10 @@
     "extends": [
         "../../tslint.json"
     ],
+    "jsRules": {
+        
+    },
     "exclude": [
         "node_modules", "ios", "android"
     ]
-}
+}   
