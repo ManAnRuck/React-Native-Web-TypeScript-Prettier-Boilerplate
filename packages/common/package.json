@@ -8,7 +8,9 @@
     "prebuild": "rimraf dist",
     "build": "tsc",
     "dev": "yarn prebuild && tsc --watch",
-    "lint": "tslint --project tsconfig.json"
+    "lint": "tslint --project tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "pre-commit": "yarn lint && yarn typecheck"
   },
   "devDependencies": {
     "@types/node": "^10.9.4",

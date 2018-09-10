@@ -6,7 +6,9 @@
         "dev": "nodemon server/index.ts",
         "build": "next build && tsc --project tsconfig.server.json",
         "start": "NODE_ENV=production node .next/production-server/index.js",
-        "lint": "tslint --project tsconfig.json"
+        "lint": "tslint --project tsconfig.json",
+        "typecheck": "tsc --noEmit",
+        "pre-commit": "yarn lint && yarn typecheck"
     },
     "dependencies": {
         "@babel/core": "^7.0.0",

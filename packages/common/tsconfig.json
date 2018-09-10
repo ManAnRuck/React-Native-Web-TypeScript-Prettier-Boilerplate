@@ -1,8 +1,8 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "target": "esnext",
-        "module": "commonjs",
+        "target": "ESNext",
+        "module": "ESNext",
         "rootDir": "src",
         "outDir": "dist",
         "declaration": true

@@ -8,7 +8,9 @@
     "prebuild": "rimraf dist",
     "build": "tsc",
     "dev": "ts-node src/index.ts",
-    "lint": "tslint --project tsconfig.json"
+    "lint": "tslint --project tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "pre-commit": "yarn lint && yarn typecheck"
   },
   "dependencies": {
     "@greatgift/common": "1.0.0"
