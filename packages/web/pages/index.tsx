@@ -1,4 +1,4 @@
-import { add } from '@greatgift/common';
+import { add } from '@myproject/common';
 import Link from 'next/link';
 import styled from 'styled-components';
 

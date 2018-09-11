@@ -1,5 +1,5 @@
 {
-  "name": "@greatgift/app",
+  "name": "@myproject/app",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
     "pre-commit": "yarn lint && yarn typecheck"
   },
   "dependencies": {
-    "@greatgift/common": "1.0.0",
+    "@myproject/common": "1.0.0",
     "react": "16.4.1",
     "react-native": "0.56.0",
     "styled-components": "^3.4.5"

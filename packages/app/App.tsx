@@ -1,4 +1,4 @@
-import { add } from '@greatgift/common';
+import { add } from '@myproject/common';
 import React, { Component } from 'react';
 import { Platform } from 'react-native';
 import styled from 'styled-components/native';

@@ -4,7 +4,7 @@ const withTypescript = require("@zeit/next-typescript");
 
 module.exports = withPlugins([
  [withTM, {
-  transpileModules: ["@greatgift/common"],
+  transpileModules: ["@myproject/common"],
  }],
  [withTypescript],
 ]);

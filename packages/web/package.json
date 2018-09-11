@@ -1,5 +1,5 @@
 {
-    "name": "@greatgift/web",
+    "name": "@myproject/web",
     "version": "1.0.0",
     "license": "ISC",
     "scripts": {
@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "@babel/core": "^7.0.0",
-        "@greatgift/common": "1.0.0",
+        "@myproject/common": "1.0.0",
         "@zeit/next-typescript": "1.1.0",
         "next": "^6.1.2",
         "next-compose-plugins": "^2.1.1",

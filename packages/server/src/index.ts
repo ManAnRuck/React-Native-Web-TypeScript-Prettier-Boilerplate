@@ -1,3 +1,3 @@
-import { add } from '@greatgift/common';
+import { add } from '@myproject/common';
 
 add(4, 5);
