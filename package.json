@@ -13,7 +13,7 @@
         ]
     },
     "scripts": {
-        "dev": "lerna run --parallel dev",
+        "dev": "yarn --cwd packages/common build && lerna run --parallel dev",
         "lint": "lerna run --parallel lint",
         "build": "yarn --cwd packages/web build",
         "start": "yarn --cwd packages/web start",

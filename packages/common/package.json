@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "dev": "yarn prebuild && tsc --watch",
+    "dev": "tsc --watch",
     "lint": "tslint --project tsconfig.json",
     "typecheck": "tsc --noEmit",
     "pre-commit": "yarn lint && yarn typecheck"
