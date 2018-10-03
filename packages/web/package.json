@@ -13,10 +13,10 @@
     "dependencies": {
         "@babel/core": "^7.0.0",
         "@myproject/common": "1.0.0",
-        "@zeit/next-typescript": "1.1.0",
-        "next": "^6.1.2",
+        "@zeit/next-typescript": "1.1.1",
+        "next": "^7.0.1",
         "next-compose-plugins": "^2.1.1",
-        "next-plugin-transpile-modules": "0.1.1",
+        "next-plugin-transpile-modules": "^0.1.2",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "styled-components": "^3.4.5",
@@ -24,15 +24,15 @@
         "typescript-babel-jest": "^1.0.5"
     },
     "devDependencies": {
-        "@types/next": "^2.4.11",
+        "@types/next": "7.0.0",
         "@types/react": "^16.0.36",
         "babel-plugin-styled-components": "^1.6.4",
         "nodemon": "^1.17.5",
         "prettier": "^1.14.2",
-        "ts-node": "^4.1.0",
+        "ts-node": "^7.0.1",
         "tslint": "^5.11.0",
         "tslint-config-airbnb": "^5.11.0",
         "tslint-config-standard": "^8.0.1",
-        "tslint-plugin-prettier": "^1.3.0"
+        "tslint-plugin-prettier": "^2.0.0"
     }
 }

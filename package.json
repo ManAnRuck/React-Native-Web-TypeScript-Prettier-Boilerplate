@@ -7,9 +7,9 @@
         "nohoist": [
             "**/react-native",
             "**/react-native/**",
-            "**/common",
             "**/react-native-typescript-transformer",
-            "**/react-native-typescript-transformer/**"
+            "**/react-native-typescript-transformer/**",
+            "**/styled-components"
         ]
     },
     "scripts": {
@@ -21,7 +21,7 @@
     },
     "name": "app",
     "devDependencies": {
-        "lerna": "^3.2.1",
+        "lerna": "^3.4.0",
         "tslint": "^5.11.0"
     }
 }

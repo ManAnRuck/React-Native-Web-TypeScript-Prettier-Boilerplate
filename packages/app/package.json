@@ -12,25 +12,28 @@
   },
   "dependencies": {
     "@myproject/common": "1.0.0",
-    "react": "16.4.1",
-    "react-native": "0.56.0",
-    "styled-components": "^3.4.5"
+    "react": "16.5.2",
+    "react-native": "0.57.1",
+    "styled-components": "^3.4.9"
   },
   "devDependencies": {
-    "@types/react": "^16.4.13",
-    "@types/react-native": "^0.56.15",
-    "babel-jest": "23.4.2",
+    "@babel/runtime": "7.0.0",
+    "@types/react": "^16.4.14",
+    "@types/react-native": "^0.57.0",
+    "babel-jest": "^23.6.0",
     "babel-preset-react-native": "^5",
-    "jest": "23.5.0",
+    "jest": "^23.6.0",
+    "metro-react-native-babel-preset": "0.46.0",
     "prettier": "^1.14.2",
     "react-native-typescript-transformer": "^1.2.10",
-    "react-test-renderer": "16.4.1",
+    "react-test-renderer": "16.5.2",
+    "schedule": "0.4.0",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-config-standard": "^8.0.1",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.0.3"
+    "typescript": "^3.1.1"
   },
   "jest": {
     "preset": "react-native"
