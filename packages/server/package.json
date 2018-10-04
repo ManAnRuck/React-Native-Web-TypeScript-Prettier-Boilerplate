@@ -16,7 +16,7 @@
     "@myproject/common": "1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^10.9.4",
+    "@types/node": "^10.11.4",
     "prettier": "^1.14.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
