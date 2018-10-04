@@ -6,7 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "dev": "yarn start",
-    "lint": "tslint --project tsconfig.json",
+    "lint": "tslint --project tsconfig.json && yarn typecheck",
     "typecheck": "tsc --noEmit",
     "pre-commit": "yarn lint && yarn typecheck"
   },

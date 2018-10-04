@@ -20,7 +20,7 @@ export default () => (
       </Link>
     </li>
     <li>
-      <Test>{add(43, 8)}</Test>
+      <Test>{add(2, 4)}</Test>
     </li>
   </ul>
 );
