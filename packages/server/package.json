@@ -7,16 +7,20 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "dev": "ts-node src/index.ts",
+    "dev": "nodemon",
     "lint": "tslint --project tsconfig.json && yarn typecheck",
     "typecheck": "tsc --noEmit",
     "pre-commit": "yarn lint && yarn typecheck"
   },
   "dependencies": {
-    "@myproject/common": "1.0.0"
+    "@myproject/common": "1.0.0",
+    "apollo-server": "^2.1.0",
+    "graphql": "^14.0.2",
+    "merge-graphql-schemas": "^1.5.7"
   },
   "devDependencies": {
     "@types/node": "^10.11.4",
+    "nodemon": "^1.18.4",
     "prettier": "^1.14.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
