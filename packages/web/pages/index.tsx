@@ -2,6 +2,9 @@ import { add } from '@myproject/common';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+// Controllers
+import { BookController } from '@myproject/controller';
+
 const Test = styled.div`
   font-size: 28px;
   color: green;
@@ -21,6 +24,21 @@ export default () => (
     </li>
     <li>
       <Test>{add(2, 4)}</Test>
+    </li>
+    <li>
+      <BookController>
+        {({ data, loading, error }) => {
+          if (error) return process.stdout.write(error);
+          if (loading) return <div>loading…</div>;
+          return (
+            <ul>
+              {data.books.map(({ author, title }) => {
+                return <li key={title}>{`${author} – ${title}`}</li>;
+              })}
+            </ul>
+          );
+        }}
+      </BookController>
     </li>
   </ul>
 );

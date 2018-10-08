@@ -1,6 +1,7 @@
 {
     "watch": [
-        "server/**/*.ts"
+        "server/**/*.ts",
+        "../controller/**/*"
     ],
     "execMap": {
         "ts": "ts-node --compilerOptions '{\"module\":\"commonjs\"}'"
