@@ -1,7 +1,14 @@
 import { add } from '@myproject/common';
 import React, { Component } from 'react';
-import { Platform } from 'react-native';
+import { ApolloProvider } from 'react-apollo';
+import { Platform, Text, View } from 'react-native';
 import styled from 'styled-components/native';
+
+// GraphQl
+import { client } from './src/graphql/initApollo';
+
+// Components
+import { BookController } from '@myproject/controller';
 
 const instructions = Platform.select({
   android:
@@ -34,12 +41,27 @@ interface IProps {}
 export default class App extends Component<IProps> {
   public render() {
     return (
-      <Container>
-        <Welcome>Welcome to React Native!</Welcome>
-        <Instructions>To get started, edit App.js</Instructions>
-        <Instructions>{instructions}</Instructions>
-        <Instructions>{add(3, 9)}</Instructions>
-      </Container>
+      <ApolloProvider client={client}>
+        <Container>
+          <Welcome>Welcome to React Native!</Welcome>
+          <Instructions>To get started, edit App.js</Instructions>
+          <Instructions>{instructions}</Instructions>
+          <Instructions>{add(3, 9)}</Instructions>
+          <BookController>
+            {({ data, loading, error }) => {
+              if (error) return process.stdout.write(error);
+              if (loading) return <Text>loading…</Text>;
+              return (
+                <View>
+                  {data.books.map(({ author, title }) => {
+                    return <Text key={title}>{`${author} – ${title}`}</Text>;
+                  })}
+                </View>
+              );
+            }}
+          </BookController>
+        </Container>
+      </ApolloProvider>
     );
   }
 }

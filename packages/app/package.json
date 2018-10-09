@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "@myproject/common": "1.0.0",
+    "@myproject/controller": "1.0.0",
+    "apollo-boost": "^0.1.16",
     "react": "16.5.2",
+    "react-apollo": "^2.2.4",
     "react-native": "0.57.1",
     "styled-components": "^3.4.9"
   },
