@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 
 import { BookListQuery } from '../../schemaTypes';
 
-const booksQuery = gql`
+const bookListQuery = gql`
   query BookListQuery {
     books {
       title
@@ -20,7 +20,7 @@ interface IProps {
 export class BookController extends React.PureComponent<IProps> {
   public render() {
     return (
-      <Query<BookListQuery> query={booksQuery}>{this.props.children}</Query>
+      <Query<BookListQuery> query={bookListQuery}>{this.props.children}</Query>
     );
   }
 }
