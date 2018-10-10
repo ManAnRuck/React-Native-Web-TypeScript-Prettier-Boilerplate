@@ -22,7 +22,7 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "allowSyntheticDefaultImports": true,
+        "allowSyntheticDefaultImports": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "baseUrl": "..",

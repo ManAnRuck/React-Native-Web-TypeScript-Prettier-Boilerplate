@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-import React from 'react';
+import * as React from 'react';
 import { Query } from 'react-apollo';
 
 import { BookListQuery, BookListQuery_books } from '../../schemaTypes';
@@ -20,7 +20,6 @@ export interface IBookControllerProps {
 }
 
 interface IProps {
-  // children: ReactNode;
   children: any;
 }
 

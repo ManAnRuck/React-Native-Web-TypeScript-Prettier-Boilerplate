@@ -2,8 +2,8 @@
     "extends": "../../tsconfig.json",
     "compileOnSave": false,
     "compilerOptions": {
-        "target": "ESNext",
-        "module": "ESNext",
+        "target": "es6",
+        "module": "commonjs",
         "jsx": "preserve",
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
