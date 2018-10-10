@@ -8,7 +8,7 @@ import styled from 'styled-components/native';
 import { client } from './src/graphql/initApollo';
 
 // Components
-import { BookController } from '@myproject/controller';
+import { BookController, IBookControllerProps } from '@myproject/controller';
 
 const instructions = Platform.select({
   android:
@@ -48,13 +48,15 @@ export default class App extends Component<IProps> {
           <Instructions>{instructions}</Instructions>
           <Instructions>{add(3, 9)}</Instructions>
           <BookController>
-            {({ data, loading, error }) => {
+            {({ data, loading, error }: IBookControllerProps) => {
               if (error) return process.stdout.write(error);
               if (loading) return <Text>loading…</Text>;
               return (
                 <View>
                   {data.books.map(({ author, title }) => {
-                    return <Text key={title}>{`${author} – ${title}`}</Text>;
+                    return (
+                      <Text key={`${title}`}>{`${author} – ${title}`}</Text>
+                    );
                   })}
                 </View>
               );

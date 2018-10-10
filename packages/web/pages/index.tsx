@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 // Controllers
-import { BookController } from '@myproject/controller';
+import { BookController, IBookControllerProps } from '@myproject/controller';
 
 const Test = styled.div`
   font-size: 28px;
@@ -27,13 +27,13 @@ export default () => (
     </li>
     <li>
       <BookController>
-        {({ data, loading, error }) => {
+        {({ data, loading, error }: IBookControllerProps) => {
           if (error) return process.stdout.write(error);
           if (loading) return <div>loading…</div>;
           return (
             <ul>
               {data.books.map(({ author, title }) => {
-                return <li key={title}>{`${author} – ${title}`}</li>;
+                return <li key={`${title}`}>{`${author} – ${title}`}</li>;
               })}
             </ul>
           );

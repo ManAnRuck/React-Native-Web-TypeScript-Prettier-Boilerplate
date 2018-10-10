@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 import * as React from 'react';
 import { Query } from 'react-apollo';
 
-import { BookListQuery } from '../../schemaTypes';
+import { BookListQuery, BookListQuery_books } from '../../schemaTypes';
 
 const bookListQuery = gql`
   query BookListQuery {
@@ -13,14 +13,36 @@ const bookListQuery = gql`
   }
 `;
 
-interface IProps {
-  children: (data: any) => JSX.Element | null;
+// interface IProps {
+//   children: (data: any) => JSX.Element | null;
+// }
+
+export interface IBookControllerProps {
+  data: { books: BookListQuery_books[] };
+  loading: boolean;
+  error: any;
 }
 
-export class BookController extends React.PureComponent<IProps> {
-  public render() {
-    return (
-      <Query<BookListQuery> query={bookListQuery}>{this.props.children}</Query>
-    );
-  }
+// export const BookController = graphql<any, BookListQuery, {}, IBookList>(
+//   bookListQuery,
+//   {
+//     props: ({ data: { loading, books } }) => {
+//       return {
+//         books,
+//         loading,
+//       };
+//     },
+//   },
+// );
+
+interface IProps {
+  children: any;
 }
+
+class BookControllerQuery extends Query<BookListQuery> {}
+
+export const BookController: React.SFC<IProps> = props => (
+  <BookControllerQuery query={bookListQuery}>
+    {props.children}
+  </BookControllerQuery>
+);
