@@ -29,6 +29,7 @@
     "typescript": "^3.0.3"
   },
   "dependencies": {
+    "@types/react-dom": "^16.0.9",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "react": "^16.5.2",
