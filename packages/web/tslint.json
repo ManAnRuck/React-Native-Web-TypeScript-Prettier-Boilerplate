@@ -10,6 +10,7 @@
         "tslint-plugin-prettier"
     ],
     "rules": {
+        "prettier": true
     },
     "exclude": [
         "node_modules", ".next"
