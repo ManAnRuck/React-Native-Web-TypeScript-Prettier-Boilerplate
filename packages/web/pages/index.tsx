@@ -28,7 +28,7 @@ export default () => (
     <li>
       <BookController>
         {({ data, loading, error }: IBookControllerProps) => {
-          if (error) return process.stdout.write(error);
+          if (error) return null;
           if (loading) return <div>loading…</div>;
           return (
             <ul>

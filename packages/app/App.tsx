@@ -49,7 +49,7 @@ export default class App extends Component<IProps> {
           <Instructions>{add(3, 9)}</Instructions>
           <BookController>
             {({ data, loading, error }: IBookControllerProps) => {
-              if (error) return process.stdout.write(error);
+              if (error) return null;
               if (loading) return <Text>loading…</Text>;
               return (
                 <View>
