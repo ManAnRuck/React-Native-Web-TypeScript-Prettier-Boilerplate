@@ -1,6 +1,10 @@
 import { add } from '@myproject/common';
 import Link from 'next/link';
+import { Button, Flag } from 'semantic-ui-react';
 import styled from 'styled-components';
+
+// Styles
+import '../assets/styles/styles.less';
 
 // Controllers
 import { BookController, IBookControllerProps } from '@myproject/controller';
@@ -24,6 +28,10 @@ export default () => (
     </li>
     <li>
       <Test>{add(2, 4)}</Test>
+    </li>
+    <li>
+      <Button>test</Button>
+      <Flag name="th" />
     </li>
     <li>
       <BookController>
