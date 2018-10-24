@@ -14,7 +14,7 @@
     "@myproject/common": "1.0.0",
     "@myproject/controller": "1.0.0",
     "apollo-boost": "^0.1.16",
-    "react": "16.6.0-alpha.8af6728",
+    "react": "^16.6.0",
     "react-apollo": "^2.2.4",
     "react-native": "^0.57.1",
     "styled-components": "^3.4.9"
@@ -29,7 +29,7 @@
     "metro-react-native-babel-preset": "^0.48.1",
     "prettier": "^1.14.2",
     "react-native-typescript-transformer": "^1.2.10",
-    "react-test-renderer": "16.5.2",
+    "react-test-renderer": "^16.6.0",
     "schedule": "0.5.0",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
