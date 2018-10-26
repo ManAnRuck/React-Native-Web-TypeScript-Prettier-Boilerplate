@@ -2,8 +2,8 @@
 
 ## Installation
 ```bash
-clone https://github.com/ReggaePanda/React-Native-Web-TypeScript-Prettier-Boilerplate.git
-cd React-Native-Web-TypeScript-Prettier-Boilerplate
+clone https://github.com/ReggaePanda/React-Native-Web-TypeScript-Prettier-Boilerplate.git MyProject
+cd MyProject
 yarn
 ```
 
