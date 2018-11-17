@@ -17,7 +17,8 @@
         "lint": "lerna run --parallel lint",
         "build": "yarn --cwd packages/web build",
         "start": "yarn --cwd packages/web start",
-        "pre-commit": "lerna run --parallel pre-commit"
+        "pre-commit": "lerna run --parallel pre-commit",
+        "fix": "lerna run fix"
     },
     "name": "app",
     "devDependencies": {

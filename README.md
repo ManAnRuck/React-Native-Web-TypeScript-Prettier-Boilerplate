@@ -5,6 +5,7 @@
 clone https://github.com/ReggaePanda/React-Native-Web-TypeScript-Prettier-Boilerplate.git MyProject
 cd MyProject
 yarn
+yarn fix
 cd packages/app
 yarn fix-third-party
 cd ../..

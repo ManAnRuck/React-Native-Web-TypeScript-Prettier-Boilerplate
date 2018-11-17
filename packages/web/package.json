@@ -8,7 +8,9 @@
         "start": "NODE_ENV=production node .next/production-server/index.js",
         "lint": "tslint --project tsconfig.json && yarn typecheck",
         "typecheck": "tsc --noEmit",
-        "pre-commit": "yarn lint && yarn typecheck"
+        "pre-commit": "yarn lint && yarn typecheck",
+        "fix-babel-core": "yarn add @babel/core --dev",
+        "fix": "yarn fix-babel-core"
     },
     "dependencies": {
         "@myproject/common": "1.0.0",
