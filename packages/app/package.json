@@ -8,15 +8,17 @@
     "dev": "yarn start",
     "lint": "tslint --project tsconfig.json && yarn typecheck",
     "typecheck": "tsc --noEmit",
-    "pre-commit": "yarn lint && yarn typecheck"
+    "pre-commit": "yarn lint && yarn typecheck",
+    "fix-third-party": "cd node_modules/react-native && scripts/ios-install-third-party.sh && cd third-party/glog-0.3.5/ && ../../scripts/ios-configure-glog.sh"
   },
   "dependencies": {
     "@myproject/common": "1.0.0",
     "@myproject/controller": "1.0.0",
     "apollo-boost": "^0.1.16",
-    "react": "^16.6.0",
+    "react": "16.6.1",
     "react-apollo": "^2.2.4",
     "react-native": "^0.57.1",
+    "react-test-renderer": "16.6.1",
     "styled-components": "^3.4.9"
   },
   "devDependencies": {
