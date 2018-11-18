@@ -8,10 +8,11 @@
         "start": "NODE_ENV=production node .next/production-server/index.js",
         "lint": "tslint --project tsconfig.json && yarn typecheck",
         "typecheck": "tsc --noEmit",
-        "pre-commit": "yarn lint && yarn typecheck"
+        "pre-commit": "yarn lint && yarn typecheck",
+        "fix-babel-core": "yarn add @babel/core --dev",
+        "fix": "yarn fix-babel-core"
     },
     "dependencies": {
-        "@babel/core": "^7.0.0",
         "@myproject/common": "1.0.0",
         "@myproject/controller": "1.0.0",
         "@zeit/next-typescript": "1.1.1",
@@ -29,6 +30,7 @@
         "typescript-babel-jest": "^1.0.5"
     },
     "devDependencies": {
+        "@babel/core": "^7.1.6",
         "@types/next": "^7.0.0",
         "@types/react": "^16.0.36",
         "@types/styled-components": "^4.0.1",
