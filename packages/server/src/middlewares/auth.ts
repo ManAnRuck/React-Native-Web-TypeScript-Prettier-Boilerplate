@@ -6,7 +6,8 @@ import { Strategy as GitHubStrategy } from 'passport-github';
 // TS Interfaces
 import { IAuthGithub } from '../../config/types';
 
-const githubAuthConfig: IAuthGithub = config.get('auth.github');
+const githubAuthConfig: IAuthGithub = { ...config.get('auth.github') };
+
 import { Router } from 'express';
 
 const router: Router = Router();
