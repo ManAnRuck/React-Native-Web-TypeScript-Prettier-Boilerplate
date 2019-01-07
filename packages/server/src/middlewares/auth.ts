@@ -27,7 +27,7 @@ router.use(passport.initialize());
 /**
  * GitHub Authentification
  */
-router.get('/auth/github', passport.authenticate('github'));
+router.get('/auth/github', passport.authenticate('github', { session: false }));
 router.get(
   '/auth/github/callback',
   passport.authenticate('github', {

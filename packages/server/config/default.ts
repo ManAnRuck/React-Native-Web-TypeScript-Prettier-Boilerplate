@@ -1,11 +1,12 @@
 import { IConfig } from './types';
+require('dotenv-safe').config();
 
 const defaultConfig: IConfig = {
   auth: {
     github: {
       callbackURL: 'http://localhost:4000/auth/github/callback',
-      clientID: '08c92a21716b8ac1a0df',
-      clientSecret: '4fad2fda515d0fa031ff5aad959bba79ff616202',
+      clientID: process.env.GITHUB_CLIENT_ID!,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
     },
   },
   db: {
