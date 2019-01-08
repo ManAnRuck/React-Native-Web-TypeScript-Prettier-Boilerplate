@@ -1,2 +1,2 @@
-export * from './modules/BookController';
+export * from './modules/UserController';
 export * from './schemaTypes';

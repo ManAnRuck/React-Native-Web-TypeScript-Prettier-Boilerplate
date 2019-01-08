@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import '../assets/styles/styles.less';
 
 // Controllers
-import { BookController, IBookControllerProps } from '@myproject/controller';
+import { IUserControllerProps, UserController } from '@myproject/controller';
 
 const Test = styled.div`
   font-size: 28px;
@@ -34,19 +34,19 @@ export default () => (
       <Flag name="th" />
     </li>
     <li>
-      <BookController>
-        {({ data, loading, error }: IBookControllerProps) => {
+      <UserController>
+        {({ data, loading, error }: IUserControllerProps) => {
           if (error) return null;
           if (loading) return <div>loading…</div>;
           return (
             <ul>
-              {data.books.map(({ author, title }) => {
-                return <li key={`${title}`}>{`${author} – ${title}`}</li>;
+              {data.users.map(({ username, githubId }) => {
+                return <li key={githubId}>{`${githubId} – ${username}`}</li>;
               })}
             </ul>
           );
         }}
-      </BookController>
+      </UserController>
     </li>
   </ul>
 );

@@ -12,6 +12,6 @@ export default class UserResolver {
 
   @Query(returns => [User])
   public async users() {
-    return this.userRepository;
+    return this.userRepository.find();
   }
 }

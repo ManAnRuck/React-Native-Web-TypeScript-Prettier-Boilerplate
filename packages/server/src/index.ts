@@ -14,7 +14,7 @@ const bootstrap = async () => {
 
   const server = await apolloServer();
 
-  server.applyMiddleware({ app });
+  server.applyMiddleware({ app, path: '/' });
 
   const port = 4000;
   createConnection().then(() => {

@@ -2,16 +2,16 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: BookListQuery
+// GraphQL query operation: UserListQuery
 // ====================================================
 
-export interface BookListQuery_books {
-  title: string | null;
-  author: string | null;
+export interface UserListQuery_users {
+  username: string;
+  githubId: string;
 }
 
-export interface BookListQuery {
-  books: (BookListQuery_books | null)[] | null;
+export interface UserListQuery {
+  users: UserListQuery_users[];
 }
 
 /* tslint:disable */
