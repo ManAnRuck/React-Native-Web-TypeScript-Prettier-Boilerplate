@@ -9,15 +9,22 @@ import { IAuthGithub } from '../../config/types';
 const githubAuthConfig: IAuthGithub = { ...config.get('auth.github') };
 
 import { Router } from 'express';
+import User from '../entity/User';
 
 const router: Router = Router();
 
 passport.use(
   new GitHubStrategy(
     githubAuthConfig,
-    (accessToken, refreshToken, profile, cb) => {
-      console.log('GITHUB AUTH', profile);
-      return cb(null, { accessToken, refreshToken });
+    async (accessToken, refreshToken, profile, cb) => {
+      let user = await User.findOne({ where: { githubId: profile.id } });
+      if (!user) {
+        user = await User.create({
+          githubId: profile.id,
+          username: profile.username,
+        }).save();
+      }
+      cb(null, { user, accessToken, refreshToken });
     },
   ),
 );
@@ -34,7 +41,10 @@ router.get(
     failureRedirect: '/login',
     session: false,
   }),
-  (_, res) => {
+  (req: any, res) => {
+    req.session.userId = req.user.user.id;
+    req.session.accessToken = req.user.accessToken;
+    req.session.refreshToken = req.user.refreshToken;
     // Successful authentication, redirect home.
     res.redirect('/');
   },
