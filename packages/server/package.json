@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "@types/config": "^0.0.34",
+    "@types/connect-redis": "^0.0.8",
+    "@types/express-session": "^1.15.11",
     "@types/node": "^10.12.18",
     "@types/passport": "^0.4.7",
     "@types/passport-github": "^1.1.3",
