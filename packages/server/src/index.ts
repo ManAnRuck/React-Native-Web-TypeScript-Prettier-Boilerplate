@@ -1,26 +1,31 @@
 import { add } from '@myproject/common';
-import { ApolloServer } from 'apollo-server-express';
 import * as express from 'express';
+import 'reflect-metadata';
 
+import apolloServer from './graphql/server';
 import authMiddleware from './middlewares/auth';
 
-import resolvers from './graphql/resolvers';
-import typeDefs from './graphql/typeDefs';
+import { createConnection } from 'typeorm';
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const bootstrap = async () => {
+  const app = express();
 
-const app = express();
+  app.use(authMiddleware);
 
-app.use(authMiddleware);
+  const server = await apolloServer();
 
-server.applyMiddleware({ app });
+  server.applyMiddleware({ app });
 
-const port = 4000;
+  const port = 4000;
+  createConnection().then(() => {
+    app.listen({ port }, async () => {
+      process.stdout.write(
+        `🚀 Server ready at http://localhost:${port}${server.graphqlPath} \n`,
+      );
+    });
+  });
 
-app.listen({ port }, async () => {
-  process.stdout.write(
-    `🚀 Server ready at http://localhost:${port}${server.graphqlPath} \n`,
-  );
-});
+  add(2, 3);
+};
 
-add(4, 5);
+bootstrap();
