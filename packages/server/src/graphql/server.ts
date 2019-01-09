@@ -23,7 +23,10 @@ export default async () => {
     resolvers: [UserResolver],
   });
 
-  const server = new ApolloServer({ schema });
+  const server = new ApolloServer({
+    schema,
+    context: ({ req }: any) => ({ req }),
+  });
 
   return server;
 };

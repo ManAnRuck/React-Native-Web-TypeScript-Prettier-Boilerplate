@@ -1,6 +1,7 @@
 interface IConfig {
   auth: {
     github: IAuthGithub;
+    sessionSecret: string;
   };
   db: IDb;
 }
@@ -13,6 +14,7 @@ interface IAuthGithub {
 
 interface IDb {
   name: string;
+  redisUrl?: string;
 }
 
 export { IConfig, IAuthGithub, IDb };

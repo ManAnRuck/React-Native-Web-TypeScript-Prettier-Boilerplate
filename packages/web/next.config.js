@@ -36,7 +36,7 @@ module.exports = withPlugins([
 	[withLess],
 	[withTM,
 	{
-		transpileModules: ["@myproject/common"],
+		transpileModules: ["@myproject/common", "@myproject/controller"],
 	}],
 	[withTypescript],
 ], nextConfig);

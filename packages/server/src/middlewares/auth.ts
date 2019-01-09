@@ -1,11 +1,11 @@
 import * as config from 'config';
-
 import * as passport from 'passport';
 import { Strategy as GitHubStrategy } from 'passport-github';
 
 // TS Interfaces
 import { IAuthGithub } from '../../config/types';
 
+// Configs
 const githubAuthConfig: IAuthGithub = { ...config.get('auth.github') };
 
 import { Router } from 'express';
@@ -46,7 +46,7 @@ router.get(
     req.session.accessToken = req.user.accessToken;
     req.session.refreshToken = req.user.refreshToken;
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('http://localhost:3000/');
   },
 );
 

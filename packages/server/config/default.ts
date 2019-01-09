@@ -8,9 +8,11 @@ const defaultConfig: IConfig = {
       clientID: process.env.GITHUB_CLIENT_ID!,
       clientSecret: process.env.GITHUB_CLIENT_SECRET!,
     },
+    sessionSecret: process.env.SESSION_SECRET!,
   },
   db: {
     name: 'great-gift-dev',
+    redisUrl: process.env.REDIS_URL,
   },
 };
 

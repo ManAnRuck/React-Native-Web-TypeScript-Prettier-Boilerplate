@@ -7,7 +7,12 @@ import styled from 'styled-components';
 import '../assets/styles/styles.less';
 
 // Controllers
-import { IUserControllerProps, UserController } from '@myproject/controller';
+import {
+  IMeControllerProps,
+  IUserControllerProps,
+  MeController,
+  UserController,
+} from '@myproject/controller';
 
 const Test = styled.div`
   font-size: 28px;
@@ -30,7 +35,9 @@ export default () => (
       <Test>{add(2, 4)}</Test>
     </li>
     <li>
-      <Button>test</Button>
+      <Link passHref href="http://localhost:4000/auth/github">
+        <Button icon="github" />
+      </Link>
       <Flag name="th" />
     </li>
     <li>
@@ -47,6 +54,25 @@ export default () => (
           );
         }}
       </UserController>
+    </li>
+    <li>
+      <MeController>
+        {({ data, loading, error }: IMeControllerProps) => {
+          console.log('ASD', data);
+          if (error) return null;
+          if (loading) return <div>loading…</div>;
+          return (
+            <ul>
+              {data.me && (
+                <li key={data.me.githubId}>{`${data.me.githubId} – ${
+                  data.me.username
+                }`}</li>
+              )}
+              {!data.me && <li>not loged in</li>}
+            </ul>
+          );
+        }}
+      </MeController>
     </li>
   </ul>
 );
