@@ -2,7 +2,7 @@ import { ApolloClient, NormalizedCacheObject } from 'apollo-boost';
 import App, { Container } from 'next/app';
 import React from 'react';
 import { ApolloProvider } from 'react-apollo';
-import withApolloClient from '../lib/with-apollo-client';
+import withApolloClient from '../lib/withApollo';
 
 interface IProps {
   apolloClient: ApolloClient<NormalizedCacheObject>;

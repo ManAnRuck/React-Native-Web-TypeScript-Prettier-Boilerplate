@@ -15,6 +15,21 @@ export const redis =
     ? new Redis(config.get('db.redisUrl'))
     : new Redis();
 
+router.use((req, _, next) => {
+  const authorization = req.headers.authorization;
+
+  if (authorization) {
+    try {
+      const qid = authorization.split(' ')[1];
+      req.headers.cookie = `qid=${qid}`;
+    } catch (_) {
+      // do nothing
+    }
+  }
+
+  return next();
+});
+
 router.use(
   session({
     store: new RedisStore({
