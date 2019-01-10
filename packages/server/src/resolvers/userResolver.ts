@@ -25,7 +25,7 @@ export default class UserResolver {
     ctx: IMyContext,
   ) {
     const { userId } = ctx.req.session!;
-    console.log('RESOLVER', ctx.req.session);
+
     return userId ? User.findOne(userId) : null;
   }
 }
