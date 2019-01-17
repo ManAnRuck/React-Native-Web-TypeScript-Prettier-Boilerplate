@@ -1,5 +1,12 @@
 import { Field, ID, ObjectType } from 'type-graphql';
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import OAuthUser from './OAuthUser';
 
 @ObjectType()
 @Entity()
@@ -12,7 +19,6 @@ export default class User extends BaseEntity {
   @Column({ type: 'text' })
   public username: string;
 
-  @Field()
-  @Column({ type: 'text' })
-  public githubId: string;
+  @OneToMany(() => OAuthUser, oAuthUser => oAuthUser.user)
+  public oAuthUsers: OAuthUser[];
 }

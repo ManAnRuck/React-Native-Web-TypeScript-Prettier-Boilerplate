@@ -3,6 +3,7 @@ import { PureComponent } from 'react';
 import { INextContextWithApollo } from '../types/NextContextWithApollo';
 
 // Styles
+import Link from 'next/link';
 import '../assets/styles/styles.less';
 
 export default class Index extends PureComponent {
@@ -15,16 +16,22 @@ export default class Index extends PureComponent {
           me {
             id
             username
-            githubId
           }
         }
       `,
     });
-    return response.data.me;
+    return response.data.me || {};
   }
 
   public render() {
-    return <div>{JSON.stringify(this.props, null, 2)}</div>;
+    return (
+      <div>
+        <Link href="c">
+          <a>C</a>
+        </Link>
+        {JSON.stringify(this.props, null, 2)}
+      </div>
+    );
   }
 }
 

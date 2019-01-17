@@ -1,7 +1,8 @@
 module.exports = {
     client: {
       service: {
-        url: 'http://localhost:4000/'
+        name: "my-app",
+        endpoint: 'http://localhost:4000/'
       }
     },
   };

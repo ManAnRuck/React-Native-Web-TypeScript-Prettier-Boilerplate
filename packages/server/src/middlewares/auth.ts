@@ -9,22 +9,53 @@ import { IAuthGithub } from '../../config/types';
 const githubAuthConfig: IAuthGithub = { ...config.get('auth.github') };
 
 import { Router } from 'express';
+import OAuthUser from '../entity/OAuthUser';
 import User from '../entity/User';
 
 const router: Router = Router();
 
+const SERVICE = 'github';
+
 passport.use(
   new GitHubStrategy(
-    githubAuthConfig,
-    async (accessToken, refreshToken, profile, cb) => {
-      let user = await User.findOne({ where: { githubId: profile.id } });
-      if (!user) {
-        user = await User.create({
-          githubId: profile.id,
-          username: profile.username,
-        }).save();
+    { ...githubAuthConfig, passReqToCallback: true },
+    async (req, accessToken, refreshToken, profile, cb) => {
+      let oAuthUser = await OAuthUser.findOne(
+        {
+          service: SERVICE,
+          serviceId: profile.id,
+        },
+        {
+          relations: ['user'],
+        },
+      );
+
+      if (oAuthUser) {
+        return cb(null, { accessToken, refreshToken, user: oAuthUser.user });
       }
-      cb(null, { user, accessToken, refreshToken });
+      oAuthUser = await OAuthUser.create({
+        accessToken,
+        refreshToken,
+        service: 'github',
+        serviceId: profile.id,
+        userName: profile.username,
+        fullName: profile.displayName,
+      }).save();
+
+      let user = await User.findOne(req.session!.userId, {
+        relations: ['oAuthUsers'],
+      });
+      if (user) {
+        user.oAuthUsers.push(oAuthUser);
+        await user.save();
+        return cb(null, { accessToken, refreshToken, user });
+      }
+
+      user = await User.create({
+        username: profile.username,
+        oAuthUsers: [oAuthUser],
+      }).save();
+      return cb(null, { accessToken, refreshToken, user });
     },
   ),
 );

@@ -16,6 +16,7 @@ export default class UserResolver {
 
   @Query(() => [User])
   public async users() {
+    console.log('Query users');
     return this.userRepository.find();
   }
 
@@ -24,6 +25,7 @@ export default class UserResolver {
     @Ctx()
     ctx: IMyContext,
   ) {
+    console.log('Query me');
     const { userId } = ctx.req.session!;
 
     return userId ? User.findOne(userId) : null;
