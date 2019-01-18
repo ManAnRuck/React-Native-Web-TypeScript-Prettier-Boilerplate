@@ -8,12 +8,18 @@ const defaultConfig: IConfig = {
       clientID: process.env.GITHUB_CLIENT_ID!,
       clientSecret: process.env.GITHUB_CLIENT_SECRET!,
     },
+    facebook: {
+      callbackURL: 'http://localhost:4000/auth/facebook/callback',
+      clientID: process.env.FACEBOOK_APP_ID!,
+      clientSecret: process.env.FACEBOOK_APP_SECRET!,
+    },
     sessionSecret: process.env.SESSION_SECRET!,
   },
   db: {
     name: 'great-gift-dev',
     redisUrl: process.env.REDIS_URL,
   },
+  webUrl: 'http://localhost:3000/',
 };
 
 export default defaultConfig;

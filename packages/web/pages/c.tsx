@@ -38,6 +38,9 @@ export default () => (
       <Link passHref href="http://localhost:4000/auth/github">
         <Button icon="github" />
       </Link>
+      <Link passHref href="http://localhost:4000/auth/facebook">
+        <Button icon="facebook" />
+      </Link>
       <Flag name="th" />
     </li>
     <li>

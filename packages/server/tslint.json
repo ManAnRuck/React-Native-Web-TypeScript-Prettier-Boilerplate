@@ -12,7 +12,8 @@
     "rules": {
         "prettier": true,
         "object-literal-sort-keys": false,
-        "no-var-requires": false
+        "no-var-requires": false,
+        "interface-name": false
     },
     "exclude": [
         "node_modules", "dist"

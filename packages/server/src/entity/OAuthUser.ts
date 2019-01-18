@@ -41,7 +41,7 @@ export default class OAuthUser extends BaseEntity {
 
   @Field()
   @Column({ type: 'text', nullable: true })
-  public fistName: string;
+  public firstName: string;
 
   @Field()
   @Column({ type: 'text', nullable: true })

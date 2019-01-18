@@ -1,12 +1,14 @@
 interface IConfig {
   auth: {
-    github: IAuthGithub;
+    github: IOAuthOptions;
+    facebook: IOAuthOptions;
     sessionSecret: string;
   };
   db: IDb;
+  webUrl: string;
 }
 
-interface IAuthGithub {
+interface IOAuthOptions {
   clientID: string;
   callbackURL: string;
   clientSecret: string;
@@ -17,4 +19,4 @@ interface IDb {
   redisUrl?: string;
 }
 
-export { IConfig, IAuthGithub, IDb };
+export { IConfig, IOAuthOptions, IDb };

@@ -23,10 +23,10 @@
         "allowSyntheticDefaultImports": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "baseUrl": "..",
+        "baseUrl": ".",
         "paths": {
-            "@abb/*": [
-                "./*/src"
+            "*": [
+                "src/types/*"
             ]
         }
     },
