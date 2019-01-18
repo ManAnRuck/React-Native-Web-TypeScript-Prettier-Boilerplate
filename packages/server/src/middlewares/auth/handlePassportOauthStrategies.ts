@@ -36,14 +36,15 @@ const handlePassportOauthStrategies = async (
   if (oAuthUser) {
     return cb(null, { accessToken, refreshToken, user: oAuthUser.user });
   }
-  oAuthUser = await OAuthUser.create({
-    accessToken,
-    refreshToken,
-    service: profile.provider,
-    serviceId: profile.id,
-    userName: profile.username,
-    fullName: profile.displayName,
-  }).save();
+
+  oAuthUser = new OAuthUser();
+  oAuthUser.accessToken = accessToken;
+  oAuthUser.refreshToken = refreshToken;
+  oAuthUser.service = profile.provider;
+  oAuthUser.serviceId = profile.id;
+  oAuthUser.userName = profile.username;
+  oAuthUser.fullName = profile.displayName;
+  await oAuthUser.save();
 
   let user = await User.findOne(req.session!.userId, {
     relations: ['oAuthUsers'],
@@ -55,10 +56,11 @@ const handlePassportOauthStrategies = async (
     return cb(null, { accessToken, refreshToken, user });
   }
 
-  user = await User.create({
-    username: profile.username,
-    oAuthUsers: [oAuthUser],
-  }).save();
+  user = new User();
+  user.username = profile.displayName;
+  user.oAuthUsers = [oAuthUser];
+  await user.save();
+
   return cb(null, { accessToken, refreshToken, user });
 };
 

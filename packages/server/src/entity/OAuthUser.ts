@@ -29,27 +29,27 @@ export default class OAuthUser extends BaseEntity {
 
   @Field()
   @Column({ type: 'text', nullable: true })
-  public refreshToken: string;
+  public refreshToken?: string;
 
   @Field()
   @Column({ type: 'text', nullable: true })
-  public email: string;
+  public email?: string;
 
   @Field()
   @Column({ type: 'text', nullable: true })
-  public userName: string;
+  public userName?: string;
 
   @Field()
   @Column({ type: 'text', nullable: true })
-  public firstName: string;
+  public firstName?: string;
 
   @Field()
   @Column({ type: 'text', nullable: true })
-  public lastName: string;
+  public lastName?: string;
 
   @Field()
   @Column({ type: 'text', nullable: true })
-  public fullName: string;
+  public fullName?: string;
 
   @ManyToOne(() => User, user => user.oAuthUsers)
   public user: User;

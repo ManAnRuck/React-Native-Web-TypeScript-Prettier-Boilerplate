@@ -33,16 +33,16 @@ passport.use(
         return cb(null, { accessToken, refreshToken, user: oAuthUser.user });
       }
 
-      oAuthUser = await OAuthUser.create({
-        accessToken,
-        refreshToken,
-        service: profile.provider,
-        serviceId: profile.id,
-        userName: profile.username,
-        fullName: profile.displayName,
-        firstName: profile.name.givenName,
-        lastName: profile.name.familyName,
-      }).save();
+      oAuthUser = new OAuthUser();
+      oAuthUser.accessToken = accessToken;
+      oAuthUser.refreshToken = refreshToken;
+      oAuthUser.service = profile.provider;
+      oAuthUser.serviceId = profile.id;
+      oAuthUser.userName = profile.username;
+      oAuthUser.fullName = profile.displayName;
+      oAuthUser.firstName = profile.name.givenName;
+      oAuthUser.lastName = profile.name.familyName;
+      await oAuthUser.save();
 
       let user = await User.findOne(req.session!.userId, {
         relations: ['oAuthUsers'],
@@ -54,10 +54,11 @@ passport.use(
         return cb(null, { accessToken, refreshToken, user });
       }
 
-      user = await User.create({
-        username: profile.displayName,
-        oAuthUsers: [oAuthUser],
-      }).save();
+      user = new User();
+      user.username = profile.displayName;
+      user.oAuthUsers = [oAuthUser];
+      await user.save();
+
       return cb(null, { accessToken, refreshToken, user });
     },
   ),
