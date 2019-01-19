@@ -13,6 +13,11 @@ const defaultConfig: IConfig = {
       clientID: process.env.FACEBOOK_APP_ID!,
       clientSecret: process.env.FACEBOOK_APP_SECRET!,
     },
+    twitter: {
+      callbackURL: 'http://localhost:4000/auth/twitter/callback',
+      consumerKey: process.env.TWITTER_CONSUMER_KEY!,
+      consumerSecret: process.env.TWITTER_CONSUMER_SECRET!,
+    },
     sessionSecret: process.env.SESSION_SECRET!,
   },
   db: {

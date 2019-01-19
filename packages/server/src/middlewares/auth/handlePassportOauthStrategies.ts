@@ -1,10 +1,13 @@
 import { Request } from 'express';
 import { Profile as FacebookProfile } from 'passport-facebook';
 import { Profile as GitHubProfile } from 'passport-github';
+import { Profile as TwitterProfile } from 'passport-twitter';
 import OAuthUser from '../../entity/OAuthUser';
 import User from '../../entity/User';
 
-export const findOAuthUser = (profile: FacebookProfile | GitHubProfile) => {
+export const findOAuthUser = (
+  profile: FacebookProfile | GitHubProfile | TwitterProfile,
+) => {
   return OAuthUser.findOne(
     {
       service: profile.provider,
