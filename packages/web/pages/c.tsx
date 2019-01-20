@@ -53,8 +53,8 @@ export default () => (
           if (loading) return <div>loading…</div>;
           return (
             <ul>
-              {data.users.map(({ username, githubId }) => {
-                return <li key={githubId}>{`${githubId} – ${username}`}</li>;
+              {data.users.map(({ username, id }) => {
+                return <li key={id}>{`${id} – ${username}`}</li>;
               })}
             </ul>
           );
@@ -69,7 +69,7 @@ export default () => (
           return (
             <ul>
               {data.me && (
-                <li key={data.me.githubId}>{`${data.me.githubId} – ${
+                <li key={data.me.id}>{`${data.me.id} – ${
                   data.me.username
                 }`}</li>
               )}

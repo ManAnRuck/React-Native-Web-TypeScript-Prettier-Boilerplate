@@ -7,8 +7,8 @@ import { UserListQuery, UserListQuery_users } from '../../schemaTypes';
 const userListQuery = gql`
   query UserListQuery {
     users {
+      id
       username
-      githubId
     }
   }
 `;

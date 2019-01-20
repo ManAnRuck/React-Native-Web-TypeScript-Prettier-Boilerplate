@@ -6,9 +6,6 @@ import * as TypeORM from 'typeorm';
 // Enteties
 import User from '../entity/User';
 
-// Resolvers
-import UserResolver from '../resolvers/userResolver';
-
 export interface IContext {
   user: User;
 }
@@ -20,7 +17,7 @@ TypeORM.useContainer(Container);
 export default async () => {
   // build TypeGraphQL executable schema
   const schema = await TypeGraphQL.buildSchema({
-    resolvers: [UserResolver],
+    resolvers: [`${__dirname}/../modules/**/*.ts`],
   });
 
   const server = new ApolloServer({

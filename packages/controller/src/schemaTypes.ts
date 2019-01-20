@@ -7,8 +7,8 @@
 
 export interface MeQuery_me {
   __typename: "User";
+  id: string;
   username: string;
-  githubId: string;
 }
 
 export interface MeQuery {
@@ -24,8 +24,8 @@ export interface MeQuery {
 
 export interface UserListQuery_users {
   __typename: "User";
+  id: string;
   username: string;
-  githubId: string;
 }
 
 export interface UserListQuery {

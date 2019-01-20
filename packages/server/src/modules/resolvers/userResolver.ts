@@ -1,12 +1,12 @@
-import { Ctx, Query, Resolver } from 'type-graphql';
+import { Ctx, Mutation, Query, Resolver } from 'type-graphql';
 import { Repository } from 'typeorm';
 import { InjectRepository } from 'typeorm-typedi-extensions';
 
 // Models
-import User from '../entity/User';
+import User from '../../entity/User';
 
 // Typescript
-import { IMyContext } from '../types/MyContext';
+import { IMyContext } from '../../types/MyContext';
 
 @Resolver(() => User)
 export default class UserResolver {
@@ -16,7 +16,6 @@ export default class UserResolver {
 
   @Query(() => [User])
   public async users() {
-    console.log('Query users');
     return this.userRepository.find();
   }
 
@@ -25,9 +24,21 @@ export default class UserResolver {
     @Ctx()
     ctx: IMyContext,
   ) {
-    console.log('Query me');
     const { userId } = ctx.req.session!;
 
     return userId ? User.findOne(userId) : null;
+  }
+
+  @Mutation(() => Boolean)
+  public async logout(
+    @Ctx()
+    ctx: IMyContext,
+  ) {
+    return new Promise(res =>
+      ctx.req.session!.destroy(err => {
+        console.log(err);
+        res(!!err);
+      }),
+    );
   }
 }

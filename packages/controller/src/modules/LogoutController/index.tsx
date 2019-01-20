@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 
 import { MeQuery, MeQuery_me } from '../../schemaTypes';
 
-import meQuery from './meQuery';
+import meQuery from './mutation';
 
 export interface IMeControllerProps {
   data: { me?: MeQuery_me };
