@@ -28,6 +28,26 @@ export type MeMe = {
   username: string;
 };
 
+export type OAuthAccountsVariables = {};
+
+export type OAuthAccountsQuery = {
+  __typename?: 'Query';
+
+  me: Maybe<OAuthAccountsMe>;
+};
+
+export type OAuthAccountsMe = {
+  __typename?: 'User';
+
+  oAuthUsers: OAuthAccountsOAuthUsers[];
+};
+
+export type OAuthAccountsOAuthUsers = {
+  __typename?: 'OAuthUser';
+
+  service: string;
+};
+
 import * as ReactApollo from 'react-apollo';
 import * as React from 'react';
 
@@ -119,4 +139,46 @@ export function MeHOC<TProps, TChildProps = any>(
     MeVariables,
     MeProps<TChildProps>
   >(MeDocument, operationOptions);
+}
+export const OAuthAccountsDocument = gql`
+  query OAuthAccounts {
+    me {
+      oAuthUsers {
+        service
+      }
+    }
+  }
+`;
+export class OAuthAccountsComponent extends React.Component<
+  Partial<ReactApollo.QueryProps<OAuthAccountsQuery, OAuthAccountsVariables>>
+> {
+  render() {
+    return (
+      <ReactApollo.Query<OAuthAccountsQuery, OAuthAccountsVariables>
+        query={OAuthAccountsDocument}
+        {...(this as any)['props'] as any}
+      />
+    );
+  }
+}
+export type OAuthAccountsProps<TChildProps = any> = Partial<
+  ReactApollo.DataProps<OAuthAccountsQuery, OAuthAccountsVariables>
+> &
+  TChildProps;
+export function OAuthAccountsHOC<TProps, TChildProps = any>(
+  operationOptions:
+    | ReactApollo.OperationOption<
+        TProps,
+        OAuthAccountsQuery,
+        OAuthAccountsVariables,
+        OAuthAccountsProps<TChildProps>
+      >
+    | undefined,
+) {
+  return ReactApollo.graphql<
+    TProps,
+    OAuthAccountsQuery,
+    OAuthAccountsVariables,
+    OAuthAccountsProps<TChildProps>
+  >(OAuthAccountsDocument, operationOptions);
 }

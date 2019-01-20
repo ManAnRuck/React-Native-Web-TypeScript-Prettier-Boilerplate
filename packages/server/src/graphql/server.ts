@@ -22,7 +22,7 @@ export default async () => {
 
   const server = new ApolloServer({
     schema,
-    context: ({ req }: any) => ({ req }),
+    context: ({ req, res }: any) => ({ req, res }),
   });
 
   return server;

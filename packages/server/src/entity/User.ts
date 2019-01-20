@@ -19,6 +19,7 @@ export default class User extends BaseEntity {
   @Column({ type: 'text' })
   public username: string;
 
+  @Field(() => [OAuthUser])
   @OneToMany(() => OAuthUser, oAuthUser => oAuthUser.user)
   public oAuthUsers: OAuthUser[];
 }

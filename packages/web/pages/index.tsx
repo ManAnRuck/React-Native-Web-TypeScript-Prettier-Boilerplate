@@ -3,17 +3,17 @@ import { PureComponent } from 'react';
 import { INextContextWithApollo } from '../types/NextContextWithApollo';
 
 // GraphQl
-import {
-  IMeControllerProps,
-  MeController,
-  meQuery,
-} from '@myproject/controller';
+import { meQuery } from '@myproject/controller';
 
 // Styles
 import Link from 'next/link';
-import { Button, Dropdown, Menu } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import '../assets/styles/styles.less';
-import { LogoutComponent, MeComponent } from '../components/apollo-components';
+import {
+  LogoutComponent,
+  MeComponent,
+  OAuthAccountsComponent,
+} from '../components/apollo-components';
 
 export default class Index extends PureComponent {
   public static async getInitialProps({
@@ -46,14 +46,22 @@ export default class Index extends PureComponent {
                     <br />
                     <LogoutComponent>
                       {(mutate, { client }) => (
-                        <Button
-                          onClick={async () => {
-                            await mutate();
-                            await client.resetStore();
-                          }}
-                        >
-                          Logout
-                        </Button>
+                        <div>
+                          <Button
+                            onClick={async () => {
+                              await mutate();
+                              await client.resetStore();
+                            }}
+                          >
+                            Logout
+                          </Button>
+                          {/* <OAuthAccountsComponent>
+                            {({ data, loading, error }) => {
+                              console.log(data, loading, error);
+                              return null;
+                            }}
+                          </OAuthAccountsComponent> */}
+                        </div>
                       )}
                     </LogoutComponent>
                   </li>

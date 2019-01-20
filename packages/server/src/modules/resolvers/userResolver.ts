@@ -1,22 +1,18 @@
-import { Ctx, Mutation, Query, Resolver } from 'type-graphql';
-import { Repository } from 'typeorm';
-import { InjectRepository } from 'typeorm-typedi-extensions';
+import { Ctx, Info, Mutation, Query, Resolver } from 'type-graphql';
 
 // Models
 import User from '../../entity/User';
 
 // Typescript
+import { GraphQLResolveInfo } from 'graphql';
 import { IMyContext } from '../../types/MyContext';
 
 @Resolver(() => User)
 export default class UserResolver {
-  constructor(
-    @InjectRepository(User) private readonly userRepository: Repository<User>,
-  ) {}
-
   @Query(() => [User])
-  public async users() {
-    return this.userRepository.find();
+  public async users(@Info() info: GraphQLResolveInfo) {
+    console.log('INFO', info.fieldNodes[0].selectionSet!.selections);
+    return User.find({ relations: ['oAuthUsers'] });
   }
 
   @Query(() => User, { nullable: true })
@@ -37,6 +33,7 @@ export default class UserResolver {
     return new Promise(res =>
       ctx.req.session!.destroy(err => {
         console.log(err);
+        ctx.res.clearCookie('qid');
         res(!!err);
       }),
     );
