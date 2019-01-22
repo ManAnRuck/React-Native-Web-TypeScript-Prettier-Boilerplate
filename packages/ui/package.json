@@ -1,0 +1,45 @@
+{
+    "name": "@myproject/ui",
+    "version": "1.0.0",
+    "license": "ISC",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "storybook": "start-storybook -p 9001 -c .storybook",
+        "build": "rimraf dist && tsc"
+    },
+    "dependencies": {
+        "react": "^16.7.0",
+        "semantic-ui-css": "^2.4.1",
+        "semantic-ui-react": "^0.84.0",
+        "styled-components": "4.1.3"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^4.1.7",
+        "@storybook/addon-info": "^4.1.7",
+        "@storybook/addon-knobs": "^4.1.7",
+        "@storybook/react": "^4.1.7",
+        "@types/jest": "^23.3.13",
+        "@types/lodash.get": "^4.4.4",
+        "@types/react": "16.7.18",
+        "@types/storybook__addon-actions": "^3.4.1",
+        "@types/storybook__addon-knobs": "^4.0.0",
+        "@types/storybook__react": "^4.0.0",
+        "@types/styled-components": "4.1.4",
+        "awesome-typescript-loader": "^5.2.1",
+        "babel-loader": "^8.0.5",
+        "babel-plugin-styled-components": "1.10.0",
+        "file-loader": "2.0.0",
+        "jest": "^23.6.0",
+        "nodemon": "1.18.9",
+        "prettier": "1.15.3",
+        "react-docgen-typescript-loader": "^3.0.1",
+        "react-docgen-typescript-webpack-plugin": "^1.1.0",
+        "ts-jest": "^23.10.5",
+        "tslint": "5.12.0",
+        "tslint-config-airbnb": "5.11.1",
+        "tslint-config-standard": "8.0.1",
+        "tslint-plugin-prettier": "2.0.1",
+        "typescript": "^3.2.4"
+    }
+}

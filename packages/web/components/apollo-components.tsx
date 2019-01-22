@@ -39,11 +39,15 @@ export type OAuthAccountsQuery = {
 export type OAuthAccountsMe = {
   __typename?: 'User';
 
+  id: string;
+
   oAuthUsers: OAuthAccountsOAuthUsers[];
 };
 
 export type OAuthAccountsOAuthUsers = {
   __typename?: 'OAuthUser';
+
+  id: string;
 
   service: string;
 };
@@ -143,7 +147,9 @@ export function MeHOC<TProps, TChildProps = any>(
 export const OAuthAccountsDocument = gql`
   query OAuthAccounts {
     me {
+      id
       oAuthUsers {
+        id
         service
       }
     }

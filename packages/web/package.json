@@ -16,6 +16,7 @@
     "dependencies": {
         "@myproject/common": "1.0.0",
         "@myproject/controller": "1.0.0",
+        "@myproject/ui": "1.0.0",
         "@types/cookie": "^0.3.2",
         "@zeit/next-typescript": "1.1.1",
         "apollo-boost": "0.1.23",

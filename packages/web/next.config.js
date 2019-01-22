@@ -5,13 +5,13 @@ const withLess = require('@zeit/next-less');
 const path = require('path');
 
 
+
 const nextConfig = {
 	webpack: (config, options) =>
 	{
 		config.resolve.alias = {
 			'../../theme.config$': path.resolve('./assets/styles/theme.config'),
 		};
-
 		config.module.rules.push(
 		{
 			test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/,
