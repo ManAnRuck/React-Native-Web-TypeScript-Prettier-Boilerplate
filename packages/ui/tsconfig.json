@@ -1,28 +1,51 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "module": "commonjs",
-      "target": "es5",
-      "lib": ["es5", "es6", "es7", "es2017", "dom"],
-      "sourceMap": true,
-      "allowJs": false,
-      "jsx": "react",
-      "moduleResolution": "node",
-      "rootDirs": ["src"],
-      "baseUrl": "src",
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "noImplicitReturns": true,
-      "noImplicitThis": true,
-      "noImplicitAny": true,
-      "strictNullChecks": true,
-      "suppressImplicitAnyIndexErrors": true,
-      "noUnusedLocals": true,
-      "declaration": true,
-      "allowSyntheticDefaultImports": true,
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true,
+    "babelOptions": {
+      "babelrc": false,
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "build", "scripts", "**/*.story.tsx"]
-  }
+    "babelCore": "@babel/core"
+  },
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es5",
+      "es6",
+      "es7",
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDirs": [
+      "./src"
+    ],
+    "baseUrl": "./src",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.story.tsx",
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts"
+  ]
+}

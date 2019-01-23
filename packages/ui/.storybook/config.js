@@ -1,9 +1,15 @@
-import { configure } from '@storybook/react';
+import { configure, addDecorator } from '@storybook/react';
 import 'semantic-ui-css/semantic.min.css';
-const req = require.context("../src", true, /.story.tsx$/);
+import { checkA11y } from '@storybook/addon-a11y';
+
+
+const req = require.context("../src", true, /.story\.tsx$/);
+
+addDecorator(checkA11y);
 
 function loadStories() {
-  req.keys().forEach(req);
+  req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);
+

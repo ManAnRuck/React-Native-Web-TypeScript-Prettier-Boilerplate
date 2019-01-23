@@ -8,7 +8,7 @@ const stories = storiesOf('Components/Button', module);
 stories.addDecorator(withKnobs);
 
 stories.add('default', () => (
-  <Button disabled={boolean('Disabled', false)} onClick={action('onClick')}>
+  <Button disabled={boolean('Disabled', true)} onClick={action('onClick')}>
     {text('Label', 'Default')}
   </Button>
 ));
