@@ -1,21 +1,10 @@
 import * as React from 'react';
-import { Button, SemanticCOLORS, SemanticICONS } from 'semantic-ui-react';
+import { Button, SemanticICONS, StrictButtonProps } from 'semantic-ui-react';
 import styled from 'styled-components';
 
-export interface OAuthButtonProps {
+interface OAuthButtonProps extends StrictButtonProps {
   service: SemanticICONS;
 }
-
-type Colors =
-  | SemanticCOLORS
-  | 'facebook'
-  | 'google plus'
-  | 'vk'
-  | 'twitter'
-  | 'linkedin'
-  | 'instagram'
-  | 'youtube'
-  | undefined;
 
 const ButtonOAuth = styled(({ customColor, ...rest }) => <Button {...rest} />)`
   &&& {
@@ -28,17 +17,27 @@ const ButtonOAuth = styled(({ customColor, ...rest }) => <Button {...rest} />)`
   }
 `;
 
-export const OAuthButton: React.SFC<OAuthButtonProps> = ({ service }) => {
+export const OAuthButton: React.SFC<OAuthButtonProps> = ({
+  service,
+  ...rest
+}) => {
   let customColor;
-  let color: Colors;
+  let color: StrictButtonProps['color'];
   switch (service) {
     case 'github':
       customColor = service;
       break;
     default:
-      color = service as Colors;
+      color = service as StrictButtonProps['color'];
       break;
   }
 
-  return <ButtonOAuth customColor={customColor} icon={service} color={color} />;
+  return (
+    <ButtonOAuth
+      {...rest}
+      customColor={customColor}
+      icon={service}
+      color={color}
+    />
+  );
 };

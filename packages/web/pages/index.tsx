@@ -9,7 +9,7 @@ import Page from '../layouts/main';
 import { meQuery } from '@myproject/controller';
 
 // UI
-import { LoginButton } from '@myproject/ui';
+import { LoginButton, OAuthButton } from '@myproject/ui';
 
 // Styles
 import Link from 'next/link';
@@ -31,10 +31,17 @@ export default class Index extends PureComponent {
     return response.data.me || {};
   }
 
+  public state = {
+    text: 'nixv',
+  };
+
   public render() {
     return (
       <Page>
         <div>
+          <br />
+          <span>{this.state.text}</span>
+          <br />
           <Link href="c">
             <a>C</a>
           </Link>
@@ -47,6 +54,10 @@ export default class Index extends PureComponent {
 
               return (
                 <div>
+                  <OAuthButton
+                    service="github"
+                    onClick={() => this.setState({ text: 'Button clicked' })}
+                  />
                   <LoginButton />
                   <h1>GreatGift</h1>
                   {isLoggedIn && (
