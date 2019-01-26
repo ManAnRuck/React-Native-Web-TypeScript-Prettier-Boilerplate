@@ -14,6 +14,7 @@
         "preserveConstEnums": true,
         "skipLibCheck": true,
         "baseUrl": ".",
+        "experimentalDecorators": true,
         "typeRoots": [
             "./node_modules/@types"
         ],
@@ -22,5 +23,8 @@
             "es2015",
             "es2016"
         ]
-    }
+    },
+    "exclude": [
+        "node_modules", "apollo-components.tsx"
+    ]
 }

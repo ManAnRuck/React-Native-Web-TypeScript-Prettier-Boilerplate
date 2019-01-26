@@ -1,25 +1,15 @@
-import get from 'lodash.get';
-import { PureComponent } from 'react';
-import { INextContextWithApollo } from '../types/NextContextWithApollo';
-
-// Layout
-import Page from '../layouts/main';
-
 // GraphQl
 import { meQuery } from '@myproject/controller';
-
-// UI
-import { LoginButton, OAuthButton } from '@myproject/ui';
-
-// Styles
-import Link from 'next/link';
-import { Button } from 'semantic-ui-react';
+import get from 'lodash.get';
+import { PureComponent } from 'react';
 import '../assets/styles/styles.less';
 import {
-  LogoutComponent,
   MeComponent,
   OAuthAccountsComponent,
 } from '../components/apollo-components';
+// Layout
+import Page from '../layouts/main';
+import { INextContextWithApollo } from '../types/NextContextWithApollo';
 
 export default class Index extends PureComponent {
   public static async getInitialProps({
@@ -31,20 +21,10 @@ export default class Index extends PureComponent {
     return response.data.me || {};
   }
 
-  public state = {
-    text: 'nixv',
-  };
-
   public render() {
     return (
       <Page>
         <div>
-          <br />
-          <span>{this.state.text}</span>
-          <br />
-          <Link href="c">
-            <a>C</a>
-          </Link>
           <MeComponent>
             {({ data, loading, error }) => {
               if (error) return null;
@@ -54,12 +34,7 @@ export default class Index extends PureComponent {
 
               return (
                 <div>
-                  <OAuthButton
-                    service="github"
-                    onClick={() => this.setState({ text: 'Button clicked' })}
-                  />
-                  <LoginButton />
-                  <h1>GreatGift</h1>
+                  <h1>React-Native-Web-TypeScript-Prettier-Boilerplate</h1>
                   {isLoggedIn && (
                     <li key={data!.me!.id}>
                       <div>Test 1</div>
@@ -75,36 +50,7 @@ export default class Index extends PureComponent {
                           return <div>{JSON.stringify(oData)}</div>;
                         }}
                       </OAuthAccountsComponent>
-                      <div>Test 3</div>
-                      <LogoutComponent>
-                        {(mutate, { client }) => (
-                          <div>
-                            <Button
-                              onClick={async () => {
-                                await mutate();
-                                await client.resetStore();
-                              }}
-                            >
-                              Logout
-                            </Button>
-                          </div>
-                        )}
-                      </LogoutComponent>
                     </li>
-                  )}
-                  {!isLoggedIn && (
-                    <div>
-                      <h2>Login</h2>
-                      <Link passHref href="http://localhost:4000/auth/github">
-                        <Button icon="github" />
-                      </Link>
-                      <Link passHref href="http://localhost:4000/auth/facebook">
-                        <Button icon="facebook" />
-                      </Link>
-                      <Link passHref href="http://localhost:4000/auth/twitter">
-                        <Button icon="twitter" />
-                      </Link>
-                    </div>
                   )}
                 </div>
               );

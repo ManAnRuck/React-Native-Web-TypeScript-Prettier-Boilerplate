@@ -1,17 +1,17 @@
 import get from 'lodash.get';
-import PropTypes from 'prop-types';
+import Link from 'next/link';
+import { SingletonRouter, withRouter } from 'next/router';
 import React, { Component } from 'react';
 import {
   Button,
   Container,
-  Header,
-  Icon,
   Menu,
   Responsive,
   Segment,
   Visibility,
 } from 'semantic-ui-react';
 import { LogoutComponent, MeComponent } from '../components/apollo-components';
+import { LoginButton } from '../components/auth/LoginButton';
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -24,49 +24,11 @@ const getWidth = (): number => {
     : (window.innerWidth as number);
 };
 
-/* eslint-disable react/no-multi-comp */
-/* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
- * such things.
- */
-const HomepageHeading = ({ mobile }: { mobile?: boolean }) => (
-  <Container text>
-    <Header
-      as="h1"
-      content="Imagine-a-Company"
-      inverted
-      style={{
-        fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
-      }}
-    />
-    <Header
-      as="h2"
-      content="Do whatever you want when you want to."
-      inverted
-      style={{
-        fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-      }}
-    />
-    <Button primary size="huge">
-      Get Started
-      <Icon name="arrow right" />
-    </Button>
-  </Container>
-);
-
-HomepageHeading.propTypes = {
-  mobile: PropTypes.bool,
-};
-
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
-class DesktopContainer extends Component {
+class DesktopContainer extends Component<SingletonRouter> {
   public state = {
     fixed: false,
   };
@@ -75,7 +37,7 @@ class DesktopContainer extends Component {
   public showFixedMenu = () => this.setState({ fixed: true });
 
   public render() {
-    const { children } = this.props;
+    const { children, router } = this.props;
     const { fixed } = this.state;
 
     return (
@@ -88,7 +50,7 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ padding: '1em 0em', marginBottom: '1em' }}
             vertical
           >
             <Menu
@@ -99,12 +61,19 @@ class DesktopContainer extends Component {
               size="large"
             >
               <Container>
-                <Menu.Item as="a" active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as="a">Work</Menu.Item>
-                <Menu.Item as="a">Company</Menu.Item>
-                <Menu.Item as="a">Careers</Menu.Item>
+                <Link href="/" passHref>
+                  <Menu.Item active={router!.asPath === '/'}>Home</Menu.Item>
+                </Link>
+                <Link href="/work" passHref>
+                  <Menu.Item active={router!.asPath === '/work'}>
+                    Work
+                  </Menu.Item>
+                </Link>
+                <Link href="/company" passHref>
+                  <Menu.Item active={router!.asPath === '/company'}>
+                    Company
+                  </Menu.Item>
+                </Link>
                 <MeComponent>
                   {({ data }) => {
                     const isLoggedIn = !!get(data, 'me', false);
@@ -128,19 +97,24 @@ class DesktopContainer extends Component {
                         </LogoutComponent>
                       );
                     }
+
+                    return (
+                      <Menu.Item position="right">
+                        <LoginButton />
+                      </Menu.Item>
+                    );
+
                     return null;
                   }}
                 </MeComponent>
               </Container>
             </Menu>
-            <HomepageHeading />
           </Segment>
         </Visibility>
-
-        {children}
+        <Container>{children}</Container>
       </Responsive>
     );
   }
 }
 
-export default DesktopContainer;
+export default withRouter<any>(DesktopContainer);

@@ -12,6 +12,11 @@ const nextConfig = {
 		config.resolve.alias = {
 			'../../theme.config$': path.resolve('./assets/styles/theme.config'),
 		};
+
+		config.resolve = Object.assign({}, config.resolve, {
+			modules: [path.resolve(__dirname, 'node_modules'), 'node_modules'],
+		  });
+
 		config.module.rules.push(
 		{
 			test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/,
