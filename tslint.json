@@ -10,5 +10,8 @@
         "import-name": false,
         "no-submodule-imports": false,
         "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
+    },
+    "linterOptions": {
+        "exclude": ["node_modules/**"]
     }
 }

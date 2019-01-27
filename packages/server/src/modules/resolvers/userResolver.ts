@@ -22,7 +22,9 @@ export default class UserResolver {
   ) {
     const { userId } = ctx.req.session!;
 
-    return userId ? User.findOne(userId, { relations: ['oAuthUsers'] }) : null;
+    return userId
+      ? User.findOne(userId, { relations: ['oAuthUsers', 'wishlists'] })
+      : null;
   }
 
   @Mutation(() => Boolean)
