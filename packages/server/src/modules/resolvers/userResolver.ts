@@ -11,6 +11,7 @@ import { IMyContext } from '../../types/MyContext';
 export default class UserResolver {
   @Query(() => [User])
   public async users(@Info() info: GraphQLResolveInfo) {
+    // tslint:disable-next-line:no-console
     console.log('INFO', info.fieldNodes[0].selectionSet!.selections);
     return User.find({ relations: ['oAuthUsers'] });
   }
@@ -34,6 +35,7 @@ export default class UserResolver {
   ) {
     return new Promise(res =>
       ctx.req.session!.destroy(err => {
+        // tslint:disable-next-line:no-console
         console.log(err);
         ctx.res.clearCookie('qid');
         res(!!err);
