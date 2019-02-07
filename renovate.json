@@ -1,2 +1,12 @@
 {
+  "packageRules": [
+    {
+      "paths": [
+        "packages/**"
+      ],
+      "extends": [
+        ":semanticCommitTypeAll(chore)"
+      ]
+    }
+  ]
 }
