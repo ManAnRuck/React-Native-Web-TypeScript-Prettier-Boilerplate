@@ -3712,10 +3712,10 @@
     "@types/react" "*"
     "@types/webpack" "*"
 
-"@types/react-native@0.57.26":
-  version "0.57.26"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.26.tgz#d0a737d8a2b201d0aac84284c6a001793debc166"
-  integrity sha512-MX+JCT2xwpkanLNjYb5V/TKJE0pj5HHEpgseiCNsxm9txjUdg5X59LZM3CHY1hn53qSssAEQYZYfXHjzRmkFQQ==
+"@types/react-native@0.57.34":
+  version "0.57.34"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.34.tgz#f15873386c4eab3accb536c49cef594634c0eafb"
+  integrity sha512-jWcxUHZjDmBjXuEVx0MmangkFiWmaQsOVJEmEpTNp55ML+OalEwGNSB8p88kq+SPLVhwOABrbIOcawo5N3qJPw==
   dependencies:
     "@types/prop-types" "*"
     "@types/react" "*"
