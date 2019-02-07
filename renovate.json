@@ -6,8 +6,13 @@
     "monorepo:apollolink",
     "monorepo:apolloclient"
   ],
+  "prConcurrentLimit": 0,
   "packageRules": [
     {
+      "prConcurrentLimit": 0
+    },
+    {
+      "prConcurrentLimit": 0,
       "branchPrefix": "renovate/app-",
       "paths": [
         "packages/app/package.json"
@@ -16,9 +21,14 @@
         "app",
         "Renovate"
       ],
-      "ignoreDeps": ["react-test-renderer", "react", "@​types/react"]
+      "ignoreDeps": [
+        "react-test-renderer",
+        "react",
+        "@​types/react"
+      ]
     },
     {
+      "prConcurrentLimit": 0,
       "branchPrefix": "renovate/common-",
       "paths": [
         "packages/common/package.json"
@@ -29,6 +39,7 @@
       ]
     },
     {
+      "prConcurrentLimit": 0,
       "branchPrefix": "renovate/controller-",
       "paths": [
         "packages/controller/package.json"
@@ -39,6 +50,7 @@
       ]
     },
     {
+      "prConcurrentLimit": 0,
       "branchPrefix": "renovate/server-",
       "paths": [
         "packages/server/package.json"
@@ -49,6 +61,7 @@
       ]
     },
     {
+      "prConcurrentLimit": 0,
       "branchPrefix": "renovate/ui-",
       "paths": [
         "packages/ui/package.json"
@@ -59,6 +72,7 @@
       ]
     },
     {
+      "prConcurrentLimit": 0,
       "branchPrefix": "renovate/web-",
       "paths": [
         "packages/web/package.json"
