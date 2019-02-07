@@ -2,9 +2,6 @@
   "extends": [
     "config:base"
   ],
-  "labels": [
-    "test"
-  ],
   "packageRules": [
     {
       "branchPrefix": "renovate/app-",
