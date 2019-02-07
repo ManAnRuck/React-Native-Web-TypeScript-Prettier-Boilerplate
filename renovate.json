@@ -1,54 +1,66 @@
 {
   "labels": [
-    "Renovate"
+    "test"
   ],
   "packageRules": [
     {
+      "branchPrefix": "renovate/app-",
       "paths": [
         "packages/app/package.json"
       ],
       "labels": [
-        "app"
+        "app",
+        "Renovate"
       ]
     },
     {
+      "branchPrefix": "renovate/common-",
       "paths": [
         "packages/common/package.json"
       ],
       "labels": [
-        "common"
+        "common",
+        "Renovate"
       ]
     },
     {
+      "branchPrefix": "renovate/controller-",
       "paths": [
         "packages/controller/package.json"
       ],
       "labels": [
-        "controller"
+        "controller",
+        "Renovate"
       ]
     },
     {
+      "branchPrefix": "renovate/server-",
       "paths": [
         "packages/server/package.json"
       ],
       "labels": [
-        "server"
+        "server",
+        "Renovate"
       ]
     },
     {
+      "branchPrefix": "renovate/ui-",
       "paths": [
         "packages/ui/package.json"
       ],
       "labels": [
-        "ui"
+        "ui",
+        "Renovate"
       ]
     },
     {
+      "branchPrefix": "renovate/web-",
       "paths": [
         "packages/web/package.json"
       ],
       "labels": [
-        "web"
+        "web",
+        "Renovate"
       ]
     }
   ]
