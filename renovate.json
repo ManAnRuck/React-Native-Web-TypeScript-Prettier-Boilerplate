@@ -1,6 +1,11 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    "monorepo:react",
+    "monorepo:storybook",
+    "monorepo:graphqlcodegenerator",
+    "monorepo:apollolink",
+    "monorepo:apolloclient"
   ],
   "packageRules": [
     {
