@@ -28,7 +28,7 @@
     "@types/react-native": "0.57.26",
     "babel-jest": "23.6.0",
     "babel-preset-react-native": "5.0.2",
-    "jest": "23.6.0",
+    "jest": "24.1.0",
     "metro-react-native-babel-preset": "0.51.1",
     "prettier": "1.16.4",
     "react-native-typescript-transformer": "1.2.11",
