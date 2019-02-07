@@ -9,8 +9,6 @@
         "lint": "tslint --project tsconfig.json && yarn typecheck",
         "typecheck": "tsc --noEmit",
         "pre-commit": "yarn lint && yarn typecheck",
-        "fix-babel-core": "yarn add @babel/core --dev",
-        "fix": "yarn fix-babel-core",
         "generate": "gql-gen"
     },
     "dependencies": {
