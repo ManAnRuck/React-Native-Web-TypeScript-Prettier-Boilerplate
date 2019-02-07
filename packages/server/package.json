@@ -45,7 +45,7 @@
     "@types/passport": "0.4.7",
     "@types/passport-oauth2": "1.4.8",
     "@types/passport-twitter": "1.0.34",
-    "prettier": "1.15.3",
+    "prettier": "1.16.4",
     "ts-node": "7.0.1",
     "ts-node-dev": "1.0.0-pre.32",
     "tslint": "5.12.0",
