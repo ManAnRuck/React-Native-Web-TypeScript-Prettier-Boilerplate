@@ -16,7 +16,7 @@
     "gen:types": "npm run schema:download && npm run codegen:generate"
   },
   "devDependencies": {
-    "@types/node": "10.12.18",
+    "@types/node": "10.12.21",
     "@types/react": "16.7.18",
     "apollo": "2.1.9",
     "prettier": "1.15.3",
