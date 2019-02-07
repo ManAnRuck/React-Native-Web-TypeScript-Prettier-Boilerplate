@@ -1,11 +1,54 @@
 {
+  "labels": [
+    "Renovate"
+  ],
   "packageRules": [
     {
       "paths": [
-        "packages/**"
+        "packages/app/package.json"
       ],
-      "extends": [
-        ":semanticCommitTypeAll(chore)"
+      "labels": [
+        "app"
+      ]
+    },
+    {
+      "paths": [
+        "packages/common/package.json"
+      ],
+      "labels": [
+        "common"
+      ]
+    },
+    {
+      "paths": [
+        "packages/controller/package.json"
+      ],
+      "labels": [
+        "controller"
+      ]
+    },
+    {
+      "paths": [
+        "packages/server/package.json"
+      ],
+      "labels": [
+        "server"
+      ]
+    },
+    {
+      "paths": [
+        "packages/ui/package.json"
+      ],
+      "labels": [
+        "ui"
+      ]
+    },
+    {
+      "paths": [
+        "packages/web/package.json"
+      ],
+      "labels": [
+        "web"
       ]
     }
   ]
