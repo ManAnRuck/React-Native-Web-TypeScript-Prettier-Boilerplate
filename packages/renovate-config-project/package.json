@@ -1,0 +1,15 @@
+{
+  "name": "renovate-config-project",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "renovate-config": {
+    "jest": {
+      "description": "jest monorepo",
+      "packageNames": [
+        "jest",
+        "babel-jest"
+      ]
+    }
+  }
+}
