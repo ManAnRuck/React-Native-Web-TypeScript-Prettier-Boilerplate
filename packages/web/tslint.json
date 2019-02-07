@@ -13,6 +13,11 @@
         "prettier": true
     },
     "exclude": [
-        "node_modules", ".next"
-    ]
+        "node_modules", ".next", "components/apollo-components.tsx"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "components/apollo-components.tsx"
+        ]
+    }
 }

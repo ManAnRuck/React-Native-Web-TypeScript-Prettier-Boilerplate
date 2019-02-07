@@ -10,9 +10,9 @@
         "tslint-plugin-prettier"
     ],
     "rules": {
-        "prettier": true
-    },
-    "exclude": [
-        "node_modules", "dist"
-    ]
+        "prettier": true,
+        "object-literal-sort-keys": false,
+        "no-var-requires": false,
+        "interface-name": false
+    }
 }

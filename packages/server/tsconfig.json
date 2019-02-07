@@ -1,11 +1,10 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "target": "es6",
+        "target": "es2016",
         "module": "commonjs",
         "lib": [
             "dom",
-            "es6",
             "es2017",
             "esnext.asynciterable"
         ],
@@ -14,6 +13,7 @@
         "removeComments": true,
         "noImplicitAny": true,
         "strictNullChecks": true,
+        "strictPropertyInitialization": false,
         "strictFunctionTypes": true,
         "noImplicitThis": true,
         "noUnusedLocals": true,
@@ -23,10 +23,10 @@
         "allowSyntheticDefaultImports": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "baseUrl": "..",
+        "baseUrl": ".",
         "paths": {
-            "@abb/*": [
-                "./*/src"
+            "*": [
+                "src/types/*"
             ]
         }
     },
