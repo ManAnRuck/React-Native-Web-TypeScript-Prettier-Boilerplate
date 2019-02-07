@@ -9,9 +9,6 @@
   "prConcurrentLimit": 0,
   "packageRules": [
     {
-      "prConcurrentLimit": 0
-    },
-    {
       "prConcurrentLimit": 0,
       "branchPrefix": "renovate/app-",
       "paths": [
