@@ -5,6 +5,6 @@
         "../ui/**/*"
     ],
     "execMap": {
-        "ts": "ts-node --compilerOptions '{\"module\":\"commonjs\"}'"
+        "ts": "ts-node"
     }
 }
