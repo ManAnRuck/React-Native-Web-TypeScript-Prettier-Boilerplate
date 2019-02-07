@@ -2,16 +2,34 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: BookListQuery
+// GraphQL query operation: MeQuery
 // ====================================================
 
-export interface BookListQuery_books {
-  title: string | null;
-  author: string | null;
+export interface MeQuery_me {
+  __typename: "User";
+  id: string;
+  username: string;
 }
 
-export interface BookListQuery {
-  books: (BookListQuery_books | null)[] | null;
+export interface MeQuery {
+  me: MeQuery_me | null;
+}
+
+/* tslint:disable */
+// This file was automatically generated and should not be edited.
+
+// ====================================================
+// GraphQL query operation: UserListQuery
+// ====================================================
+
+export interface UserListQuery_users {
+  __typename: "User";
+  id: string;
+  username: string;
+}
+
+export interface UserListQuery {
+  users: UserListQuery_users[];
 }
 
 /* tslint:disable */

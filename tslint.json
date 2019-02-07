@@ -9,6 +9,10 @@
         "no-boolean-literal-compare": true,
         "import-name": false,
         "no-submodule-imports": false,
-        "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
+        "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+        "no-console": false
+    },
+    "linterOptions": {
+        "exclude": ["node_modules/**", "apollo-components.tsx", "dist", ".next"]
     }
 }

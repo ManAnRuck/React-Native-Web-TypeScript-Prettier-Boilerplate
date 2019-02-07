@@ -1,0 +1,5 @@
+{
+    "plugins": [
+      "@quickbaseoss/babel-plugin-styled-components-css-namespace"
+    ]
+  }

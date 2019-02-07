@@ -11,8 +11,8 @@
     "lint": "tslint --project tsconfig.json && yarn typecheck",
     "typecheck": "tsc --noEmit",
     "pre-commit": "yarn lint && yarn typecheck",
-    "schema:download": "apollo schema:download --endpoint=http://localhost:4000/",
-    "codegen:generate": "apollo codegen:generate --queries='./src/**/*.tsx' --schema=./schema.json --target=typescript --outputFlat ./src/schemaTypes.ts",
+    "schema:download": "apollo service:download",
+    "codegen:generate": "apollo client:codegen --target=typescript --outputFlat='./src/schemaTypes.ts'",
     "gen:types": "npm run schema:download && npm run codegen:generate"
   },
   "devDependencies": {
