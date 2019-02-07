@@ -24,7 +24,7 @@
     },
     "name": "app",
     "devDependencies": {
-        "lerna": "3.9.0",
+        "lerna": "3.10.8",
         "tslint": "5.12.0"
     }
 }
