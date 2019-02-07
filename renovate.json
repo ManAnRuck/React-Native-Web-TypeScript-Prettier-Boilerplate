@@ -47,17 +47,7 @@
         "server",
         "Renovate"
       ]
-    },
-    {
-      "branchPrefix": "renovate/ui-",
-      "paths": [
-        "packages/ui/package.json"
-      ],
-      "labels": [
-        "ui",
-        "Renovate"
-      ]
-    },
+    }
     {
       "branchPrefix": "renovate/web-",
       "paths": [
