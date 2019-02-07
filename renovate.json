@@ -15,7 +15,8 @@
       "labels": [
         "app",
         "Renovate"
-      ]
+      ],
+      "ignoreDeps": ["react-test-renderer", "react", "@​types/react"]
     },
     {
       "branchPrefix": "renovate/common-",
