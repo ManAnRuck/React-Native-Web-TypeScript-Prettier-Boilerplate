@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/node": "10.12.21",
     "@types/react": "16.7.18",
-    "apollo": "2.1.9",
+    "apollo": "2.4.4",
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
     "tslint": "5.12.0",
