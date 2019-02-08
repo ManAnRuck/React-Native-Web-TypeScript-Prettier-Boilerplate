@@ -20,7 +20,7 @@
     {
       "packageNames": [
         "react",
-        "@​types/react",
+        "@types/react",
         "react-dom"
       ],
       "groupName": "react packages"
