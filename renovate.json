@@ -5,7 +5,7 @@
     "monorepo:graphqlcodegenerator",
     "monorepo:apollolink",
     "monorepo:apolloclient",
-    "project:jest"
+    "github>ReggaePanda/renovate-config-brm"
   ],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
