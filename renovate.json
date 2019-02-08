@@ -5,11 +5,18 @@
     "monorepo:graphqlcodegenerator",
     "monorepo:apollolink",
     "monorepo:apolloclient",
-    "github>ReggaePanda/renovate-config-brm"
   ],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "packageRules": [
+    {
+        "packageNames": [
+            "jest",
+            "babel-jest",
+            "@types/jest"
+        ],
+        "groupName": "jest packages"
+    },
     {
       "branchPrefix": "renovate/app-",
       "paths": [
