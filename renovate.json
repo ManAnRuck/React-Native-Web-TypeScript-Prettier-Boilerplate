@@ -4,7 +4,7 @@
     "monorepo:storybook",
     "monorepo:graphqlcodegenerator",
     "monorepo:apollolink",
-    "monorepo:apolloclient",
+    "monorepo:apolloclient"
   ],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
