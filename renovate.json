@@ -10,12 +10,20 @@
   "prConcurrentLimit": 0,
   "packageRules": [
     {
-        "packageNames": [
-            "jest",
-            "babel-jest",
-            "@types/jest"
-        ],
-        "groupName": "jest packages"
+      "packageNames": [
+        "jest",
+        "babel-jest",
+        "@types/jest"
+      ],
+      "groupName": "jest packages"
+    },
+    {
+      "packageNames": [
+        "react",
+        "@​types/react",
+        "react-dom"
+      ],
+      "groupName": "react packages"
     },
     {
       "branchPrefix": "renovate/app-",
