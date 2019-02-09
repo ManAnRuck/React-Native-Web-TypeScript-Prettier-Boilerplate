@@ -16,8 +16,8 @@
     "gen:types": "npm run schema:download && npm run codegen:generate"
   },
   "devDependencies": {
-    "@types/node": "10.12.21",
-    "@types/react": "16.7.18",
+    "@types/node": "10.12.24",
+    "@types/react": "16.8.2",
     "apollo": "2.4.4",
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
@@ -29,11 +29,11 @@
     "typescript": "3.3.3"
   },
   "dependencies": {
-    "@types/react-dom": "^16.0.9",
+    "@types/react-dom": "^16.8.0",
+    "graphql-tag": "^2.10.1",
     "graphql": "^14.0.2",
-    "graphql-tag": "^2.10.0",
-    "react": "^16.5.2",
-    "react-apollo": "^2.2.4",
-    "react-dom": "^16.5.2"
+    "react": "^16.8.1",
+    "react-apollo": "^2.4.1",
+    "react-dom": "^16.8.1"
   }
 }
