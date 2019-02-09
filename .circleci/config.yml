@@ -4,6 +4,7 @@
 #
 version: 2
 jobs:
+
   test:
 
     docker:
@@ -97,10 +98,3 @@ jobs:
 
       # run test!
       - run: yarn test
-
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - test
-      - build
