@@ -9,7 +9,9 @@
         "lint": "tslint --project tsconfig.json && yarn typecheck",
         "typecheck": "tsc --noEmit",
         "pre-commit": "yarn lint && yarn typecheck",
-        "generate": "gql-gen"
+        "generate": "gql-gen",
+        "cy": "cypress open",
+        "cy:run": "cypress run"
     },
     "dependencies": {
         "@myproject/common": "1.0.0",
@@ -46,6 +48,7 @@
         "@types/styled-components": "4.1.8",
         "@zeit/next-less": "1.0.1",
         "babel-plugin-styled-components": "1.10.0",
+        "cypress": "^3.1.5",
         "file-loader": "3.0.1",
         "graphql-code-generator": "0.16.1",
         "graphql-codegen-typescript-client": "0.16.1",
@@ -61,5 +64,6 @@
         "tslint-plugin-prettier": "2.0.1",
         "typescript": "3.3.3",
         "url-loader": "1.1.2"
-    }
+    },
+    "bundledDependencies":["@myproject/server"]
 }

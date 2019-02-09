@@ -17,7 +17,7 @@ TypeORM.useContainer(Container);
 export default async () => {
   // build TypeGraphQL executable schema
   const schema = await TypeGraphQL.buildSchema({
-    resolvers: [`${__dirname}/../modules/**/!(*.test).ts`],
+    resolvers: [`${__dirname}/../modules/**/!(*.test).*`],
   });
 
   const server = new ApolloServer({
