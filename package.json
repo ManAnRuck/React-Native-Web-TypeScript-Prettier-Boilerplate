@@ -22,9 +22,9 @@
         "yarn:remove-node-modules": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
         "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install",
         "serve": "lerna run serve",
-        "start:test": "start-test serve 3000 test",
         "test:web": "yarn --cwd packages/web cy:run",
-        "test": "yarn test:web"
+        "test": "start-test serve 3000 test:all",
+        "test:all": "yarn test:web"
     },
     "name": "app",
     "devDependencies": {
