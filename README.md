@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/ReggaePanda/React-Native-Web-TypeScript-Prettier-Boilerplate.svg?style=svg)](https://circleci.com/gh/ReggaePanda/React-Native-Web-TypeScript-Prettier-Boilerplate)
+
 # React-Native-Web-TypeScript-Prettier-Boilerplate
 
 ## Installation
