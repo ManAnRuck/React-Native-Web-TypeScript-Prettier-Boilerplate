@@ -2,7 +2,12 @@
     "private": true,
     "workspaces": {
         "packages": [
-            "packages/*"
+            "packages/common",
+            "packages/server",
+            "packages/controller",
+            "packages/app",
+            "packages/ui",
+            "packages/web"
         ],
         "nohoist": [
             "**/react-native",
@@ -21,15 +26,17 @@
         "pre-commit": "lerna run --parallel pre-commit",
         "yarn:remove-node-modules": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
         "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install",
-        "serve": "lerna run serve",
+        "start:server": "yarn --cwd packages/server start & wait-on tcp:4000",
+        "start:web": "yarn --cwd packages/web start & wait-on http://localhost:3000",
+        "start": "yarn start:server && yarn start:web",
         "test:web": "yarn --cwd packages/web cy:run",
-        "test": "start-test serve 3000 test:all",
+        "test": "yarn start && yarn test:all",
         "test:all": "yarn test:web"
     },
     "name": "app",
     "devDependencies": {
         "lerna": "3.11.0",
-        "start-server-and-test": "^1.7.11",
-        "tslint": "5.12.1"
+        "tslint": "5.12.1",
+        "wait-on": "^3.2.0"
     }
 }
