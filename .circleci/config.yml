@@ -4,10 +4,17 @@
 #
 version: 2
 jobs:
-  build:
+  rest:
+
     docker:
       # specify the version you desire here
-      - image: circleci/node:11.6.0
+      - image: cypress/base:10
+
+      # PostgreSql
+      - image: circleci/postgres:9.6.2-alpine
+        environment:
+          POSTGRES_USER: manuelruck
+          POSTGRES_DB: myproject
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -28,6 +35,7 @@ jobs:
 
       - run: yarn install
 
+
       - save_cache:
           paths:
             - node_modules
@@ -36,5 +44,8 @@ jobs:
       # run build!
       - run: yarn build
 
-      # run tests!
+      # run lint!
       - run: yarn lint
+
+      # run test!
+      - run: yarn test
