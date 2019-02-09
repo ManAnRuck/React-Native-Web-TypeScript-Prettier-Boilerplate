@@ -41,7 +41,7 @@
     "@types/connect-redis": "0.0.8",
     "@types/express-session": "1.15.11",
     "@types/ioredis": "4.0.6",
-    "@types/node": "10.12.21",
+    "@types/node": "10.12.24",
     "@types/passport": "1.0.0",
     "@types/passport-oauth2": "1.4.8",
     "@types/passport-twitter": "1.0.34",
