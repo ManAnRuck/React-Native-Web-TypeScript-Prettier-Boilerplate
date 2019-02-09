@@ -34,8 +34,11 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
+              
+      - cypress/run
 
       - run: yarn install
+
 
       - save_cache:
           paths:
@@ -47,10 +50,6 @@ jobs:
 
       # run lint!
       - run: yarn lint
-
-      - cypress/install:
-          # and builds the app using this command
-          build: 'npm run build'
 
       # run test!
       - run: yarn test
