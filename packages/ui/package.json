@@ -6,6 +6,8 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "dev": "start-storybook -p 9001 -c .storybook",
+        "typecheck": "tsc --noEmit",
+        "lint": "tslint --project tsconfig.json && yarn typecheck",
         "build": "rimraf dist && tsc"
     },
     "dependencies": {
