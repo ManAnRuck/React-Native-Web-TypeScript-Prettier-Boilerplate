@@ -21,7 +21,7 @@ export default class UserResolver {
     @Ctx()
     ctx: IMyContext,
   ) {
-    const { userId } = ctx.req.session!;
+    const { userId } = ctx.req.session ? ctx.req.session : { userId: null };
 
     return userId ? User.findOne(userId, { relations: ['oAuthUsers'] }) : null;
   }
