@@ -19,7 +19,9 @@
         "lint": "lerna run --parallel lint",
         "build": "lerna run build",
         "start": "yarn --cwd packages/web start",
-        "pre-commit": "lerna run --parallel pre-commit"
+        "pre-commit": "lerna run --parallel pre-commit",
+        "yarn:remove-node-modules": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
+        "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install"
     },
     "name": "app",
     "devDependencies": {
