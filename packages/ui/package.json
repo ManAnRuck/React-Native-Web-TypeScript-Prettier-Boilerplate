@@ -5,7 +5,7 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "dev": "start-storybook -p 9001 -c .storybook",
+        "dev": "start-storybook --ci -p 9001 -c .storybook",
         "build": "rimraf dist && tsc"
     },
     "dependencies": {
