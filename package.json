@@ -18,14 +18,18 @@
         "dev": "yarn --cwd packages/common build && lerna run --parallel dev",
         "lint": "lerna run --parallel lint",
         "build": "lerna run build",
-        "start": "yarn --cwd packages/web start",
         "pre-commit": "lerna run --parallel pre-commit",
         "yarn:remove-node-modules": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
-        "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install"
+        "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install",
+        "serve": "lerna run serve",
+        "start:test": "start-test serve 3000 test",
+        "test:web": "yarn --cwd packages/web cy:run",
+        "test": "yarn test:web"
     },
     "name": "app",
     "devDependencies": {
         "lerna": "3.11.0",
+        "start-server-and-test": "^1.7.11",
         "tslint": "5.12.1"
     }
 }
