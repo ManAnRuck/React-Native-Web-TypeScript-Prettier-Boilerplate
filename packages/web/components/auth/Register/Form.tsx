@@ -1,7 +1,8 @@
+import { registerValidationSchema } from '@myproject/common';
 import { InputField } from '@myproject/ui';
 import { Field, FormikErrors, FormikProps, withFormik } from 'formik';
 import * as React from 'react';
-import { Button, Form, Message } from 'semantic-ui-react';
+import { Button, Form } from 'semantic-ui-react';
 
 export interface FormValues {
   email: string;
@@ -22,27 +23,15 @@ class C extends React.PureComponent<FormikProps<FormValues> & Props> {
         error={!!errors}
         data-testid="register-form"
       >
-        <Message
-          error
-          header={'asdf'}
-          content="You can only sign up for an account once with a given e-mail address."
-        />
-        <Field
-          name="input"
-          label="E-Mail"
-          required
-          component={InputField}
-          form={{ touched: false, errors: { input: 'FEHLER' } }}
-        />
+        <Field name="email" label="E-Mail" required component={InputField} />
         <Field
           name="password"
           label="Passwort"
           required
           component={InputField}
-          form={{ touched: false, errors: { input: 'FEHLER' } }}
         />
         <Form.Field required>
-          <Button type="submit">Add</Button>
+          <Button type="submit">LogIn / Register</Button>
         </Form.Field>
       </Form>
     );
@@ -50,6 +39,7 @@ class C extends React.PureComponent<FormikProps<FormValues> & Props> {
 }
 
 export const RegisterForm = withFormik<Props, FormValues>({
+  validationSchema: registerValidationSchema,
   mapPropsToValues: () => ({ email: '', password: '' }),
   handleSubmit: async (values, { props, setErrors }) => {
     const errors = await props.submit(values);

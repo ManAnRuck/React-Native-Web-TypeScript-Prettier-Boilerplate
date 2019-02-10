@@ -12,14 +12,16 @@ export const InputField: React.SFC<
   placeholder,
   ...props
 }) => {
+  console.log({ touched });
+  const errorMsg = touched[field.name] && errors[field.name];
+
   return (
-    <Form.Field
-      required={required}
-      error={touched[field.name] && !!errors[field.name]}
-    >
+    <Form.Field required={required} error={!!errorMsg}>
       {label && <label>{label}</label>}
       <input placeholder={placeholder || label} {...field} {...props} />
-      <Message error content={errors[field.name]} />
+      {errorMsg && (
+        <Message error={!!errorMsg} content={errorMsg ? errorMsg : false} />
+      )}
     </Form.Field>
   );
 };
