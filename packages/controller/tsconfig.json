@@ -1,8 +1,8 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
+        "target": "ES5",
+        "module": "CommonJS",
         "declaration": true,
         "lib": [
             "dom",
@@ -17,6 +17,7 @@
         "noImplicitAny": true,
         "strictNullChecks": true,
         "strictFunctionTypes": true,
+        "skipLibCheck": true,
         "noImplicitThis": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
@@ -33,7 +34,7 @@
         }
     },
     "exclude": [
-        "node_modules"
+        "./node_modules"
     ],
     "include": [
         "./src/**/*.tsx",

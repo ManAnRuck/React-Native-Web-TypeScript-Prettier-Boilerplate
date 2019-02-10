@@ -1,13 +1,11 @@
-import { boolean, text } from '@storybook/addon-knobs';
+import { InputField } from '@myproject/ui';
 import { Field, FormikErrors, FormikProps, withFormik } from 'formik';
 import * as React from 'react';
 import { Button, Form, Message } from 'semantic-ui-react';
-import { InputField } from './InputField';
-import { TextAreaField } from './TextareaField';
 
 export interface FormValues {
-  title: string;
-  description: string;
+  email: string;
+  password: string;
 }
 
 export interface Props {
@@ -21,7 +19,8 @@ class C extends React.PureComponent<FormikProps<FormValues> & Props> {
     return (
       <Form
         onSubmit={handleSubmit}
-        error={boolean('show errors', false, 'Form')}
+        error={!!errors}
+        data-testid="register-form"
       >
         <Message
           error
@@ -30,21 +29,17 @@ class C extends React.PureComponent<FormikProps<FormValues> & Props> {
         />
         <Field
           name="input"
-          label={text('(input)label', 'Title', 'Input')}
-          required={boolean('(input)required', false, 'Input')}
-          placeholder={text('(input)placeholder', '', 'Input')}
+          label="E-Mail"
+          required
           component={InputField}
           form={{ touched: false, errors: { input: 'FEHLER' } }}
         />
         <Field
-          name="textarea"
-          label={text('(textarea)label', 'Description', 'TextArea')}
-          placeholder={text(
-            '(textarea)placeholder',
-            'Tell us more about your party…',
-            'TextArea',
-          )}
-          component={TextAreaField}
+          name="password"
+          label="Passwort"
+          required
+          component={InputField}
+          form={{ touched: false, errors: { input: 'FEHLER' } }}
         />
         <Form.Field required>
           <Button type="submit">Add</Button>
@@ -54,8 +49,8 @@ class C extends React.PureComponent<FormikProps<FormValues> & Props> {
   }
 }
 
-export const FormExample = withFormik<Props, FormValues>({
-  mapPropsToValues: () => ({ title: '', description: '' }),
+export const RegisterForm = withFormik<Props, FormValues>({
+  mapPropsToValues: () => ({ email: '', password: '' }),
   handleSubmit: async (values, { props, setErrors }) => {
     const errors = await props.submit(values);
     if (errors) {
