@@ -1,8 +1,10 @@
 import * as React from 'react';
 
 interface Props {
-    children: (data: { submit: (values: any) => Promise<null>}) => JSX.Element | null
- }
+  children: (data: {
+    submit: (values: any) => Promise<null>;
+  }) => JSX.Element | null;
+}
 
 interface FormValues {
   email: string;
@@ -16,6 +18,6 @@ export class RegisterController extends React.PureComponent<Props> {
   };
 
   public render() {
-    return this.props.children({ submit: this.handleSubmit })
+    return this.props.children({ submit: this.handleSubmit });
   }
 }
