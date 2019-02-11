@@ -34,6 +34,8 @@ export default class RegisterResolver {
     localUser.user = user;
     await localUser.save();
 
+    ctx.req.session!.userId = user.id;
+
     return user;
   }
 }

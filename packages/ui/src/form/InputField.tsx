@@ -12,7 +12,6 @@ export const InputField: React.SFC<
   placeholder,
   ...props
 }) => {
-  console.log({ touched });
   const errorMsg = touched[field.name] && errors[field.name];
 
   return (

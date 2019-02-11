@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { RegisterComponent } from '../apollo-components';
+import { RegisterComponent, UsersProps } from '../apollo-components';
 
 interface Props {
   children: (data: {
     submit: (values: any) => Promise<null>;
   }) => JSX.Element | null;
+  succeded: (user: UsersProps) => Promise<null>;
 }
 
 interface FormValues {
@@ -13,16 +14,25 @@ interface FormValues {
 }
 
 export class RegisterController extends React.PureComponent<Props> {
-  public handleSubmit = async (values: FormValues) => {
-    console.log('values', values);
-    return null;
-  };
-
   public render() {
     return (
       <RegisterComponent>
-        {() => {
-          return this.props.children({ submit: this.handleSubmit });
+        {mutation => {
+          const submit = async (values: FormValues) => {
+            const user = await mutation({
+              variables: {
+                email: values.email,
+                password: values.password,
+              },
+            });
+
+            if (user) {
+              this.props.succeded(user);
+            }
+            return null;
+          };
+
+          return this.props.children({ submit });
         }}
       </RegisterComponent>
     );

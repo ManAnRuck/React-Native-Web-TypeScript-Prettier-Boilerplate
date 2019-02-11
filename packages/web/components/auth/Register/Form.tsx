@@ -16,7 +16,6 @@ export interface Props {
 class C extends React.PureComponent<FormikProps<FormValues> & Props> {
   public render() {
     const { handleSubmit, errors } = this.props;
-    console.log({ errors });
     return (
       <Form
         onSubmit={handleSubmit}

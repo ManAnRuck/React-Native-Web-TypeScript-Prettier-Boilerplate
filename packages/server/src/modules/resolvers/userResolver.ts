@@ -1,18 +1,15 @@
-import { Ctx, Info, Mutation, Query, Resolver } from 'type-graphql';
+import { Ctx, Mutation, Query, Resolver } from 'type-graphql';
 
 // Models
 import User from '../../entity/User';
 
 // Typescript
-import { GraphQLResolveInfo } from 'graphql';
 import { IMyContext } from '../../types/MyContext';
 
 @Resolver(() => User)
 export default class UserResolver {
   @Query(() => [User])
-  public async users(@Info() info: GraphQLResolveInfo) {
-    // tslint:disable-next-line:no-console
-    console.log('INFO', info.fieldNodes[0].selectionSet!.selections);
+  public async users() {
     return User.find({ relations: ['oAuthUsers'] });
   }
 

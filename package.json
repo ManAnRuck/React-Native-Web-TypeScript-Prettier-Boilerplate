@@ -20,9 +20,12 @@
         ]
     },
     "scripts": {
-        "dev": "yarn --cwd packages/common build && lerna run --parallel dev",
-        "lint": "lerna run --parallel lint",
+        "dev": "yarn build:common && yarn build:controller && yarn build:ui && lerna run --parallel dev",
+        "build:common": "yarn --cwd packages/common build",
+        "build:controller": "yarn --cwd packages/controller build",
+        "build:ui": "yarn --cwd packages/ui build",
         "build": "lerna run build",
+        "lint": "lerna run --parallel lint",
         "pre-commit": "lerna run --parallel pre-commit",
         "yarn:remove-node-modules": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
         "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install",
