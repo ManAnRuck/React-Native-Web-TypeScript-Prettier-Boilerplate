@@ -6,6 +6,7 @@
 
 /// <reference types="passport"/>
 
+import passport = require('passport');
 import { Strategy as PassportStrategy } from "passport-strategy";
 import express = require("express");
 

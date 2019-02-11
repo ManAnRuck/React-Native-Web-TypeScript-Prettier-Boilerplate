@@ -12,6 +12,25 @@ export type LogoutMutation = {
   logout: boolean;
 };
 
+export type RegisterVariables = {
+  email: string;
+  password: string;
+};
+
+export type RegisterMutation = {
+  __typename?: 'Mutation';
+
+  register: RegisterRegister;
+};
+
+export type RegisterRegister = {
+  __typename?: 'User';
+
+  id: string;
+
+  username: string;
+};
+
 export type MeVariables = {};
 
 export type MeQuery = {
@@ -50,6 +69,22 @@ export type OAuthAccountsOAuthUsers = {
   id: string;
 
   service: string;
+};
+
+export type UsersVariables = {};
+
+export type UsersQuery = {
+  __typename?: 'Query';
+
+  users: UsersUsers[];
+};
+
+export type UsersUsers = {
+  __typename?: 'User';
+
+  id: string;
+
+  username: string;
 };
 
 import * as ReactApollo from 'react-apollo';
@@ -102,6 +137,51 @@ export function LogoutHOC<TProps, TChildProps = any>(
     LogoutVariables,
     LogoutProps<TChildProps>
   >(LogoutDocument, operationOptions);
+}
+export const RegisterDocument = gql`
+  mutation register($email: String!, $password: String!) {
+    register(email: $email, password: $password) {
+      id
+      username
+    }
+  }
+`;
+export class RegisterComponent extends React.Component<
+  Partial<ReactApollo.MutationProps<RegisterMutation, RegisterVariables>>
+> {
+  render() {
+    return (
+      <ReactApollo.Mutation<RegisterMutation, RegisterVariables>
+        mutation={RegisterDocument}
+        {...(this as any)['props'] as any}
+      />
+    );
+  }
+}
+export type RegisterProps<TChildProps = any> = Partial<
+  ReactApollo.MutateProps<RegisterMutation, RegisterVariables>
+> &
+  TChildProps;
+export type RegisterMutationFn = ReactApollo.MutationFn<
+  RegisterMutation,
+  RegisterVariables
+>;
+export function RegisterHOC<TProps, TChildProps = any>(
+  operationOptions:
+    | ReactApollo.OperationOption<
+        TProps,
+        RegisterMutation,
+        RegisterVariables,
+        RegisterProps<TChildProps>
+      >
+    | undefined,
+) {
+  return ReactApollo.graphql<
+    TProps,
+    RegisterMutation,
+    RegisterVariables,
+    RegisterProps<TChildProps>
+  >(RegisterDocument, operationOptions);
 }
 export const MeDocument = gql`
   query Me {
@@ -187,4 +267,45 @@ export function OAuthAccountsHOC<TProps, TChildProps = any>(
     OAuthAccountsVariables,
     OAuthAccountsProps<TChildProps>
   >(OAuthAccountsDocument, operationOptions);
+}
+export const UsersDocument = gql`
+  query Users {
+    users {
+      id
+      username
+    }
+  }
+`;
+export class UsersComponent extends React.Component<
+  Partial<ReactApollo.QueryProps<UsersQuery, UsersVariables>>
+> {
+  render() {
+    return (
+      <ReactApollo.Query<UsersQuery, UsersVariables>
+        query={UsersDocument}
+        {...(this as any)['props'] as any}
+      />
+    );
+  }
+}
+export type UsersProps<TChildProps = any> = Partial<
+  ReactApollo.DataProps<UsersQuery, UsersVariables>
+> &
+  TChildProps;
+export function UsersHOC<TProps, TChildProps = any>(
+  operationOptions:
+    | ReactApollo.OperationOption<
+        TProps,
+        UsersQuery,
+        UsersVariables,
+        UsersProps<TChildProps>
+      >
+    | undefined,
+) {
+  return ReactApollo.graphql<
+    TProps,
+    UsersQuery,
+    UsersVariables,
+    UsersProps<TChildProps>
+  >(UsersDocument, operationOptions);
 }

@@ -26,6 +26,7 @@ class C extends React.PureComponent<FormikProps<FormValues> & Props> {
         <Field name="email" label="E-Mail" required component={InputField} />
         <Field
           name="password"
+          type="password"
           label="Passwort"
           required
           component={InputField}

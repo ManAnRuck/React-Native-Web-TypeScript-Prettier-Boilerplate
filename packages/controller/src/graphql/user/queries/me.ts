@@ -1,7 +1,10 @@
 import gql from 'graphql-tag';
 
 export default gql`
-  mutation logout {
-    logout
+  query Me {
+    me {
+      id
+      username
+    }
   }
 `;

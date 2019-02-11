@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { RegisterComponent } from '../apollo-components';
 
 interface Props {
   children: (data: {
@@ -18,6 +19,12 @@ export class RegisterController extends React.PureComponent<Props> {
   };
 
   public render() {
-    return this.props.children({ submit: this.handleSubmit });
+    return (
+      <RegisterComponent>
+        {() => {
+          return this.props.children({ submit: this.handleSubmit });
+        }}
+      </RegisterComponent>
+    );
   }
 }
