@@ -18,9 +18,12 @@ export default class RegisterResolver {
   ): Promise<User> {
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    let user = await User.findOne(ctx.req.session!.userId, {
-      relations: ['localUsers'],
-    });
+    let user = await User.findOne(
+      { id: ctx.req.session!.userId },
+      {
+        relations: ['localUsers'],
+      },
+    );
 
     if (!user) {
       user = new User();
@@ -28,13 +31,13 @@ export default class RegisterResolver {
       await user.save();
     }
 
+    ctx.req.session!.userId = user.id;
+
     const localUser = LocalUser.create();
     localUser.email = email;
     localUser.password = hashedPassword;
     localUser.user = user;
     await localUser.save();
-
-    ctx.req.session!.userId = user.id;
 
     return user;
   }
