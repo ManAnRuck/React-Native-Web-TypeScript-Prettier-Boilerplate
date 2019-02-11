@@ -6,6 +6,7 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import LocalUser from './LocalUser';
 import OAuthUser from './OAuthUser';
 
 @ObjectType()
@@ -22,4 +23,8 @@ export default class User extends BaseEntity {
   @Field(() => [OAuthUser])
   @OneToMany(() => OAuthUser, oAuthUser => oAuthUser.user)
   public oAuthUsers: OAuthUser[];
+
+  @Field(() => [LocalUser])
+  @OneToMany(() => LocalUser, localUser => localUser.user)
+  public localUsers: LocalUser[];
 }
