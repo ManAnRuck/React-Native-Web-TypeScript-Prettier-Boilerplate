@@ -74,6 +74,7 @@ class DesktopContainer extends Component<SingletonRouter> {
                               <Button
                                 as="a"
                                 inverted={!fixed}
+                                data-testid="logout-button"
                                 onClick={async () => {
                                   await mutate();
                                   await client.resetStore();

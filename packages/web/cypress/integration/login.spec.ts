@@ -11,4 +11,8 @@ describe('login', () => {
     });
     cy.get('[data-testid=register-form]').submit();
   });
+
+  it('click logout button', () => {
+    cy.get('[data-testid=logout-button]').click();
+  });
 });
