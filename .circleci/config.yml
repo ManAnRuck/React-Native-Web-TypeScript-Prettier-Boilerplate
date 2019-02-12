@@ -93,8 +93,27 @@ jobs:
 
       # run test!
       - run: 
+          name: Start test servers
+          command: yarn start:test && 
+          background: true
+
+      - run:
+          name: Wait for server
+          shell: /bin/sh
+          command: |
+            wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 10 http://localhost:4000
+            :
+
+      - run:
+          name: Wait for web
+          shell: /bin/sh
+          command: |
+            wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 10 http://localhost:3000
+            :
+
+      - run:
           name: Start test Web
-          command: yarn start:test && yarn --cwd packages/web cy:run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
+          command: yarn --cwd packages/web cy:run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
 workflows:
   version: 2
