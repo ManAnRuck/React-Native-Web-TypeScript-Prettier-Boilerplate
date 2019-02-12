@@ -11,7 +11,7 @@
         "pre-commit": "yarn lint && yarn typecheck",
         "generate": "gql-gen",
         "cy": "cypress open",
-        "cy:run": "cypress run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f"
+        "cy:run": "cypress run"
     },
     "dependencies": {
         "@myproject/common": "1.0.0",
