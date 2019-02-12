@@ -8,12 +8,12 @@ module.exports = {
     "synchronize": true,
     "logging": false,
     "entities": [
-       process.env.NODE_ENV === 'production' ? process.env.TYPEORM_ENTETIES : "src/entity/**/*.ts"
+       process.env.NODE_ENV === 'production' ? "src/entity/**/*.js" : "src/entity/**/*.ts"
     ],
     "migrations": [
-      process.env.NODE_ENV === 'production' ? process.env.TYPEORM_MIGRATIONS : "src/migration/**/*.ts"
+      process.env.NODE_ENV === 'production' ? "src/migration/**/*.js" : "src/migration/**/*.ts"
     ],
     "subscribers": [
-      process.env.NODE_ENV === 'production' ? process.env.TYPEORM_SUBSCRIBERS : "src/subscriber/**/*.ts"
+      process.env.NODE_ENV === 'production' ? "src/subscriber/**/*.js" : "src/subscriber/**/*.ts"
     ]
  }
