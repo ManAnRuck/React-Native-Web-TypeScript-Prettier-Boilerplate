@@ -61,7 +61,7 @@ jobs:
 
       - run:
           name: Update yarn
-          command: yarn policies set-version 1.13.0
+          command: yarn self-update
 
       # Download and cache dependencies
       - restore_cache:
