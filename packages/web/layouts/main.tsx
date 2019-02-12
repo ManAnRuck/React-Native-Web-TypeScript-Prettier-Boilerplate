@@ -1,3 +1,4 @@
+import { LogoutComponent, MeComponent } from '@myproject/controller';
 import get from 'lodash.get';
 import Link from 'next/link';
 import { SingletonRouter, withRouter } from 'next/router';
@@ -10,7 +11,6 @@ import {
   Visibility,
 } from 'semantic-ui-react';
 import '../assets/styles/styles.less';
-import { LogoutComponent, MeComponent } from '../components/apollo-components';
 import { LoginButton } from '../components/auth/LoginButton';
 
 /* Heads up!
@@ -74,6 +74,7 @@ class DesktopContainer extends Component<SingletonRouter> {
                               <Button
                                 as="a"
                                 inverted={!fixed}
+                                data-testid="logout-button"
                                 onClick={async () => {
                                   await mutate();
                                   await client.resetStore();

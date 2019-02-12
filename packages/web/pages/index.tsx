@@ -1,11 +1,12 @@
 // GraphQl
-import { meQuery } from '@myproject/controller';
-import get from 'lodash.get';
-import { PureComponent } from 'react';
 import {
   MeComponent,
+  meQuery,
   OAuthAccountsComponent,
-} from '../components/apollo-components';
+} from '@myproject/controller';
+import get from 'lodash.get';
+import { PureComponent } from 'react';
+
 // Layout
 import Page from '../layouts/main';
 import { INextContextWithApollo } from '../types/NextContextWithApollo';

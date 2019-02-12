@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "start": "node ./dist/src/index.js",
+    "start": "NODE_ENV=production node ./dist/src/index.js",
     "dev": "ts-node-dev --respawn ./src/index.ts",
     "lint": "tslint --project tsconfig.json && yarn typecheck",
     "typecheck": "tsc --noEmit",
@@ -17,6 +17,7 @@
     "@myproject/common": "1.0.0",
     "apollo-server": "^2.4.0",
     "apollo-server-express": "^2.4.0",
+    "bcryptjs": "^2.4.3",
     "config": "^3.0.1",
     "connect-redis": "^3.4.0",
     "cors": "^2.8.5",
@@ -29,6 +30,7 @@
     "passport": "^0.4.0",
     "passport-facebook": "^3.0.0",
     "passport-github": "^1.1.0",
+    "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4",
     "pg": "^7.7.1",
     "reflect-metadata": "^0.1.13",
@@ -38,6 +40,7 @@
     "typeorm-typedi-extensions": "^0.2.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/config": "0.0.34",
     "@types/connect-redis": "0.0.8",
     "@types/express-session": "1.15.11",
@@ -45,7 +48,10 @@
     "@types/node": "10.12.24",
     "@types/passport": "1.0.0",
     "@types/passport-oauth2": "1.4.8",
+    "@types/passport-strategy": "^0.2.35",
     "@types/passport-twitter": "1.0.34",
+    "dtslint": "^0.4.2",
+    "passport-strategy": "^1.0.0",
     "prettier": "1.16.4",
     "ts-node": "8.0.2",
     "ts-node-dev": "1.0.0-pre.32",

@@ -1,8 +1,9 @@
 import { OAuthButton } from '@myproject/ui';
 import Link from 'next/link';
 import * as React from 'react';
-import { Button, Header, Modal } from 'semantic-ui-react';
+import { Button, Divider, Header, Modal } from 'semantic-ui-react';
 import styled from 'styled-components';
+import { RegisterConnector } from './Register';
 
 const LoginButtons = styled.div`
   display: flex;
@@ -10,8 +11,14 @@ const LoginButtons = styled.div`
   justify-content: space-around;
 `;
 
+const EmailFormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const LoginButton = () => (
-  <Modal trigger={<Button>Log In</Button>}>
+  <Modal trigger={<Button data-testid="login-button">Log In</Button>}>
     <Modal.Header>Select a Photo</Modal.Header>
     <Modal.Content>
       <Modal.Description>
@@ -27,6 +34,10 @@ export const LoginButton = () => (
             <OAuthButton service="github" size="massive" />
           </Link>
         </LoginButtons>
+        <Divider horizontal>Or</Divider>
+        <EmailFormWrapper>
+          <RegisterConnector />
+        </EmailFormWrapper>
       </Modal.Description>
     </Modal.Content>
   </Modal>

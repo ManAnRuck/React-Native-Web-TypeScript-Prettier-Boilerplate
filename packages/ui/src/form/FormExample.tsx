@@ -2,8 +2,8 @@ import { boolean, text } from '@storybook/addon-knobs';
 import { Field, FormikErrors, FormikProps, withFormik } from 'formik';
 import * as React from 'react';
 import { Button, Form, Message } from 'semantic-ui-react';
-import { InputField } from './Input';
-import { TextAreaField } from './Textarea';
+import { InputField } from './InputField';
+import { TextAreaField } from './TextareaField';
 
 export interface FormValues {
   title: string;
@@ -16,8 +16,7 @@ export interface Props {
 
 class C extends React.PureComponent<FormikProps<FormValues> & Props> {
   public render() {
-    const { handleSubmit, errors } = this.props;
-    console.log({ errors });
+    const { handleSubmit } = this.props;
     return (
       <Form
         onSubmit={handleSubmit}

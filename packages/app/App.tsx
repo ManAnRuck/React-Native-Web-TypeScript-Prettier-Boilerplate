@@ -8,7 +8,7 @@ import styled from 'styled-components/native';
 import { client } from './src/graphql/initApollo';
 
 // Components
-import { IUserControllerProps, UserController } from '@myproject/controller';
+import { UsersComponent } from '@myproject/controller';
 
 const instructions = Platform.select({
   android:
@@ -47,19 +47,19 @@ export default class App extends Component<IProps> {
           <Instructions>To get started, edit App.js</Instructions>
           <Instructions>{instructions}</Instructions>
           <Instructions>{add(3, 9)}</Instructions>
-          <UserController>
-            {({ data, loading, error }: IUserControllerProps) => {
+          <UsersComponent>
+            {({ data, loading, error }) => {
               if (error) return null;
               if (loading) return <Text>loading…</Text>;
               return (
                 <View>
-                  {data.users.map(({ username, id }) => {
+                  {data!.users.map(({ username, id }) => {
                     return <Text key={`${id}`}>{`${id} – ${username}`}</Text>;
                   })}
                 </View>
               );
             }}
-          </UserController>
+          </UsersComponent>
         </Container>
       </ApolloProvider>
     );

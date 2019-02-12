@@ -10,7 +10,9 @@
         "tslint-plugin-prettier"
     ],
     "rules": {
-        "prettier": true
+        "prettier": true,
+        "interface-name":false,
+        "object-literal-sort-keys": false
     },
     "exclude": [
         "node_modules", ".next", "components/apollo-components.tsx"

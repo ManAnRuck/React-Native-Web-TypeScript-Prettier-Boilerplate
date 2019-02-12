@@ -17,7 +17,6 @@ export const redis =
 
 router.use((req, _, next) => {
   const authorization = req.headers.authorization;
-
   if (authorization) {
     try {
       const qid = authorization.split(' ')[1];
@@ -41,10 +40,9 @@ router.use(
     saveUninitialized: false,
     cookie: {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      // secure: process.env.NODE_ENV === 'production', // TODO make cookie secure on live!
       maxAge: 1000 * 60 * 60 * 7, // 7 days
     },
   } as any),
 );
-
 export default router;

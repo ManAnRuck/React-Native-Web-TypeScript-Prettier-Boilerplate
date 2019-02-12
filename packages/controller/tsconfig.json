@@ -1,12 +1,11 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "target": "es6",
         "module": "commonjs",
+        "target": "es5",
         "declaration": true,
         "lib": [
             "dom",
-            "es6",
             "es2017",
             "esnext.asynciterable"
         ],
@@ -17,6 +16,7 @@
         "noImplicitAny": true,
         "strictNullChecks": true,
         "strictFunctionTypes": true,
+        "skipLibCheck": true,
         "noImplicitThis": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
@@ -25,7 +25,7 @@
         "allowSyntheticDefaultImports": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "baseUrl": "..",
+        "baseUrl": ".",
         "paths": {
             "@abb/*": [
                 "./*/src"
@@ -33,7 +33,9 @@
         }
     },
     "exclude": [
-        "node_modules"
+        "./node_modules",
+        "./src/modules/apollo-components.tsx",
+        "./dist"
     ],
     "include": [
         "./src/**/*.tsx",

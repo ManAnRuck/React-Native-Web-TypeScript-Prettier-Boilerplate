@@ -8,7 +8,7 @@ const corsOptions = {
   credentials: true,
   origin:
     process.env.NODE_ENV === 'production'
-      ? ['http://…']
+      ? ['http://localhost:3000']
       : ['http://localhost:3000', 'http://localhost:4000'],
 };
 
