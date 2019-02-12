@@ -94,7 +94,7 @@ jobs:
       # run test!
       - run: 
           name: Start test Web
-          command: yarn start:test && yarn --cwd packages/web cy:run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
+          command: yarn start:test && yarn --cwd packages/web cy:run --record --parallel --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
 workflows:
   version: 2
