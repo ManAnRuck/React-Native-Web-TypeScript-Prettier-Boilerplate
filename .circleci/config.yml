@@ -29,60 +29,6 @@ jobs:
 
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: yarn install
-
-
-      - save_cache:
-          paths:
-            - node_modules
-            - "packages/common/node_modules"
-            - "packages/controller/node_modules"
-            - "packages/web/node_modules"
-            - "packages/server/node_modules"
-            - "packages/ui/node_modules"
-            - "packages/app/node_modules"
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
-
-      # run build!
-      - run: yarn build
-
-      # run lint!
-      - run: yarn lint
-
-      # run test!
-      - run: yarn test
-
-
-
-  build:
-
-    docker:
-      # specify the version you desire here
-      - image: cypress/base:10
-
-      # PostgreSql
-      - image: circleci/postgres:9.6.11-alpine
-        environment:
-          POSTGRES_USER: manuelruck
-          POSTGRES_DB: myproject
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
-    steps:
-      - checkout
       
       - run:
           name: install dockerize
@@ -101,7 +47,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "yarn.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
@@ -111,6 +57,12 @@ jobs:
       - save_cache:
           paths:
             - node_modules
+            - "packages/app/node_modules"
+            - "packages/common/node_modules"
+            - "packages/controller/node_modules"
+            - "packages/server/node_modules"
+            - "packages/ui/node_modules"
+            - "packages/web/node_modules"
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       # run build!
