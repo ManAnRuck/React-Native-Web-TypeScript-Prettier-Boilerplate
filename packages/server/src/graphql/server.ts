@@ -1,7 +1,7 @@
 import { ApolloServer } from 'apollo-server-express';
-import * as TypeGraphQL from 'type-graphql';
+import TypeGraphQL from 'type-graphql';
 import { Container } from 'typedi';
-import * as TypeORM from 'typeorm';
+import TypeORM from 'typeorm';
 
 // Enteties
 import User from '../entity/User';

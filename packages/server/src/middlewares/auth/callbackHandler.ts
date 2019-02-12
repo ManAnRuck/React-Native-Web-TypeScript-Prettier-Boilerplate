@@ -1,4 +1,4 @@
-import * as config from 'config';
+import config from 'config';
 import { RequestHandler } from 'express';
 
 export const callbackHandler: RequestHandler = (req: any, res) => {

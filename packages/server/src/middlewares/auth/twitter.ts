@@ -1,6 +1,6 @@
-import * as config from 'config';
+import config from 'config';
 import { Router } from 'express';
-import * as passport from 'passport';
+import passport from 'passport';
 import { findOAuthUser } from './handlePassportOauthStrategies';
 
 import { Strategy as TwitterStrategy } from 'passport-twitter';
