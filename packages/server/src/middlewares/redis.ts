@@ -41,7 +41,7 @@ router.use(
     saveUninitialized: false,
     cookie: {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      // secure: process.env.NODE_ENV === 'production', // TODO make cookie secure on live!
       maxAge: 1000 * 60 * 60 * 7, // 7 days
     },
   } as any),

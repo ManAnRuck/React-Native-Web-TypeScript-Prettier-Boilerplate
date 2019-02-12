@@ -30,8 +30,6 @@ export default class UserResolver {
   ) {
     return new Promise(res =>
       ctx.req.session!.destroy(err => {
-        // tslint:disable-next-line:no-console
-        console.log(err);
         ctx.res.clearCookie('qid');
         res(!!err);
       }),

@@ -12,7 +12,11 @@ if (!isBrowser) {
   (global as any).fetch = fetch;
 }
 
-function create(initialState: any, { getToken }: { getToken: () => string }) {
+interface Options {
+  getToken: () => string;
+}
+
+function create(initialState: any, { getToken }: Options) {
   const httpLink = createHttpLink({
     credentials: 'include',
     uri: 'http://localhost:4000/',
@@ -23,7 +27,7 @@ function create(initialState: any, { getToken }: { getToken: () => string }) {
     return {
       headers: {
         ...headers,
-        authorization: token ? `Bearer ${token}` : '',
+        authorization: token ? `qid=${token}` : '',
       },
     };
   });
@@ -37,10 +41,7 @@ function create(initialState: any, { getToken }: { getToken: () => string }) {
   });
 }
 
-export default function initApollo(
-  initialState: any,
-  options: { getToken: () => string },
-) {
+export default function initApollo(initialState: any, options: Options) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (!isBrowser) {

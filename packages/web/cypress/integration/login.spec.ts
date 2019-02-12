@@ -1,5 +1,7 @@
 /// <reference types="cypress"/>
 
+Cypress.Cookies.debug(true);
+
 describe('login', () => {
   it('click login button', () => {
     cy.visit('http://localhost:3000');
@@ -10,6 +12,8 @@ describe('login', () => {
       cy.get('[name=password]').type('my-test-password');
     });
     cy.get('[data-testid=register-form]').submit();
+    cy.wait(3000);
+    cy.getCookies().debug();
     cy.get('[data-testid=logout-button]');
   });
 

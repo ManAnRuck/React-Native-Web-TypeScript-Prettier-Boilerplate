@@ -31,9 +31,10 @@
         "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install",
         "start:server": "yarn --cwd packages/server start & wait-on tcp:4000",
         "start:web": "yarn --cwd packages/web start & wait-on http://localhost:3000",
-        "start": "yarn start:server && yarn start:web",
+        "start:test": "yarn start:server && yarn start:web",
+        "start": "lerna run start --parallel",
         "test:web": "yarn --cwd packages/web cy:run",
-        "test": "yarn start && yarn test:all",
+        "test": "yarn start:test && yarn test:all",
         "test:all": "yarn test:web"
     },
     "name": "app",
