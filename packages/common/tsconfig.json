@@ -5,6 +5,13 @@
         "module": "CommonJS",
         "rootDir": "src",
         "outDir": "dist",
-        "declaration": true
-    }
+        "declaration": true,
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "./src/**/*.tsx",
+        "./src/**/*.ts"
+    ]
 }

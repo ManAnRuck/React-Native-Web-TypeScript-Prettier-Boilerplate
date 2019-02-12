@@ -10,9 +10,17 @@
         "tslint-plugin-prettier"
     ],
     "rules": {
-        "prettier": true
+        "no-implicit-dependencies": [true, "dev"],
+        "prettier": true,
+        "interface-name": false,
+        "object-literal-sort-keys": false
     },
     "exclude": [
-        "node_modules", "dist"
-    ]
+        "node_modules", "dist", "src/modules/apollo-components.tsx"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "src/modules/apollo-components.tsx"
+        ]
+    }
 }

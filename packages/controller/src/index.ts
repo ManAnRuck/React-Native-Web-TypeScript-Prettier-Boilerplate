@@ -1,4 +1,7 @@
-export * from './schemaTypes';
+export * from './modules/apollo-components';
 
-export * from './modules/UserController';
-export * from './modules/MeController';
+// Controllers
+export * from './modules/user/RegisterController';
+
+// Queries
+export { default as meQuery } from './graphql/user/queries/me';

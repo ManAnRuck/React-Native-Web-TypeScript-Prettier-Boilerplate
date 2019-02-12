@@ -10,9 +10,12 @@
         "tslint-plugin-prettier"
     ],
     "rules": {
+        "no-implicit-dependencies": [true, "dev"],
         "prettier": true,
-        "object-literal-sort-keys": false,
-        "no-var-requires": false,
-        "interface-name": false
-    }
+        "interface-name": false,
+        "object-literal-sort-keys": false
+    },
+    "exclude": [
+        "node_modules", "dist"
+    ]
 }

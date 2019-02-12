@@ -13,7 +13,8 @@
     "pre-commit": "yarn lint && yarn typecheck",
     "schema:download": "apollo service:download",
     "codegen:generate": "apollo client:codegen --target=typescript --outputFlat='./src/schemaTypes.ts'",
-    "gen:types": "npm run schema:download && npm run codegen:generate"
+    "gen:types": "npm run schema:download && npm run codegen:generate",
+    "generate": "gql-gen && yarn build"
   },
   "devDependencies": {
     "@types/node": "10.12.24",
@@ -30,8 +31,9 @@
   },
   "dependencies": {
     "@types/react-dom": "^16.8.0",
-    "graphql-tag": "^2.10.1",
+    "apollo-client": "^2.4.12",
     "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.1",
     "react": "^16.8.1",
     "react-apollo": "^2.4.1",
     "react-dom": "^16.8.1"

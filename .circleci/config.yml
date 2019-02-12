@@ -4,37 +4,15 @@
 #
 version: 2
 jobs:
+  
   test:
-    docker:
-      # specify the version you desire here
-      - image: cypress/base:10
-      # PostgreSql
-      - image: circleci/postgres:9.6.2-alpine
-        environment:
-          POSTGRES_USER: manuelruck
-          POSTGRES_DB: myproject
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-    working_directory: ~/repo
-    steps:
-      - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: yarn install
-
-
-
-  build:
 
     docker:
       # specify the version you desire here
       - image: cypress/base:10
+
+      # REDIS
+      - image: circleci/redis:alpine
 
       # PostgreSql
       - image: circleci/postgres:9.6.2-alpine
@@ -51,13 +29,46 @@ jobs:
 
     steps:
       - checkout
+      
+      - restore_cache:
+          key: dockerize-{{ arch }}-v0.6.0
+
+      - run:
+          name: install dockerize if not found in cache
+          command:
+            if \[ -f /usr/local/bin/dockerize \]; then
+              echo "dockerize found; skipping installation";
+            else wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+              && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+              && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz;
+            fi
+          environment:
+            DOCKERIZE_VERSION: v0.6.0
+
+
+      - save_cache:
+          key: dockerize-{{ arch }}-v0.6.0
+          paths:
+            - /usr/local/bin/dockerize
+
+      - run:
+          name: Wait for REDIS
+          command: dockerize -wait tcp://localhost:6379 -timeout 1m
+
+      - run:
+          name: Wait for PostgreSql
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Update yarn
+          command: npm install -g yarn
 
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1.1-dependencies-{{ checksum "yarn.lock" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+            - v1.1-dependencies-
 
       - run: yarn install
 
@@ -65,7 +76,14 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - "packages/app/node_modules"
+            - "packages/common/node_modules"
+            - "packages/controller/node_modules"
+            - "packages/server/node_modules"
+            - "packages/ui/node_modules"
+            - "packages/web/node_modules"           
+            - "/root/.cache/Cypress"
+          key: v1.1-dependencies-{{ checksum "yarn.lock" }}
 
       # run build!
       - run: yarn build
@@ -74,11 +92,12 @@ jobs:
       - run: yarn lint
 
       # run test!
-      - run: yarn test
+      - run: 
+          name: Start test Web
+          command: yarn start:test && yarn --cwd packages/web cy:run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
 workflows:
   version: 2
-  build_and_test:
+  test:
     jobs:
       - test
-      - build

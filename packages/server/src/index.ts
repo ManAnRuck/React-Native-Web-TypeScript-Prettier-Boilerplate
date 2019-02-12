@@ -24,13 +24,15 @@ const bootstrap = async () => {
   server.applyMiddleware({ app, path: '/', cors: false });
 
   const port = 4000;
-  createConnection().then(() => {
-    app.listen({ port }, async () => {
-      process.stdout.write(
-        `🚀 Server ready at http://localhost:${port}${server.graphqlPath} \n`,
-      );
-    });
-  });
+  createConnection()
+    .then(() => {
+      app.listen({ port }, async () => {
+        process.stdout.write(
+          `🚀 Server ready at http://localhost:${port}${server.graphqlPath} \n`,
+        );
+      });
+    })
+    .catch(error => console.error('TypeORM', error));
 
   add(2, 3);
 };

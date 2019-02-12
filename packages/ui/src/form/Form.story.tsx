@@ -11,7 +11,6 @@ stories.addDecorator(withKnobs).addDecorator(centered);
 stories.add('FormExample', () => {
   const handleSubmit = async (values: FormValues) => {
     action('handleSubmit')(values);
-    console.log('values', values);
     return null;
   };
   return <FormExample submit={handleSubmit} />;
