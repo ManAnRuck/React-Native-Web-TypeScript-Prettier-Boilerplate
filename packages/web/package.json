@@ -11,7 +11,7 @@
         "pre-commit": "yarn lint && yarn typecheck",
         "generate": "gql-gen",
         "cy": "cypress open",
-        "cy:run": "DEBUG=cypress:* cypress run"
+        "cy:run": "cypress run"
     },
     "dependencies": {
         "@myproject/common": "1.0.0",
