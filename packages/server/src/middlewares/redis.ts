@@ -17,7 +17,6 @@ export const redis =
 
 router.use((req, _, next) => {
   const authorization = req.headers.authorization;
-
   if (authorization) {
     try {
       const qid = authorization.split(' ')[1];

@@ -21,7 +21,6 @@ export class RegisterController extends React.PureComponent<Props> {
       <RegisterComponent>
         {mutation => {
           const submit = async (values: FormValues) => {
-            console.log('refetchQueries', this.props.refetchQueries);
             const user = await mutation({
               variables: {
                 email: values.email,

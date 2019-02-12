@@ -5,7 +5,6 @@ import { RegisterForm } from './Form';
 
 export class RegisterConnector extends React.PureComponent {
   public succeded = async () => {
-    console.log('push', this.props);
     Router.replace('/work');
     return null;
   };

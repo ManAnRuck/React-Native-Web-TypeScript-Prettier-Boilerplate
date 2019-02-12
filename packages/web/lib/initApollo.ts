@@ -27,7 +27,7 @@ function create(initialState: any, { getToken }: Options) {
     return {
       headers: {
         ...headers,
-        authorization: token ? `qid=${token}` : '',
+        authorization: token ? `Bearer ${token}` : '',
       },
     };
   });

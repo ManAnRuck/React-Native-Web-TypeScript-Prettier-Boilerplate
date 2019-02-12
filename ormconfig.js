@@ -17,5 +17,3 @@ module.exports = {
       process.env.NODE_ENV === 'production' ? process.env.TYPEORM_SUBSCRIBERS : "src/subscriber/**/*.ts"
     ]
  }
-
- console.log("TYPEORM_CONFIG", process.env.NODE_ENV)

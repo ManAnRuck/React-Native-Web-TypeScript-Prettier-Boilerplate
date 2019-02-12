@@ -100,7 +100,9 @@ jobs:
       - run: yarn lint
 
       # run test!
-      - run: yarn test
+      - run: yarn start:test
+
+      - run: cypress run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
 workflows:
   version: 2
