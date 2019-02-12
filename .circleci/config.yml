@@ -33,7 +33,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "yarn.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
@@ -43,7 +43,13 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - "packages/common/node_modules"
+            - "packages/controller/node_modules"
+            - "packages/web/node_modules"
+            - "packages/server/node_modules"
+            - "packages/ui/node_modules"
+            - "packages/app/node_modules"
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       # run build!
       - run: yarn build
@@ -78,6 +84,14 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Wait for REDIS
+          command: dockerize -wait tcp://localhost:6379 -timeout 1m
+
+      - run:
+          name: Wait for PostgreSql
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -91,17 +105,13 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       # run build!
       - run: yarn build
 
       # run lint!
       - run: yarn lint
-
-      - run:
-          name: Wait for db
-          command: dockerize -wait tcp://localhost:6379 -timeout 1m
 
       # run test!
       - run: yarn start:test
