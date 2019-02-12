@@ -32,7 +32,7 @@ const bootstrap = async () => {
         );
       });
     })
-    .catch(error => console.error(error));
+    .catch(error => console.error('TypeORM', error));
 
   add(2, 3);
 };

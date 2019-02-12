@@ -46,6 +46,6 @@ try {
     } as any),
   );
 } catch (error) {
-  console.error(error);
+  console.error('REDIS', error);
 }
 export default router;
