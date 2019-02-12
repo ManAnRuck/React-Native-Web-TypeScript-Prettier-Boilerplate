@@ -10,28 +10,34 @@ const nextConfig = {
 	webpack: (config, options) =>
 	{
 		config.resolve.alias = {
+			...config.resolve.alias,
 			'../../theme.config$': path.resolve('./assets/styles/theme.config'),
 		};
 
-		config.resolve = Object.assign({}, config.resolve, {
-			modules: [path.resolve(__dirname, 'node_modules'), 'node_modules'],
-		  });
+		config.resolve.modules =  [
+			...config.resolve.modules,
+			path.resolve(__dirname, 'node_modules'), 
+			'node_modules'
+		];
+		
 
-		config.module.rules.push(
-		{
-			test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/,
-			use:
+		config.module.rules = [
+			...config.module.rules,
 			{
-				loader: 'url-loader',
-				options:
+				test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/,
+				use:
 				{
-					limit: 100000,
-					publicPath: './',
-					outputPath: 'static/',
-					name: '[name].[ext]',
+					loader: 'url-loader',
+					options:
+					{
+						limit: 100000,
+						publicPath: './',
+						outputPath: 'static/',
+						name: '[name].[ext]',
+					},
 				},
-			},
-		});
+			}
+		]
 
 		return config;
 	},
