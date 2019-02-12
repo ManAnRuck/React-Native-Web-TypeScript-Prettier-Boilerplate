@@ -92,8 +92,8 @@ jobs:
           command: yarn start:test
 
       - run: 
-          name: start test
-          command: cypress run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
+          name: start test WEB
+          command: yarn --cwd packages/web cy:run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
 workflows:
   version: 2
