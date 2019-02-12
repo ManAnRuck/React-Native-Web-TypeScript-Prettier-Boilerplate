@@ -59,6 +59,10 @@ jobs:
           name: Wait for PostgreSql
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
+      - run:
+          name: Update yarn
+          command: yarn policies set-version 1.13.0
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -88,12 +92,8 @@ jobs:
 
       # run test!
       - run: 
-          name: start servers for testing
-          command: yarn start:test
-
-      - run: 
-          name: start test WEB
-          command: yarn --cwd packages/web cy:run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
+          name: Start test Web
+          command: yarn start:test && yarn --cwd packages/web cy:run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
 workflows:
   version: 2
