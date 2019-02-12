@@ -39,7 +39,7 @@
     },
     "name": "app",
     "devDependencies": {
-        "lerna": "3.11.0",
+        "lerna": "3.11.1",
         "tslint": "5.12.1",
         "wait-on": "^3.2.0"
     }
