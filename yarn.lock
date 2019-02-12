@@ -18202,10 +18202,10 @@ typeorm@^0.2.11:
     yargonaut "^1.1.2"
     yargs "^12.0.5"
 
-typescript-babel-jest@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/typescript-babel-jest/-/typescript-babel-jest-1.0.5.tgz#5f5acffb7495cb050601f056e4ec07ac52c69445"
-  integrity sha512-JUAFMB7ckjo56GLC2LiG/xlrxQZ/XRAks96SqyJ+Yq+aDJXBoGXQ/0/nanXUF+mbFNUBHK6hk0nWLAa0dG94BA==
+typescript-babel-jest@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/typescript-babel-jest/-/typescript-babel-jest-1.0.6.tgz#f9b9ab1fd83be44674cb139e4f0fd368591dc4a5"
+  integrity sha512-S+b3V+WsTAXlfdeh9JFIMrfMZCCP++T6ThzPIrtuujunsRZYXpZzXR5/SIV4euBKLrreMbK+Zw9JPx9dZIuKZQ==
   dependencies:
     app-root-path "2.0.1"
     babel-jest "20.0.3"
