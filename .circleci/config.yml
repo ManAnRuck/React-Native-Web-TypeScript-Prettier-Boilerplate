@@ -30,11 +30,23 @@ jobs:
     steps:
       - checkout
       
+      - restore_cache:
+      key: dockerize-{{ arch }}-v0.6.0
+
       - run:
-          name: install dockerize
-          command: wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-          environment:
-            DOCKERIZE_VERSION: v0.3.0
+          name: install dockerize if not found in cache
+          command:
+            if \[ -f /usr/local/bin/dockerize \]; then
+              echo "dockerize found; skipping installation";
+            else wget   https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+              && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+              && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz;
+            fi
+
+      - save_cache:
+          key: dockerize-{{ arch }}-v0.6.0
+          paths:
+            - /usr/local/bin/dockerize
 
       - run:
           name: Wait for REDIS
