@@ -83,6 +83,7 @@ jobs:
 
     steps:
       - checkout
+      
       - run:
           name: install dockerize
           command: wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
@@ -119,9 +120,13 @@ jobs:
       - run: yarn lint
 
       # run test!
-      - run: yarn start:test
+      - run: 
+        name: start servers for testing
+        command: yarn start:test
 
-      - run: cypress run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
+      - run: 
+        name: start test
+        command: cypress run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
 workflows:
   version: 2
