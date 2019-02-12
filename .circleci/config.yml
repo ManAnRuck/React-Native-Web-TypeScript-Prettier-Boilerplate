@@ -73,12 +73,12 @@ jobs:
 
       # run test!
       - run: 
-        name: start servers for testing
-        command: yarn start:test
+          name: start servers for testing
+          command: yarn start:test
 
       - run: 
-        name: start test
-        command: cypress run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
+          name: start test
+          command: cypress run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
 workflows:
   version: 2
