@@ -61,7 +61,7 @@ jobs:
 
       - run:
           name: Update yarn
-          command: yarn self-update
+          command: npm install -g yarn
 
       # Download and cache dependencies
       - restore_cache:
