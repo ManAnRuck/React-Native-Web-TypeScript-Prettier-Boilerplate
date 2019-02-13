@@ -6,7 +6,7 @@ import { findOAuthUser } from './handlePassportOauthStrategies';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
 
 // TS Interfaces
-import { IOAuthOptions } from '../../../config/types';
+import { IOAuthOptions } from '../../types/types';
 import OAuthUser from '../../entity/OAuthUser';
 import User from '../../entity/User';
 import { callbackHandler } from './callbackHandler';

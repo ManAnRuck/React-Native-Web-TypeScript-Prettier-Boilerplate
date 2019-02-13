@@ -3538,6 +3538,20 @@
   dependencies:
     "@types/express" "*"
 
+"@types/dotenv-safe@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@types/dotenv-safe/-/dotenv-safe-5.0.3.tgz#dddfcf655aad72b78921aceb3afcc95be8301f82"
+  integrity sha512-H2A6p93WegICjH84+pGCsvd8YskkfDrfwJGeTFGzNgw3RrLEZTyChK3QpagiICOWT6E7ARm2e3sHHuxMPfXjZw==
+  dependencies:
+    "@types/dotenv" "*"
+
+"@types/dotenv@*":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@types/dotenv/-/dotenv-6.1.0.tgz#fba2bfd1f28a46eadaa049f3313ebb89bdedfc53"
+  integrity sha512-gmbNb7V1LbJQA4MmH0hVFgqY1cyKsa6RvKC1Xrq0WBnZ0JuuvXKciXx/s8dN0LVXCJd8xO6wIaSFSyUIoGph9g==
+  dependencies:
+    "@types/node" "*"
+
 "@types/events@*":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
@@ -13579,15 +13593,20 @@ next-compose-plugins@2.1.1:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.1.1.tgz#7da0a3ce0c8ce267b5cb4164d2fb6e4aaf61bf86"
   integrity sha512-4yLtmGjnBlzuYdL66+c/zi8ljl24sK9jtP31UsTG1ZAAHj+ybWfEG/S+HMwK+pD2fNmJ4xQyr4xOubzExcS+Lg==
 
-next-plugin-transpile-modules@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/next-plugin-transpile-modules/-/next-plugin-transpile-modules-1.1.0.tgz#1b3e4235a839f31f48e5a8ae1e2e2e23bccee6cd"
-  integrity sha512-/XksdNn/7ajcbaXbOb/3fYHt8nmRiVvUh9wQ3Hk8Saxsw2egnolawOYDPa97XuKozcSoH/vh4estszHOK/FbBQ==
+next-plugin-transpile-modules@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/next-plugin-transpile-modules/-/next-plugin-transpile-modules-2.0.0.tgz#8632683f0f04fbc776ce80c6cc62bb5c6694661d"
+  integrity sha512-9vI7/OvBlu6f/cwzNdBDKxmY2Zc4Jr8hRy59exkXWwF22LUIZrEa0D7qhqWahAhbMibMGMMsX9GeUuOXKcG9/Q==
 
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
+
+next-transpile-modules@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-1.1.0.tgz#9b5bd958b689df30fe267e98200dcd4b60425d77"
+  integrity sha512-M4keE0Xk/2nTd2BMneGALp2SZGVMG/gSSxxFLZKYg8E5RcojtALm7YUWbeb929+YW5OSVKB9T+FUmw9iXAXRog==
 
 next@7.0.3:
   version "7.0.3"
@@ -17961,7 +17980,7 @@ ts-log@2.1.4:
   resolved "https://registry.yarnpkg.com/ts-log/-/ts-log-2.1.4.tgz#063c5ad1cbab5d49d258d18015963489fb6fb59a"
   integrity sha512-P1EJSoyV+N3bR/IWFeAqXzKPZwHpnLY6j7j58mAvewHRipo+BQM2Y1f9Y9BjEQznKwgqqZm7H8iuixmssU7tYQ==
 
-ts-node-dev@1.0.0-pre.32, ts-node-dev@^1.0.0-pre.32:
+ts-node-dev@1.0.0-pre.32:
   version "1.0.0-pre.32"
   resolved "https://registry.yarnpkg.com/ts-node-dev/-/ts-node-dev-1.0.0-pre.32.tgz#aa3bb9056c002713cfc393b2c324459020db41dc"
   integrity sha512-hOy2mp5ncnKAJFjuQtfHOk6tqG7FfTnuARDsV5WGSQz0ldPG9iTQLbDn+q2wwNuvjbCfsAeGWwDMJc/73EraPQ==

@@ -1,12 +1,10 @@
 {
     "extends": "../tsconfig.settings.json",
     "compilerOptions": {
-        "jsx": "react",
+        "target": "es3",
         "outDir": "dist/",
         "rootDir": "src/",
-        "baseUrl": "src/",
-    },
-    "exclude": [
-        "modules/apollo-components.tsx"
-    ]
+        "jsx": "react",
+        "declaration": true,
+    }
 }

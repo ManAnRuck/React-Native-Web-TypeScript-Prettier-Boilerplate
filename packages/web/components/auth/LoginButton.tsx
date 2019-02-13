@@ -18,7 +18,7 @@ const EmailFormWrapper = styled.div`
 `;
 
 export const LoginButton = () => (
-  <Modal trigger={<Button data-testid="login-button">Log In</Button>}>
+  <Modal trigger={<Button data-testid="login-button">Log In!</Button>}>
     <Modal.Header>Select a Photo</Modal.Header>
     <Modal.Content>
       <Modal.Description>

@@ -6,7 +6,7 @@ import { findOAuthUser } from './handlePassportOauthStrategies';
 import { Strategy as TwitterStrategy } from 'passport-twitter';
 
 // TS Interfaces
-import { ITwitterOptions } from '../../../config/types';
+import { ITwitterOptions } from '../../types/types';
 import OAuthUser from '../../entity/OAuthUser';
 import User from '../../entity/User';
 import { callbackHandler } from './callbackHandler';

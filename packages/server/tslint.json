@@ -13,7 +13,8 @@
         "no-implicit-dependencies": [true, "dev"],
         "prettier": true,
         "interface-name": false,
-        "object-literal-sort-keys": false
+        "object-literal-sort-keys": false,
+        "ordered-imports":false
     },
     "exclude": [
         "node_modules", "dist"
