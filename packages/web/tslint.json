@@ -1,25 +1,14 @@
 {
-    "project": "./tsconfig.json",
-    "extends": [
-        "tslint:latest",
-        "tslint-config-airbnb",
-        "tslint-config-prettier",
-        "../../tslint.json"
-    ],
-    "rulesDirectory": [
-        "tslint-plugin-prettier"
-    ],
-    "rules": {
-        "prettier": true,
-        "interface-name":false,
-        "object-literal-sort-keys": false
-    },
-    "exclude": [
-        "node_modules", ".next", "components/apollo-components.tsx"
-    ],
-    "linterOptions": {
-        "exclude": [
-            "components/apollo-components.tsx"
-        ]
-    }
+  "extends": ["../../tslint.json"],
+  "rules": {
+    "no-submodule-imports": [
+      true,
+      "rxjs",
+      "next/router",
+      "next/link",
+      "next/head",
+      "next/app",
+      "next/document"
+    ]
+  }
 }

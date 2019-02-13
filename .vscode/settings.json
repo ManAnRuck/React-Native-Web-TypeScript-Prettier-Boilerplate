@@ -1,7 +1,5 @@
 {
-    "eslint.packageManager": "yarn",
-    "tslint.autoFixOnSave": true,
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -15,6 +13,5 @@
         "**/node_modules": true,
         ".jest/*": true
     },
-    "typescript.tsdk": "./node_modules/typescript/lib",
-    "eslint.enable": false
+    "typescript.tsdk": "./node_modules/typescript/lib"
 }

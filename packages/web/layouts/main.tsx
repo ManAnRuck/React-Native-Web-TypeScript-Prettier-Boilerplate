@@ -12,6 +12,8 @@ import {
 } from 'semantic-ui-react';
 import '../assets/styles/styles.less';
 import { LoginButton } from '../components/auth/LoginButton';
+import { MutationFn } from 'react-apollo';
+import ApolloClient from 'apollo-client';
 
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
@@ -24,6 +26,17 @@ class DesktopContainer extends Component<SingletonRouter> {
 
   public hideFixedMenu = () => this.setState({ fixed: false });
   public showFixedMenu = () => this.setState({ fixed: true });
+
+  public logOut = ({
+    mutate,
+    client,
+  }: {
+    mutate: MutationFn;
+    client: ApolloClient<object>;
+  }) => async () => {
+    await mutate();
+    await client.resetStore();
+  };
 
   public render() {
     const { children, router } = this.props;
@@ -75,10 +88,7 @@ class DesktopContainer extends Component<SingletonRouter> {
                                 as="a"
                                 inverted={!fixed}
                                 data-testid="logout-button"
-                                onClick={async () => {
-                                  await mutate();
-                                  await client.resetStore();
-                                }}
+                                onClick={this.logOut({ mutate, client })}
                               >
                                 Logout
                               </Button>
