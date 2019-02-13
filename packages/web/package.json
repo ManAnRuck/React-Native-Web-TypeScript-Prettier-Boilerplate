@@ -58,10 +58,6 @@
         "nodemon": "1.18.10",
         "prettier": "1.16.4",
         "ts-node": "8.0.2",
-        "tslint": "5.12.1",
-        "tslint-config-airbnb": "5.11.1",
-        "tslint-config-standard": "8.0.1",
-        "tslint-plugin-prettier": "2.0.1",
         "typescript": "3.3.3",
         "url-loader": "1.1.2"
     },

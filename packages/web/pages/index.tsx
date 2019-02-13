@@ -27,8 +27,12 @@ export default class Index extends PureComponent {
         <div>
           <MeComponent>
             {({ data, loading, error }) => {
-              if (error) return null;
-              if (loading) return <div>loading…</div>;
+              if (error) {
+                return null;
+              }
+              if (loading) {
+                return <div>loading…</div>;
+              }
 
               const isLoggedIn = !!get(data, 'me', false);
 
@@ -44,8 +48,12 @@ export default class Index extends PureComponent {
                           loading: oLoading,
                           error: oError,
                         }) => {
-                          if (oError) return null;
-                          if (oLoading) return <div>loading…</div>;
+                          if (oError) {
+                            return null;
+                          }
+                          if (oLoading) {
+                            return <div>loading…</div>;
+                          }
 
                           return <div>{JSON.stringify(oData)}</div>;
                         }}
