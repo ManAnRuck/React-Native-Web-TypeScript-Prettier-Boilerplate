@@ -2,6 +2,7 @@ import { add } from '@myproject/common';
 import React, { Component } from 'react';
 import { ApolloProvider } from 'react-apollo';
 import { Platform, Text, View } from 'react-native';
+
 import styled from 'styled-components/native';
 
 // GraphQl
@@ -36,9 +37,7 @@ const Instructions = styled.Text`
   text-align: center;
 `;
 
-// tslint:disable-next-line:no-empty-interface
-interface IProps {}
-export default class App extends Component<IProps> {
+export default class App extends Component {
   public render() {
     return (
       <ApolloProvider client={client}>
@@ -49,8 +48,12 @@ export default class App extends Component<IProps> {
           <Instructions>{add(3, 9)}</Instructions>
           <UsersComponent>
             {({ data, loading, error }) => {
-              if (error) return null;
-              if (loading) return <Text>loading…</Text>;
+              if (error) {
+                return null;
+              }
+              if (loading) {
+                return <Text>loading…</Text>;
+              }
               return (
                 <View>
                   {data!.users.map(({ username, id }) => {
