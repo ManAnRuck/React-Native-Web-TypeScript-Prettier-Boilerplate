@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "start": "NODE_ENV=production node ./dist/src/index.js",
+    "start": "NODE_ENV=production node ./dist/index.js",
     "dev": "ts-node-dev --respawn ./src/index.ts",
     "lint": "tslint --project tsconfig.json && yarn typecheck",
     "typecheck": "tsc --noEmit",
@@ -43,6 +43,7 @@
     "@types/bcryptjs": "^2.4.2",
     "@types/config": "0.0.34",
     "@types/connect-redis": "0.0.8",
+    "@types/dotenv-safe": "^5.0.3",
     "@types/express-session": "1.15.11",
     "@types/ioredis": "4.0.6",
     "@types/node": "10.12.25",

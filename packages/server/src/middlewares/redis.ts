@@ -1,8 +1,8 @@
-import * as config from 'config';
-import * as connectRedis from 'connect-redis';
+import config from 'config';
+import connectRedis from 'connect-redis';
 import { Router } from 'express';
-import * as session from 'express-session';
-import * as Redis from 'ioredis';
+import session from 'express-session';
+import Redis from 'ioredis';
 
 // Configs
 const SESSION_SECRET = config.get('auth.sessionSecret');

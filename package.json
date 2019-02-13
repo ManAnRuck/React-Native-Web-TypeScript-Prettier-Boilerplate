@@ -2,12 +2,7 @@
     "private": true,
     "workspaces": {
         "packages": [
-            "packages/common",
-            "packages/server",
-            "packages/controller",
-            "packages/app",
-            "packages/ui",
-            "packages/web"
+            "packages/*"
         ],
         "nohoist": [
             "**/react-native",
@@ -20,7 +15,7 @@
         ]
     },
     "scripts": {
-        "dev": "yarn build:common && yarn build:controller && yarn build:ui && lerna run --parallel dev",
+        "dev": "yarn build:common && yarn build:controller && yarn build:ui && lerna run dev --parallel --ignore \"@myproject/app\"",
         "build:common": "yarn --cwd packages/common build",
         "build:controller": "yarn --cwd packages/controller build",
         "build:ui": "yarn --cwd packages/ui build",
