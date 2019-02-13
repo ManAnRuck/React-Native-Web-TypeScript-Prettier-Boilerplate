@@ -13608,10 +13608,10 @@ next-tick@1:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next-transpile-modules@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-1.1.0.tgz#9b5bd958b689df30fe267e98200dcd4b60425d77"
-  integrity sha512-M4keE0Xk/2nTd2BMneGALp2SZGVMG/gSSxxFLZKYg8E5RcojtALm7YUWbeb929+YW5OSVKB9T+FUmw9iXAXRog==
+next-transpile-modules@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-2.0.0.tgz#ecbac0a5ad97ec7c0f47326bcdb64b6e11cf445c"
+  integrity sha512-W+jV3Kg+bLmGbntYfrGBloiV+ABOXt+GMI2aIUcM29yaPVDsIn2vWoyH6PA2ZXXgILm7xmyPfi30/0idbAmsaA==
 
 next@7.0.3:
   version "7.0.3"
