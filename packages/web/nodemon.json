@@ -1,8 +1,6 @@
 {
     "watch": [
-        "server/**/*.ts",
-        "../controller/**/*",
-        "../ui/**/*"
+        "server/**/*.ts"
     ],
     "execMap": {
         "ts": "ts-node"
