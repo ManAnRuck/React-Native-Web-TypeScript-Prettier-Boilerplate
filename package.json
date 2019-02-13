@@ -1,47 +1,47 @@
 {
-    "private": true,
-    "workspaces": {
-        "packages": [
-            "packages/*"
-        ],
-        "nohoist": [
-            "**/react-native",
-            "**/react-native/**",
-            "**/react-native-typescript-transformer",
-            "**/react-native-typescript-transformer/**",
-            "**/styled-components",
-            "**/@zeit",
-            "**/@zeit/**"
-        ]
-    },
-    "scripts": {
-        "dev": "yarn build:common && yarn build:controller && yarn build:ui && lerna run dev --parallel --ignore \"@myproject/app\"",
-        "build:common": "yarn --cwd packages/common build",
-        "build:controller": "yarn --cwd packages/controller build",
-        "build:ui": "yarn --cwd packages/ui build",
-        "build": "lerna run build",
-        "lint": "lerna run --parallel lint",
-        "pre-commit": "lerna run --parallel pre-commit",
-        "yarn:remove-node-modules": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
-        "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install",
-        "start:server": "yarn --cwd packages/server start & wait-on tcp:4000",
-        "start:web": "yarn --cwd packages/web start & wait-on http://localhost:3000",
-        "start:test": "yarn start:server && yarn start:web",
-        "start": "lerna run start --parallel --ignore \"@myproject/app\"",
-        "test:web": "yarn --cwd packages/web cy:run",
-        "test": "yarn start:test && yarn test:all",
-        "test:all": "yarn test:web"
-    },
-    "name": "app",
-    "devDependencies": {
-        "lerna": "3.11.1",
-        "prettier": "^1.16.4",
-        "tslint": "^5.12.1",
-        "tslint-config-airbnb": "^5.11.1",
-        "tslint-config-prettier": "^1.18.0",
-        "tslint-immutable": "^5.1.2",
-        "tslint-plugin-prettier": "^2.0.1",
-        "tslint-react": "^3.6.0",
-        "wait-on": "^3.2.0"
-    }
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-typescript-transformer",
+      "**/react-native-typescript-transformer/**",
+      "**/styled-components",
+      "**/@zeit",
+      "**/@zeit/**"
+    ]
+  },
+  "scripts": {
+    "dev": "yarn build:common && yarn build:controller && yarn build:ui && lerna run dev --parallel",
+    "build:common": "yarn --cwd packages/common build",
+    "build:controller": "yarn --cwd packages/controller build",
+    "build:ui": "yarn --cwd packages/ui build",
+    "build": "lerna run build",
+    "lint": "lerna run --parallel lint",
+    "pre-commit": "lerna run --parallel pre-commit",
+    "yarn:remove-node-modules": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
+    "yarn:reinstall": "yarn yarn:remove-node-modules && yarn install",
+    "start:server": "yarn --cwd packages/server start & wait-on tcp:4000",
+    "start:web": "yarn --cwd packages/web start & wait-on http://localhost:3000",
+    "start:test": "yarn start:server && yarn start:web",
+    "start": "lerna run start --parallel",
+    "test:web": "yarn --cwd packages/web cy:run",
+    "test": "yarn start:test && yarn test:all",
+    "test:all": "yarn test:web"
+  },
+  "name": "app",
+  "devDependencies": {
+    "lerna": "3.11.1",
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-immutable": "^5.1.2",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
+    "wait-on": "^3.2.0"
+  }
 }
