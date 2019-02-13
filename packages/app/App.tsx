@@ -2,7 +2,7 @@ import { add } from '@myproject/common';
 import React, { Component } from 'react';
 import { ApolloProvider } from 'react-apollo';
 import { Platform, Text, View } from 'react-native';
-/* tslint:disable-next-line */
+
 import styled from 'styled-components/native';
 
 // GraphQl
