@@ -3445,6 +3445,20 @@
   dependencies:
     "@types/express" "*"
 
+"@types/dotenv-safe@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@types/dotenv-safe/-/dotenv-safe-5.0.3.tgz#dddfcf655aad72b78921aceb3afcc95be8301f82"
+  integrity sha512-H2A6p93WegICjH84+pGCsvd8YskkfDrfwJGeTFGzNgw3RrLEZTyChK3QpagiICOWT6E7ARm2e3sHHuxMPfXjZw==
+  dependencies:
+    "@types/dotenv" "*"
+
+"@types/dotenv@*":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@types/dotenv/-/dotenv-6.1.0.tgz#fba2bfd1f28a46eadaa049f3313ebb89bdedfc53"
+  integrity sha512-gmbNb7V1LbJQA4MmH0hVFgqY1cyKsa6RvKC1Xrq0WBnZ0JuuvXKciXx/s8dN0LVXCJd8xO6wIaSFSyUIoGph9g==
+  dependencies:
+    "@types/node" "*"
+
 "@types/events@*":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
@@ -13307,15 +13321,26 @@ next-compose-plugins@2.1.1:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.1.1.tgz#7da0a3ce0c8ce267b5cb4164d2fb6e4aaf61bf86"
   integrity sha512-4yLtmGjnBlzuYdL66+c/zi8ljl24sK9jtP31UsTG1ZAAHj+ybWfEG/S+HMwK+pD2fNmJ4xQyr4xOubzExcS+Lg==
 
+<<<<<<< HEAD
 next-plugin-transpile-modules@2.0.0:
+=======
+next-plugin-transpile-modules@^2.0.0:
+>>>>>>> renovate/web-next-8.x
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/next-plugin-transpile-modules/-/next-plugin-transpile-modules-2.0.0.tgz#8632683f0f04fbc776ce80c6cc62bb5c6694661d"
   integrity sha512-9vI7/OvBlu6f/cwzNdBDKxmY2Zc4Jr8hRy59exkXWwF22LUIZrEa0D7qhqWahAhbMibMGMMsX9GeUuOXKcG9/Q==
 
+<<<<<<< HEAD
 next-server@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.0.tgz#2ad17f505b042a4fb47cc2ae0967f7f195e78b6a"
   integrity sha512-x/Me4MR7SwmMtRoIhGhr/OA+0sUMlSaPXKezd79fEJhIAWVnvcVt/PuHS2bbRPkOG1sIqqgaegYR4gQTDK6k3A==
+=======
+next-server@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.1.tgz#39c48570366016e86ba600891f60bf6e5e2652a3"
+  integrity sha512-JFItMaal0QMwhMD/cqQuFN0a8XyCKSz1cNEfAsms5JfuDj5yMOGy29Qq4K5RONhCTRCtjXA6iDmDjPEng3FP8A==
+>>>>>>> renovate/web-next-8.x
   dependencies:
     etag "1.8.1"
     find-up "3.0.0"
@@ -13330,10 +13355,22 @@ next-tick@1:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
+<<<<<<< HEAD
 next@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/next/-/next-8.0.0.tgz#b09e8b4254fa6d22ceff5759c13682161a2c359d"
   integrity sha512-jDFgFjC5J8YIjU/0fSbDQo3E4flZ83egiWtyl9JxJJBhr93w5A1wZQsDvqxYOI7DEppJwa0JEsDUY0wD6fKwQg==
+=======
+next-transpile-modules@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-1.1.0.tgz#9b5bd958b689df30fe267e98200dcd4b60425d77"
+  integrity sha512-M4keE0Xk/2nTd2BMneGALp2SZGVMG/gSSxxFLZKYg8E5RcojtALm7YUWbeb929+YW5OSVKB9T+FUmw9iXAXRog==
+
+next@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/next/-/next-8.0.1.tgz#6147fbb22d8e55b2562b4ea2df868977d15ae9a0"
+  integrity sha512-d92vle1+4/EFgAbiLTEF7I3QHnBdO4AMKUYY9CQRGSD2K2zciQrvF5/SXl4nVIuCHyCAIwn87Rqsn3ipBn59jw==
+>>>>>>> renovate/web-next-8.x
   dependencies:
     "@babel/core" "7.1.2"
     "@babel/plugin-proposal-class-properties" "7.1.0"
@@ -13370,7 +13407,11 @@ next@8.0.0:
     loader-utils "1.1.0"
     mkdirp-then "1.2.0"
     nanoid "1.2.1"
+<<<<<<< HEAD
     next-server "8.0.0"
+=======
+    next-server "8.0.1"
+>>>>>>> renovate/web-next-8.x
     prop-types "15.6.2"
     prop-types-exact "1.2.0"
     react-error-overlay "4.0.0"

@@ -1,4 +1,4 @@
-import * as cors from 'cors';
+import cors from 'cors';
 import { Router } from 'express';
 
 const router: Router = Router();
