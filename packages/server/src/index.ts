@@ -1,5 +1,4 @@
-import { add } from '@myproject/common';
-import * as express from 'express';
+import express from 'express';
 import 'reflect-metadata';
 
 import apolloServer from './graphql/server';
@@ -33,8 +32,6 @@ const bootstrap = async () => {
       });
     })
     .catch(error => console.error('TypeORM', error));
-
-  add(2, 3);
 };
 
 bootstrap();

@@ -1,28 +1,20 @@
 {
-    "extends": "../../tsconfig.json",
+    "extends": "../tsconfig.settings.json",
     "compileOnSave": false,
     "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
-        "jsx": "preserve",
-        "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "noUnusedLocals": true,
-        "noImplicitAny": true,
-        "noUnusedParameters": true,
-        "removeComments": false,
-        "preserveConstEnums": true,
-        "skipLibCheck": true,
         "baseUrl": ".",
-        "experimentalDecorators": true,
-        "typeRoots": [
-            "./node_modules/@types"
-        ],
-        "lib": [
-            "dom",
-            "es2015",
-            "es2016"
-        ]
+        "jsx": "preserve",
+        "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+        "plugins": [
+            {
+              "name": "typescript-tslint-plugin",
+              "alwaysShowRuleFailuresAsWarnings": false,
+              "ignoreDefinitionFiles": true,
+              "configFile": "../tslint.json",
+              "suppressWhileTypeErrorsPresent": false,
+              "mockTypeScriptVersion": false
+            }
+          ]
     },
     "exclude": [
         "node_modules", "apollo-components.tsx"

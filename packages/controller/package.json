@@ -17,16 +17,11 @@
     "generate": "gql-gen && yarn build"
   },
   "devDependencies": {
-    "@types/node": "10.12.24",
+    "@types/node": "10.12.25",
     "@types/react": "16.8.2",
     "apollo": "2.4.4",
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
-    "tslint": "5.12.1",
-    "tslint-config-airbnb": "5.11.1",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-config-standard": "8.0.1",
-    "tslint-plugin-prettier": "2.0.1",
     "typescript": "3.3.3"
   },
   "dependencies": {

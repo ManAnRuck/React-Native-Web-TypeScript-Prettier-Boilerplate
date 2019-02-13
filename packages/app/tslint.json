@@ -1,19 +1,6 @@
 {
-    "project": "./tsconfig.json",
-    "extends": [
-        "tslint:latest",
-        "tslint-config-airbnb",
-        "tslint-config-prettier",
-        "../../tslint.json"
-    ],
-    "rulesDirectory": [
-        "tslint-plugin-prettier"
-    ],
-    "rules": {
-        "prettier": true,
-        "object-literal-sort-keys": false
-    },
-    "exclude": [
-        "node_modules", "ios", "android"
-    ]
+  "extends": ["../../tslint.json"],
+  "rules": {
+    "no-submodule-imports": [true, "rxjs", "styled-components/native"]
+  }
 }

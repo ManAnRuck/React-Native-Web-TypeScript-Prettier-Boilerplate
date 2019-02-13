@@ -1,39 +1,17 @@
 {
-    "extends": "../../tsconfig.json",
+    "extends": "../tsconfig.settings.json",
     "compilerOptions": {
-        "target": "es2016",
-        "module": "commonjs",
-        "lib": [
-            "dom",
-            "es2017",
-            "esnext.asynciterable"
-        ],
-        "sourceMap": false,
-        "outDir": "./dist",
-        "moduleResolution": "node",
-        "removeComments": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "strictPropertyInitialization": false,
-        "strictFunctionTypes": true,
-        "noImplicitThis": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-        "allowSyntheticDefaultImports": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
         "baseUrl": ".",
+        "outDir": "./dist",
         "paths": {
             "*": [
                 "src/types/*"
             ]
-        }
+        },
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
     },
-    "exclude": [
-        "node_modules"
-    ],
     "include": [
         "./src/**/*.tsx",
         "./src/**/*.ts"

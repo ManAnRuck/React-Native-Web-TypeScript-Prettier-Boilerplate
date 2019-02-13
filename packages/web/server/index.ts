@@ -1,5 +1,5 @@
 import { createServer } from 'http';
-import * as next from 'next';
+import next from 'next';
 import { parse } from 'url';
 
 const port = Number(process.env.PORT) || 3000;
@@ -22,7 +22,9 @@ app.prepare().then(() => {
       }
     }
   }).listen(port, (err: any) => {
-    if (err) throw err;
+    if (err) {
+      throw err;
+    }
     // tslint:disable-next-line:no-console
     console.log(`> Ready on http://localhost:${port}`);
   });

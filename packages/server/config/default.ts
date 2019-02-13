@@ -1,5 +1,8 @@
-import { IConfig } from './types';
-require('dotenv-safe').config();
+import { IConfig } from '../src/types/types';
+
+import * as dotenvSafe from 'dotenv-safe';
+
+dotenvSafe.config();
 
 const defaultConfig: IConfig = {
   auth: {

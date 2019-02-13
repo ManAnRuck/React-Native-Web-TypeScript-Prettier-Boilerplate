@@ -1,12 +1,12 @@
-import * as config from 'config';
+import config from 'config';
 import { Router } from 'express';
-import * as passport from 'passport';
+import passport from 'passport';
 import handlePassportOauthStrategies from './handlePassportOauthStrategies';
 
 import { Strategy as GitHubStrategy } from 'passport-github';
 
 // TS Interfaces
-import { IOAuthOptions } from '../../../config/types';
+import { IOAuthOptions } from '../../types/types';
 import { callbackHandler } from './callbackHandler';
 
 // Configs

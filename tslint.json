@@ -1,18 +1,19 @@
 {
-    "project": "./tsconfig.json",
-    "rulesDirectory": [
-        "tslint-plugin-prettier"
-    ],
-    "rules": {
-        "prettier": true,
-        "jsx-no-multiline-js": false,
-        "no-boolean-literal-compare": true,
-        "import-name": false,
-        "no-submodule-imports": false,
-        "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
-        "no-console": false
-    },
-    "linterOptions": {
-        "exclude": ["node_modules/**", "apollo-components.tsx", "dist", ".next"]
-    }
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-immutable",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "jsRules": {},
+  "rules": {
+    "prettier": true,
+    "object-literal-sort-keys": false,
+    "interface-name": false,
+    "jsx-boolean-value": [true, "never"],
+    "no-console": false,
+    "ordered-imports": false
+  }
 }
