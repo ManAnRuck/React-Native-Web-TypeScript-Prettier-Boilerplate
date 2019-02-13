@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../tsconfig.settings.json",
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -9,6 +9,6 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noEmit": true,
-    "target": "es6",
+    "target": "es6"
   }
 }

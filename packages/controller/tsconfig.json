@@ -1,10 +1,10 @@
 {
-    "extends": "../tsconfig.settings.json",
-    "compilerOptions": {
-        "target": "es5",
-        "outDir": "dist/",
-        "rootDir": "src/",
-        "jsx": "react",
-        "declaration": true,
-    }
+  "extends": "../tsconfig.settings.json",
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "dist/",
+    "rootDir": "src/",
+    "jsx": "react",
+    "declaration": true
+  }
 }

@@ -1,3 +1,4 @@
+// @ts-check
 const withPlugins = require("next-compose-plugins");
 // const withTM = require("next-plugin-transpile-modules");
 const withTM = require("next-transpile-modules");

@@ -2,7 +2,7 @@
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true,
     "babelOptions": {
-      "babelrc": false,
+      "babelrc": false
     },
     "babelCore": "@babel/core"
   },
@@ -11,9 +11,7 @@
     "outDir": "dist",
     "declaration": true,
     "jsx": "react",
-    "rootDirs": [
-      "./src"
-    ],
+    "rootDirs": ["./src"],
     "baseUrl": "./src"
   }
 }

@@ -4,7 +4,17 @@
     "compilerOptions": {
         "baseUrl": ".",
         "jsx": "preserve",
-        "lib": ["dom", "es6", "es2017", "esnext.asynciterable"]
+        "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+        "plugins": [
+            {
+              "name": "typescript-tslint-plugin",
+              "alwaysShowRuleFailuresAsWarnings": false,
+              "ignoreDefinitionFiles": true,
+              "configFile": "../tslint.json",
+              "suppressWhileTypeErrorsPresent": false,
+              "mockTypeScriptVersion": false
+            }
+          ]
     },
     "exclude": [
         "node_modules", "apollo-components.tsx"

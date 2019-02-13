@@ -1,18 +1,5 @@
 {
-    "project": "./tsconfig.json",
     "extends": [
-        "tslint:latest",
-        "tslint-config-airbnb",
-        "tslint-config-prettier",
         "../../tslint.json"
-    ],
-    "rulesDirectory": [
-        "tslint-plugin-prettier"
-    ],
-    "rules": {
-        "prettier": true
-    },
-    "exclude": [
-        "./node_modules"
     ]
 }

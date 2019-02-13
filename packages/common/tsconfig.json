@@ -1,17 +1,12 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "target": "ES5",
-        "module": "CommonJS",
-        "rootDir": "src",
-        "outDir": "dist",
-        "declaration": true,
-    },
-    "exclude": [
-        "node_modules"
-    ],
-    "include": [
-        "./src/**/*.tsx",
-        "./src/**/*.ts"
-    ]
+  "extends": "../tsconfig.settings.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJS",
+    "rootDir": "src",
+    "outDir": "dist",
+    "declaration": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts"]
 }
