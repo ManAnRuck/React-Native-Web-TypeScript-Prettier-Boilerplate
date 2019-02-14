@@ -10,6 +10,9 @@ const nextConfig = {
       ...config.resolve.alias,
       '../../theme.config$': path.resolve('./assets/styles/theme.config'),
       'styled-components': require.resolve('styled-components'),
+      '@myproject/common': require.resolve('@myproject/common'),
+      '@myproject/controller': require.resolve('@myproject/controller'),
+      '@myproject/ui': require.resolve('@myproject/ui'),
     };
 
     config.module.rules = [
