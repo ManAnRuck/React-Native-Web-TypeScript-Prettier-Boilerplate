@@ -1,87 +1,54 @@
 {
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
+  "devDependencies": {
+    "automerge": true,
+    "major": {
+      "automerge": false
+    },
+    "minor": {
+      "automerge": false
+    }
+  },
   "packageRules": [
     {
-      "packageNames": [
-        "jest",
-        "babel-jest",
-        "@types/jest"
-      ],
+      "packageNames": ["jest", "babel-jest", "@types/jest"],
       "groupName": "jest packages"
     },
     {
-      "packageNames": [
-        "react",
-        "@types/react",
-        "react-dom"
-      ],
+      "packageNames": ["react", "@types/react", "react-dom"],
       "groupName": "react packages"
     },
     {
       "branchPrefix": "renovate/app-",
-      "paths": [
-        "packages/app/package.json"
-      ],
-      "labels": [
-        "app",
-        "Renovate"
-      ],
-      "ignoreDeps": [
-        "react-test-renderer",
-        "react",
-        "@​types/react"
-      ]
+      "paths": ["packages/app/package.json"],
+      "labels": ["app", "Renovate"],
+      "ignoreDeps": ["react-test-renderer", "react", "@​types/react"]
     },
     {
       "branchPrefix": "renovate/common-",
-      "paths": [
-        "packages/common/package.json"
-      ],
-      "labels": [
-        "common",
-        "Renovate"
-      ]
+      "paths": ["packages/common/package.json"],
+      "labels": ["common", "Renovate"]
     },
     {
       "branchPrefix": "renovate/controller-",
-      "paths": [
-        "packages/controller/package.json"
-      ],
-      "labels": [
-        "controller",
-        "Renovate"
-      ]
+      "paths": ["packages/controller/package.json"],
+      "labels": ["controller", "Renovate"]
     },
     {
       "branchPrefix": "renovate/server-",
-      "paths": [
-        "packages/server/package.json"
-      ],
-      "labels": [
-        "server",
-        "Renovate"
-      ]
+      "paths": ["packages/server/package.json"],
+      "labels": ["server", "Renovate"]
     },
     {
       "branchPrefix": "renovate/ui-",
-      "paths": [
-        "packages/ui/package.json"
-      ],
-      "labels": [
-        "ui",
-        "Renovate"
-      ]
+      "paths": ["packages/ui/package.json"],
+      "labels": ["ui", "Renovate"]
     },
     {
       "branchPrefix": "renovate/web-",
-      "paths": [
-        "packages/web/package.json"
-      ],
-      "labels": [
-        "web",
-        "Renovate"
-      ]
+      "paths": ["packages/web/package.json"],
+      "labels": ["web", "Renovate"]
     }
   ]
 }
