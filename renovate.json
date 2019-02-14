@@ -1,77 +1,55 @@
 {
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
+  "automerge": true,
   "packageRules": [
     {
-      "packageNames": ["jest", "babel-jest", "@types/jest"],
-      "groupName": "jest packages",
-
       "depTypeList": ["devDependencies"],
       "updateTypes": ["patch"],
       "automerge": true
     },
     {
+      "depTypeList": ["dependencies"],
+      "automerge": false
+    },
+    {
+      "packageNames": ["jest", "babel-jest", "@types/jest"],
+      "groupName": "jest packages"
+    },
+    {
       "packageNames": ["react", "@types/react", "react-dom"],
-      "groupName": "react packages",
-
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
+      "groupName": "react packages"
     },
     {
       "branchPrefix": "renovate/app-",
       "paths": ["packages/app/package.json"],
       "labels": ["app", "Renovate"],
-      "ignoreDeps": ["react-test-renderer", "react", "@​types/react"],
-
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
+      "ignoreDeps": ["react-test-renderer", "react", "@​types/react"]
     },
     {
       "branchPrefix": "renovate/common-",
       "paths": ["packages/common/package.json"],
-      "labels": ["common", "Renovate"],
-
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
+      "labels": ["common", "Renovate"]
     },
     {
       "branchPrefix": "renovate/controller-",
       "paths": ["packages/controller/package.json"],
-      "labels": ["controller", "Renovate"],
-
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
+      "labels": ["controller", "Renovate"]
     },
     {
       "branchPrefix": "renovate/server-",
       "paths": ["packages/server/package.json"],
-      "labels": ["server", "Renovate"],
-
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
+      "labels": ["server", "Renovate"]
     },
     {
       "branchPrefix": "renovate/ui-",
       "paths": ["packages/ui/package.json"],
-      "labels": ["ui", "Renovate"],
-
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
+      "labels": ["ui", "Renovate"]
     },
     {
       "branchPrefix": "renovate/web-",
       "paths": ["packages/web/package.json"],
-      "labels": ["web", "Renovate"],
-
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
+      "labels": ["web", "Renovate"]
     }
   ]
 }
