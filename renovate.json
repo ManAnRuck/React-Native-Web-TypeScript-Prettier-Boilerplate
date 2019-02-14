@@ -1,6 +1,7 @@
 {
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
+  "separateMinorPatch": true,
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
