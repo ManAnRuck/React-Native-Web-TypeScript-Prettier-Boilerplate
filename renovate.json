@@ -1,12 +1,25 @@
 {
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
+  "automerge": true,
+  "patch": {
+    "automerge": false
+  },
+  "minor": {
+    "automerge": false
+  },
+  "major": {
+    "automerge": false
+  },
   "devDependencies": {
     "automerge": true,
-    "major": {
-      "automerge": false
+    "patch": {
+      "automerge": true
     },
     "minor": {
+      "automerge": false
+    },
+    "major": {
       "automerge": false
     }
   },
