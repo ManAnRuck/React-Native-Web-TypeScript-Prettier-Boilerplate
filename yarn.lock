@@ -3707,6 +3707,14 @@
     "@types/react" "*"
     "@types/webpack" "*"
 
+"@types/react-native@*":
+  version "0.57.36"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.36.tgz#b8e8c2c119fd0f9227f32ee260b7abf223f47960"
+  integrity sha512-6u2WWupQ+mVRsICZqiy3BCGi9vivluhut/+Z1dbjXKn9ms9MrCVvnyQ0jyooqhtmtRzquH6mYYNYArGYdEajjg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
+
 "@types/react-native@0.57.35":
   version "0.57.35"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.35.tgz#362bbfa28a5700bac6fd814f8cb4aae1521cd9d3"
@@ -3819,6 +3827,15 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
   integrity sha512-7NQmHra/JILCd1QqpSzl8+mJRc8ZHz3uDm8YV1Ks9IhK0epEiTw8aIErbvH9PI+6XbqhyIQy3462nEsn7UVzjQ==
+
+"@types/styled-components@4.1.10":
+  version "4.1.10"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.10.tgz#7d23d0f1f5b32a78a9207d0300480d47251a3e98"
+  integrity sha512-BrXaqsBG2iiT/U1SLLMa32rt3nYdKVBnMSgsbC7bmoGHp9sefmp6wF3FrEUCUFPTRuKf0AgYIP4HRaTo/pj0Ng==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    csstype "^2.2.0"
 
 "@types/styled-components@4.1.8":
   version "4.1.8"
