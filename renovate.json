@@ -3,11 +3,6 @@
   "prConcurrentLimit": 0,
   "packageRules": [
     {
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
-    },
-    {
       "packageNames": ["jest", "babel-jest", "@types/jest"],
       "groupName": "jest packages"
     },
@@ -45,6 +40,11 @@
       "branchPrefix": "renovate/web-",
       "paths": ["packages/web/package.json"],
       "labels": ["web", "Renovate"]
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["patch"],
+      "automerge": true
     }
   ]
 }
