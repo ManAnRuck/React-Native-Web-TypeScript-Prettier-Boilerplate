@@ -1,29 +1,12 @@
 {
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
-  "automerge": true,
-  "patch": {
-    "automerge": false
-  },
-  "minor": {
-    "automerge": false
-  },
-  "major": {
-    "automerge": false
-  },
-  "devDependencies": {
-    "automerge": true,
-    "patch": {
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["patch"],
       "automerge": true
     },
-    "minor": {
-      "automerge": false
-    },
-    "major": {
-      "automerge": false
-    }
-  },
-  "packageRules": [
     {
       "packageNames": ["jest", "babel-jest", "@types/jest"],
       "groupName": "jest packages"
