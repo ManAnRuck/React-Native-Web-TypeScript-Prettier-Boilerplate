@@ -5,6 +5,11 @@
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
+      "updateTypes": ["patch"],
+      "labels": ["automerge"]
+    },
+    {
+      "depTypeList": ["devDependencies"],
       "updateTypes": ["minor", "major"],
       "automerge": false
     },
