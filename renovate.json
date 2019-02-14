@@ -6,6 +6,7 @@
     {
       "depTypeList": ["devDependencies"],
       "updateTypes": ["patch"],
+      "automerge": true,
       "labels": ["automerge"]
     },
     {
