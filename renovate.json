@@ -3,8 +3,8 @@
   "prConcurrentLimit": 0,
   "packageRules": [
     {
-      "depTypeList": ["devDependencies"],
       "updateTypes": ["patch"],
+      "depTypeList": ["devDependencies"],
       "automerge": true,
       "labels": ["automerge"]
     },
