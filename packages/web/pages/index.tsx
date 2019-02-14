@@ -15,7 +15,6 @@ export default class Index extends PureComponent {
   public static async getInitialProps({
     apolloClient,
   }: INextContextWithApollo) {
-    console.log('DEBUG next-transpile-modules', { meQuery });
     const response: any = await apolloClient.query({
       query: meQuery,
     });
