@@ -3565,13 +3565,6 @@
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.6.tgz#5932ead926307ca21e5b36808257f7c926b06565"
   integrity sha512-403D4wN95Mtzt2EoQHARf5oe/jEPhzBOBNrunk+ydQGW8WmkQ/E8rViRAEB1qEt/vssfGfNVD6ujP4FVeegrLg==
 
-"@types/lodash.get@4.4.4":
-  version "4.4.4"
-  resolved "https://registry.yarnpkg.com/@types/lodash.get/-/lodash.get-4.4.4.tgz#34b67841594e4ddc8853341d65e971a38cb4e2f0"
-  integrity sha512-6igkhtKoWAEvTWCgd5uubiuxXLUY/kljQOQZV1G5Y7SrivpmCU+NWG5tGLgRBkccobrDljbJYzBM2vgCG4Oc8Q==
-  dependencies:
-    "@types/lodash" "*"
-
 "@types/lodash.get@4.4.5":
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/@types/lodash.get/-/lodash.get-4.4.5.tgz#a835251b005cf87582deb68ba0f147df51321bc3"
