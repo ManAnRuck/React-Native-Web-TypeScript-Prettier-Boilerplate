@@ -44,7 +44,7 @@
     "@types/config": "0.0.34",
     "@types/connect-redis": "0.0.8",
     "@types/dotenv-safe": "^5.0.3",
-    "@types/express-session": "1.15.11",
+    "@types/express-session": "1.15.12",
     "@types/ioredis": "4.0.6",
     "@types/node": "10.12.26",
     "@types/passport": "1.0.0",
