@@ -2,11 +2,8 @@
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "separateMinorPatch": true,
+  "ignoreDeps": ["gradle"],
   "packageRules": [
-    {
-      "paths": ["packages/app/package.json"],
-      "ignoreDeps": ["gradle"]
-    },
     {
       "depTypeList": ["devDependencies"],
       "updateTypes": ["patch"],
