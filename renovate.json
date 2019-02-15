@@ -4,6 +4,9 @@
   "separateMinorPatch": true,
   "packageRules": [
     {
+      "ignoreDeps": ["gradle"]
+    },
+    {
       "depTypeList": ["devDependencies"],
       "updateTypes": ["patch"],
       "labels": ["AUTOMERGE"],
