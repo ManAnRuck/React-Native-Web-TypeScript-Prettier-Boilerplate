@@ -36,7 +36,7 @@
     "@types/storybook__addon-centered": "3.3.2",
     "@types/storybook__addon-knobs": "4.0.1",
     "@types/storybook__react": "4.0.1",
-    "@types/styled-components": "4.1.8",
+    "@types/styled-components": "4.1.10",
     "awesome-typescript-loader": "5.2.1",
     "babel-loader": "8.0.5",
     "babel-plugin-styled-components": "1.10.0",
