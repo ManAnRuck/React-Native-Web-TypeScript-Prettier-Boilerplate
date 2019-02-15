@@ -3810,10 +3810,10 @@
     "@types/react" "*"
     "@types/storybook__react" "*"
 
-"@types/storybook__addon-knobs@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@types/storybook__addon-knobs/-/storybook__addon-knobs-4.0.0.tgz#b218f0d84888833cc8b8d7a7b524175e8bb3030f"
-  integrity sha512-x3GNz8f0fQv7USvDuVXdZ4p/7nofFHyH6iB/qwR84Yp97xZxOzlQ0SY+6K14tVbdi9P7Qm5DZ2kZr0a+Io8qEQ==
+"@types/storybook__addon-knobs@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@types/storybook__addon-knobs/-/storybook__addon-knobs-4.0.1.tgz#fcd7ba4875130b7dddf688a77b95d8f28e35e6f0"
+  integrity sha512-7T1Oaw8ojdGGwVNspbBjpZioxtY9ySmMXvRzf3fCJhpexizNw49uzBD6MwhHUdboP1A/pDFWKVfv9ZDKeNXIHQ==
   dependencies:
     "@types/react" "*"
     "@types/storybook__react" "*"
