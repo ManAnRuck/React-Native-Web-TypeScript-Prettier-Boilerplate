@@ -12,8 +12,7 @@ import {
 } from 'semantic-ui-react';
 import '../assets/styles/styles.less';
 import { LoginButton } from '../components/auth/LoginButton';
-import { MutationFn } from 'react-apollo';
-import ApolloClient from 'apollo-client';
+import { MutationFn, MutationResult } from 'react-apollo';
 
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
@@ -32,7 +31,7 @@ class DesktopContainer extends Component<SingletonRouter> {
     client,
   }: {
     mutate: MutationFn;
-    client: ApolloClient<object>;
+    client: MutationResult['client'];
   }) => async () => {
     await mutate();
     await client.resetStore();
