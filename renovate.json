@@ -4,6 +4,7 @@
   "separateMinorPatch": true,
   "packageRules": [
     {
+      "paths": ["packages/app/package.json"],
       "ignoreDeps": ["gradle"]
     },
     {
