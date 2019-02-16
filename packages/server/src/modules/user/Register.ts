@@ -7,7 +7,7 @@ import User from '../../entity/User';
 
 // Typescript
 import { IMyContext } from '../../types/MyContext';
-import { AuthenticationError } from 'apollo-server';
+import { REGISTER_PASSWORD_WRONG } from '../../graphql/errors/user/register';
 
 @Resolver(() => User)
 export default class RegisterResolver {
@@ -39,7 +39,9 @@ export default class RegisterResolver {
       if (lu && bcrypt.compareSync(password, lu.password)) {
         return lu;
       } else if (lu) {
-        throw new AuthenticationError('your login data are incorrect');
+        const validationErrors: any = {};
+        validationErrors.form = { message: 'Fasd', field: 'form' };
+        throw new Error(REGISTER_PASSWORD_WRONG.key);
       }
       return null;
     });
