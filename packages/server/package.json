@@ -8,7 +8,7 @@
     "prebuild": "rimraf dist",
     "build": "tsc",
     "start": "NODE_ENV=production node ./dist/index.js",
-    "dev": "ts-node-dev --respawn ./src/index.ts",
+    "dev": "nodemon ./src/index.ts",
     "lint": "tslint --project tsconfig.json && yarn typecheck",
     "typecheck": "tsc --noEmit",
     "pre-commit": "yarn lint && yarn typecheck"
@@ -52,6 +52,7 @@
     "@types/passport-strategy": "^0.2.35",
     "@types/passport-twitter": "1.0.34",
     "dtslint": "^0.4.2",
+    "nodemon": "^1.18.10",
     "passport-strategy": "^1.0.0",
     "prettier": "1.16.4",
     "ts-node": "8.0.2",
