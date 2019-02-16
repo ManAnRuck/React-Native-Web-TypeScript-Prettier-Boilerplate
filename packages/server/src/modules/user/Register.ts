@@ -7,6 +7,7 @@ import User from '../../entity/User';
 
 // Typescript
 import { IMyContext } from '../../types/MyContext';
+import { REGISTER_PASSWORD_WRONG } from '../../graphql/errors/user/register';
 
 @Resolver(() => User)
 export default class RegisterResolver {
@@ -18,6 +19,7 @@ export default class RegisterResolver {
   ): Promise<User> {
     const hashedPassword = await bcrypt.hash(password, 12);
 
+    // get user if there is an active session
     let user = await User.findOne(
       { id: ctx.req.session!.userId },
       {
@@ -25,19 +27,45 @@ export default class RegisterResolver {
       },
     );
 
+    // search for existing user, login or thorw an error
+    let localUser = await LocalUser.findOne(
+      {
+        email,
+      },
+      {
+        relations: ['user'],
+      },
+    ).then(lu => {
+      if (lu && bcrypt.compareSync(password, lu.password)) {
+        return lu;
+      } else if (lu) {
+        const validationErrors: any = {};
+        validationErrors.form = { message: 'Fasd', field: 'form' };
+        throw new Error(REGISTER_PASSWORD_WRONG.key);
+      }
+      return null;
+    });
+
+    if (localUser) {
+      user = localUser.user;
+    }
+
     if (!user) {
       user = new User();
       user.username = email;
       await user.save();
     }
 
+    // set session
     ctx.req.session!.userId = user.id;
 
-    const localUser = LocalUser.create();
-    localUser.email = email;
-    localUser.password = hashedPassword;
-    localUser.user = user;
-    await localUser.save();
+    if (!localUser) {
+      localUser = LocalUser.create();
+      localUser.email = email;
+      localUser.password = hashedPassword;
+      localUser.user = user;
+      await localUser.save();
+    }
 
     return user;
   }
