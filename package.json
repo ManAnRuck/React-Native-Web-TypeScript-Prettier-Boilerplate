@@ -15,8 +15,8 @@
     ]
   },
   "scripts": {
-    "dev": "yarn build:common && yarn build:controller && yarn build:ui && lerna run dev --parallel",
-    "build:common": "yarn --cwd packages/common build",
+    "dev": "yarn dev:build && lerna run dev --parallel",
+    "dev:build": "lerna run --parallel --scope @*/controller --scope @*/common build --scope @*/ui build",
     "build:controller": "yarn --cwd packages/controller build",
     "build:ui": "yarn --cwd packages/ui build",
     "build": "lerna run build",
