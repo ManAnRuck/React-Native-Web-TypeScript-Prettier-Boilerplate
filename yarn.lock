@@ -16477,10 +16477,10 @@ schema-utils@^0.4.4, schema-utils@^0.4.5:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
-semantic-ui-calendar-react@0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/semantic-ui-calendar-react/-/semantic-ui-calendar-react-0.13.0.tgz#c826827fc846641aba2d81f53744d474784bfe22"
-  integrity sha512-+DhCcj2GZBQspW2dY8Q0rKL4a1u9bCb1XP138KXbl23ZPRWbLK9+gHbbnL1fs3VlLjwoKMBaZGUs80gbGIN1CQ==
+semantic-ui-calendar-react@0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/semantic-ui-calendar-react/-/semantic-ui-calendar-react-0.14.0.tgz#34aaa812efca71d4955724c690ab15d1d0631e66"
+  integrity sha512-1I0H1T2ruOjuq47zTzhTId8ebk7BomSRfI+fw1Wkvua0Y9uNcT5Vqud4qiOUmI4WhheLWIc/l4J6V+81WHI2eA==
   dependencies:
     keyboard-key "^1.0.2"
     lodash "^4.17.10"
