@@ -7,9 +7,13 @@
 ```bash
 clone https://github.com/ReggaePanda/React-Native-Web-TypeScript-Prettier-Boilerplate.git MyProject
 cd MyProject
+docker-compose up
+
 yarn
 yarn build
 ```
+
+create `packages/server/.env` from `packages/server/.env.example` (you do not need Change tokens if u don't want socialmedia oauth)
 
 run project
 
