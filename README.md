@@ -18,6 +18,7 @@ create `packages/server/.env` from `packages/server/.env.example` (you do not ne
 run project
 
 ```bash
+docker-compose up
 yarn dev
 ```
 
