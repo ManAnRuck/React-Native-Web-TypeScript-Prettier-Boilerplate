@@ -11,13 +11,30 @@ interface IProps {
 }
 
 export default class MyDocument extends Document<IProps> {
-  public static getInitialProps({ renderPage }: NextDocumentContext) {
+  public static async getInitialProps(ctx: NextDocumentContext) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage((APP: any) => (props: any) =>
-      sheet.collectStyles(<APP {...props} />),
-    );
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App: any) => (props: any) =>
+            sheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 
   public render() {
