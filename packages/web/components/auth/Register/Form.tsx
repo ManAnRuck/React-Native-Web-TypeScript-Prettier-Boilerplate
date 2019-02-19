@@ -39,7 +39,6 @@ class C extends React.PureComponent<
 > {
   public render() {
     const { handleSubmit, errors } = this.props;
-    console.log(errors);
     return (
       <Form
         onSubmit={handleSubmit}

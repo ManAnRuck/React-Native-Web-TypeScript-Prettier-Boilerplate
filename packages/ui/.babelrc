@@ -1,6 +1,15 @@
 {
   "ignore": ["**/*.story.tsx"],
-  "presets": ["@babel/preset-react", "@babel/typescript"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/typescript"
+  ],
   "plugins": [
     [
       "styled-components",
