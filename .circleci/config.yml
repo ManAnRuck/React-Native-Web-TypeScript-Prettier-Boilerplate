@@ -4,9 +4,7 @@
 #
 version: 2
 jobs:
-  
   test:
-
     docker:
       # specify the version you desire here
       - image: cypress/base:10
@@ -17,7 +15,7 @@ jobs:
       # PostgreSql
       - image: circleci/postgres:9.6.11-alpine
         environment:
-          POSTGRES_USER: manuelruck
+          POSTGRES_USER: myuser
           POSTGRES_DB: myproject
 
       # Specify service dependencies here if necessary
@@ -29,22 +27,20 @@ jobs:
 
     steps:
       - checkout
-      
+
       - restore_cache:
           key: dockerize-{{ arch }}-v0.6.0
 
       - run:
           name: install dockerize if not found in cache
-          command:
-            if \[ -f /usr/local/bin/dockerize \]; then
-              echo "dockerize found; skipping installation";
+          command: if \[ -f /usr/local/bin/dockerize \]; then
+            echo "dockerize found; skipping installation";
             else wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-              && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-              && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz;
+            && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+            && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz;
             fi
           environment:
             DOCKERIZE_VERSION: v0.6.0
-
 
       - save_cache:
           key: dockerize-{{ arch }}-v0.6.0
@@ -72,7 +68,6 @@ jobs:
 
       - run: yarn install
 
-
       - save_cache:
           paths:
             - node_modules
@@ -81,7 +76,7 @@ jobs:
             - "packages/controller/node_modules"
             - "packages/server/node_modules"
             - "packages/ui/node_modules"
-            - "packages/web/node_modules"           
+            - "packages/web/node_modules"
             - "/root/.cache/Cypress"
           key: v1.1-dependencies-{{ checksum "yarn.lock" }}
 
@@ -92,7 +87,7 @@ jobs:
       - run: yarn lint
 
       # run test!
-      - run: 
+      - run:
           name: Start test Web
           command: yarn start:test && yarn --cwd packages/web cy:run --record --key a5e74ce0-0f42-4a88-ad01-d3eff0b60a5f
 
