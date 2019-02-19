@@ -3,7 +3,7 @@ module.exports = {
     "host": "localhost",
     "port": process.env.POSTGRESQL_PORT || 5555,
     "username": process.env.POSTGRESQL_USER || "myuser",
-    "password": process.env.POSTGRESQL_PASSWORD || "",
+    "password": process.env.POSTGRESQL_PASSWORD || "mypassword",
     "database": process.env.POSTGRESQL_DB || "myproject",
     "synchronize": true,
     "logging": false,
