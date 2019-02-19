@@ -1,0 +1,29 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=myproject
+    ports:
+      - "5555:5432"
+    volumes:
+      - database:/var/lib/postgresql/data
+  redis:
+    image: redis:alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: redis
+    ports:
+      - "6378:6379"
+    networks:
+      - redis-net
+    volumes:
+      - redis-data:/data
+
+networks:
+  redis-net:
+
+volumes:
+  database:
+  redis-data:

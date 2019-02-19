@@ -1,5 +1,19 @@
 {
-    "plugins": [
-      "@quickbaseoss/babel-plugin-styled-components-css-namespace"
+  "ignore": ["**/*.story.tsx"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/typescript"
+  ],
+  "plugins": [
+    [
+      "styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
     ]
-  }
+  ]
+}
