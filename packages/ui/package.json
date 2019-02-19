@@ -7,10 +7,12 @@
   "scripts": {
     "dev": "concurrently \"yarn storybook\" \"yarn watch\"",
     "typecheck": "tsc --noEmit",
-    "watch": "tsc --watch",
+    "watch": "nodemon --exec yarn build",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "lint": "tslint --project tsconfig.json && yarn typecheck",
-    "build": "rimraf dist && tsc"
+    "build": "yarn build:types && yarn build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps"
   },
   "dependencies": {
     "formik": "1.5.0",
@@ -21,6 +23,10 @@
     "styled-components": "4.1.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "0.1.1",
     "@storybook/addon-a11y": "4.1.12",
     "@storybook/addon-actions": "4.1.12",

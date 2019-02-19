@@ -7,7 +7,7 @@
     "babelCore": "@babel/core"
   },
   "extends": "../tsconfig.settings.json",
-  "compileOnSave": true,
+  "compileOnSave": false,
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,
