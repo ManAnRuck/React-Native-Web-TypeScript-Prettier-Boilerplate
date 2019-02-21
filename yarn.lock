@@ -3058,14 +3058,14 @@
     core-js "^2.5.7"
     global "^4.3.2"
 
-"@storybook/addon-info@4.1.12":
-  version "4.1.12"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.12.tgz#cbc95ee488cef2131083d0c8e6b95a32287cbb5e"
-  integrity sha512-cbIzcHS+JkveM9ySwOtpsRsb++jHXqgpL0JPrzOQ0okXr/KcLZglUeijCvnRZgzfQJhQeUBX5t7YWMEnCtPZGA==
+"@storybook/addon-info@4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.13.tgz#b91494a5f4e69998fee9a3110717c2bb208f1542"
+  integrity sha512-l30GWUUYGpXhYCyO3yKEdlBCc/Vc7+q2tQ3VdOmlMcPZGW9QxJg6Qav3GC8aIPlAhcFwlzxE4bT+0sCQGSKUIQ==
   dependencies:
-    "@storybook/addons" "4.1.12"
-    "@storybook/client-logger" "4.1.12"
-    "@storybook/components" "4.1.12"
+    "@storybook/addons" "4.1.13"
+    "@storybook/client-logger" "4.1.13"
+    "@storybook/components" "4.1.13"
     core-js "^2.5.7"
     global "^4.3.2"
     marksy "^6.1.0"
