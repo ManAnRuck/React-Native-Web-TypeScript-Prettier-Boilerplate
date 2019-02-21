@@ -3612,10 +3612,10 @@
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-14.0.5.tgz#e696292fd2d77dc168b5b791710f83463aa39abd"
   integrity sha512-bwGYLE0SRy5ZraC91dqI2bxbspfm10kyJ2Yjuvk4OjdGznh7fkoWW+xXZHfFydJaqu9syZi099cpiZw3GlPDiA==
 
-"@types/ioredis@4.0.7":
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/@types/ioredis/-/ioredis-4.0.7.tgz#e061a65b23dab5014249f6965e1f7e6a6ff4d3cc"
-  integrity sha512-nMkhcxUF1YWydGcl5sSb5FkFAOcAk7rbIY2nEKib7TGRQDD93PaxoHRB9axlV241VIIDpYpaToOom4tPc4vv1w==
+"@types/ioredis@4.0.8":
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/@types/ioredis/-/ioredis-4.0.8.tgz#23f28c39ed2d2434ec7c70bd9e4b6d2dccb96c45"
+  integrity sha512-ZAXWkcij8wN+0eNNM1ofl8kzWvbPIwibBZcDa/8m32wqBcX7S4r+QRA59fob1OD1HQhEFVC16XFN8P5ZgSF1yQ==
   dependencies:
     "@types/node" "*"
 
