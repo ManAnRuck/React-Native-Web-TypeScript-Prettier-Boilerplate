@@ -22,7 +22,7 @@
     "apollo": "2.5.1",
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
-    "typescript": "3.3.3"
+    "typescript": "3.3.3333"
   },
   "dependencies": {
     "@types/react-dom": "^16.8.0",
