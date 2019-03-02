@@ -13,7 +13,7 @@
     "pre-commit": "yarn lint && yarn typecheck"
   },
   "devDependencies": {
-    "@types/node": "10.12.27",
+    "@types/node": "10.12.29",
     "@types/yup": "^0.26.9",
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
