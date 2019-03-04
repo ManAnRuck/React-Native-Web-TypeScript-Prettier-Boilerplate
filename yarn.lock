@@ -15569,10 +15569,10 @@ react-modal@^3.6.1:
     react-lifecycles-compat "^3.0.0"
     warning "^3.0.0"
 
-react-native-typescript-transformer@1.2.11:
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/react-native-typescript-transformer/-/react-native-typescript-transformer-1.2.11.tgz#679398c27262cf941e5a5f3ea45cf7eea715d557"
-  integrity sha512-Kz/t1CQI4L2MrZQHI4fh5gkrPbNBaxim74QF0d02vg+4vlxHnn4iye8vI7WM9cWZdNUnN5IafrNn3ah5dWtElQ==
+react-native-typescript-transformer@1.2.12:
+  version "1.2.12"
+  resolved "https://registry.yarnpkg.com/react-native-typescript-transformer/-/react-native-typescript-transformer-1.2.12.tgz#ec234d31446d1aee213a2d5fb7e7584beff5dba3"
+  integrity sha512-X+4aykwXKGoaayLT1Xi8sB6q5CrJD0LCrFDYHa5A6WVwqO8Hom31W2Af5ch1gShFL0j0L9ZjiYQRuOD6Xsvqog==
   dependencies:
     babel-traverse "^6.26.0"
     chalk "^2.4.0"
