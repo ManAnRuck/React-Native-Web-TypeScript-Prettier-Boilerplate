@@ -3861,6 +3861,14 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/react@16.8.7":
+  version "16.8.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.7.tgz#7b1c0223dd5494f9b4501ad2a69aa6acb350a29b"
+  integrity sha512-0xbkIyrDNKUn4IJVf8JaCn+ucao/cq6ZB8O6kSzhrJub1cVSqgTArtG0qCfdERWKMEIvUbrwLXeQMqWEsyr9dA==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
 "@types/redis@*":
   version "2.8.10"
   resolved "https://registry.yarnpkg.com/@types/redis/-/redis-2.8.10.tgz#27130c3bcc803265a51cb978538ca330dff2e748"
