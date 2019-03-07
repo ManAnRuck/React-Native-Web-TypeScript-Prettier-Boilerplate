@@ -31,7 +31,7 @@
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "0.1.1",
     "@storybook/addon-a11y": "4.1.13",
     "@storybook/addon-actions": "4.1.13",
-    "@storybook/addon-centered": "4.1.13",
+    "@storybook/addon-centered": "5.0.0",
     "@storybook/addon-info": "4.1.13",
     "@storybook/addon-knobs": "4.1.13",
     "@storybook/react": "4.1.13",
