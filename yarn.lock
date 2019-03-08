@@ -3091,15 +3091,15 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-knobs@4.1.13":
-  version "4.1.13"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-4.1.13.tgz#7a5688903fde1726c168aa188216aaaafb3eb498"
-  integrity sha512-QXOYa4L3sHC27KiXLlJFPSG1ZuJFcESIAKRaWSE+3Rz/AMbt5jgba66CH1b4SXVEIaiEKg6oWu+eRL9JzcmdjA==
+"@storybook/addon-knobs@4.1.14":
+  version "4.1.14"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-4.1.14.tgz#48bc37f58707cb00960a501f24f702c993f17ad8"
+  integrity sha512-ScMi3iZxdOYMzVv7jMUqfgyPBWYwkSW4OLrVFIr5/EPP9mAOwnlYz+tI/8zM6w7/cvdEPY2pCilKt2zhzEMQ9w==
   dependencies:
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.13"
-    "@storybook/components" "4.1.13"
-    "@storybook/core-events" "4.1.13"
+    "@storybook/addons" "4.1.14"
+    "@storybook/components" "4.1.14"
+    "@storybook/core-events" "4.1.14"
     copy-to-clipboard "^3.0.8"
     core-js "^2.5.7"
     escape-html "^1.0.3"
