@@ -3557,10 +3557,10 @@
   resolved "https://registry.yarnpkg.com/@types/config/-/config-0.0.34.tgz#123f91bdb5afdd702294b9de9ca04d9ea11137b0"
   integrity sha512-jWi9DXx77hnzN4kHCNEvP/kab+nchRLTg9yjXYxjTcMBkuc5iBb3QuwJ4sPrb+nzy1GQjrfyfMqZOdR4i7opRQ==
 
-"@types/connect-redis@0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@types/connect-redis/-/connect-redis-0.0.8.tgz#5dfec54b1027cb2ec33a78e5de319fc9227528d2"
-  integrity sha512-zqMHgRiBxSqj3vpz/S7kR4GhJHo5atag/s7i/GFvZte7SsOxkU8OWK/BcysWS4M7XL7koe4+u4lGjvx7Yir9EQ==
+"@types/connect-redis@0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@types/connect-redis/-/connect-redis-0.0.9.tgz#ad1db26cdb55a741fcbad6dc337b6273ddc5e064"
+  integrity sha512-LdAbC9EnQkHLMgeV0EKufPbqaRKfsAxgdWaYnDtQOKuJV2U4JpFE2EU4yKJ3G2FjVvNXyzO6rcaBBjPBztGTzg==
   dependencies:
     "@types/express" "*"
     "@types/express-session" "*"
