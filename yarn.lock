@@ -3829,10 +3829,10 @@
     "@types/prop-types" "*"
     "@types/react" "*"
 
-"@types/react-native@0.57.38":
-  version "0.57.38"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.38.tgz#2ff6ed1a7cc207afbfd87bf496513d96931d1446"
-  integrity sha512-bmY2ad/vQgP0HMT7Q7EQzirDBt5ibp+kBHclTnY7/i5MrdqE1oY+3b9NkDg3ohXlumr7p5stAG6I55nhfeUV6Q==
+"@types/react-native@0.57.39":
+  version "0.57.39"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.39.tgz#be2409006239220bac0fe0ce03d54ecef36274ba"
+  integrity sha512-yigfcYENP5hCh5YLOQctu6BRZ2DdFndlrT0RS9opktpSdlKTtuNuKic6VcSlu2OTWGfWyQXh6kGXYIKRpfVSRw==
   dependencies:
     "@types/prop-types" "*"
     "@types/react" "*"
