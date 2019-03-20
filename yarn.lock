@@ -3066,13 +3066,14 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-centered@4.1.14":
-  version "4.1.14"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-4.1.14.tgz#fc5897cf4ab12f8dba515ee3566826ab46bcb391"
-  integrity sha512-UgfuPnUhasND4oh0rP9xkgy/nEgp0FmTOiF5TG+OVInO3jJU4nk3eMto2m6wR+jDrvDWsnY938xJ7umwep/VCQ==
+"@storybook/addon-centered@5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-5.0.3.tgz#c66ef8b919235bffefe794408f37c375168f005a"
+  integrity sha512-f3WYXtD9JAtDov2OjMXtYtqeKqO4uXmhONTyG/fqYuPAdzAZGHn4yOueN6hkaf/MOhxxVOfo9HUrg7c0D7zJkQ==
   dependencies:
-    core-js "^2.5.7"
+    core-js "^2.6.5"
     global "^4.3.2"
+    util-deprecate "^1.0.2"
 
 "@storybook/addon-info@4.1.14":
   version "4.1.14"
@@ -7466,6 +7467,11 @@ core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0, core-js@^2.5.7:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.1.tgz#87416ae817de957a3f249b3b5ca475d4aaed6042"
   integrity sha512-L72mmmEayPJBejKIWe2pYtGis5r0tQ5NaJekdhyXgeMQTpJoBsH0NL4ElY2LfSoV15xeQWKQ+XTTOZdyero5Xg==
+
+core-js@^2.6.5:
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
+  integrity sha512-klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
