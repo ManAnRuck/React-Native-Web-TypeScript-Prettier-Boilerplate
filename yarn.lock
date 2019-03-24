@@ -3046,17 +3046,17 @@
     global "^4.3.2"
     prop-types "^15.6.2"
 
-"@storybook/addon-actions@4.1.14":
-  version "4.1.14"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.1.14.tgz#4bd962da767aa6a99867114894229c739f87d780"
-  integrity sha512-zq8MSSLXv+D+e/m3LdRrAMVrJP5xcETO4OtutJCdJeAkIjMvstnWncUEUHMltv/+bTBQgb77uoTFKVN4zrJL2g==
+"@storybook/addon-actions@4.1.16":
+  version "4.1.16"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.1.16.tgz#ff13e893725e4782920a2fa9d950b75f7755634f"
+  integrity sha512-g9CfZTe/7O0+OZxrc8sS3ldYcDes7X9KcMweFvI5XSbEVd8pHaIc3Xvk4pqKRBSPWk1+ep2Il6EMSbfMjv54JA==
   dependencies:
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.14"
-    "@storybook/components" "4.1.14"
-    "@storybook/core-events" "4.1.14"
+    "@storybook/addons" "4.1.16"
+    "@storybook/components" "4.1.16"
+    "@storybook/core-events" "4.1.16"
     core-js "^2.5.7"
     deep-equal "^1.0.1"
     global "^4.3.2"
