@@ -3026,6 +3026,14 @@
     exenv "^1.2.2"
     prop-types "^15.6.2"
 
+"@semantic-ui-react/event-stack@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@semantic-ui-react/event-stack/-/event-stack-3.1.0.tgz#aadbe4a28b0dd7703c5f451640d0fefe66dd9208"
+  integrity sha512-WHtU9wutZByZtFZxzj4BVEk+rvWldZpZhRcyv6d84+XLSolm83zLHYJLTACGuSl6Xa/xpgVXquvm9GyMudkJYg==
+  dependencies:
+    exenv "^1.2.2"
+    prop-types "^15.6.2"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -16669,6 +16677,20 @@ semantic-ui-react@0.85.0:
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@semantic-ui-react/event-stack" "^3.0.1"
+    classnames "^2.2.6"
+    keyboard-key "^1.0.4"
+    lodash "^4.17.11"
+    prop-types "^15.6.2"
+    react-is "^16.7.0"
+    shallowequal "^1.1.0"
+
+semantic-ui-react@0.86.0:
+  version "0.86.0"
+  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.86.0.tgz#f3c6a27250f2e9e07a975d0a3399ffd3a48861b5"
+  integrity sha512-t/psK15zX9bEaezpRDwoXAZovp+I083SgsicAnMig/mxqaRI2FHZpr/G+lfzizrTpmYjgi4/Th6/QAol8pa7JQ==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    "@semantic-ui-react/event-stack" "^3.1.0"
     classnames "^2.2.6"
     keyboard-key "^1.0.4"
     lodash "^4.17.11"
