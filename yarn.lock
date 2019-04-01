@@ -3177,15 +3177,15 @@
     react-dom "^16.8.1"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-actions@5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-5.0.5.tgz#9179d08262c326c865021f5ecd173708c82edc87"
-  integrity sha512-m7uNuniFXmMdVSYEajlQ6us465NtLXoIj9cfYGX9wwzxb5tB2EG1oBUxVF5Q6JHC/HlRCsieYViHA+rprVLpJw==
+"@storybook/addon-actions@5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-5.0.6.tgz#78cf9c05b8b6cde1d5d46961ffb95d92be16bf46"
+  integrity sha512-Qbenp6Dv8uphDKsIemtW8bSu3PNYIDSB5av7bW9GieYex8QL6ntv7dja0DaD6NmIfjOZdO0Q0U3Nc9CAgHGOBQ==
   dependencies:
-    "@storybook/addons" "5.0.5"
-    "@storybook/components" "5.0.5"
-    "@storybook/core-events" "5.0.5"
-    "@storybook/theming" "5.0.5"
+    "@storybook/addons" "5.0.6"
+    "@storybook/components" "5.0.6"
+    "@storybook/core-events" "5.0.6"
+    "@storybook/theming" "5.0.6"
     core-js "^2.6.5"
     fast-deep-equal "^2.0.1"
     global "^4.3.2"
