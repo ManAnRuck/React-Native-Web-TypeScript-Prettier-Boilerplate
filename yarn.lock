@@ -4216,6 +4216,14 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/react@16.8.11":
+  version "16.8.11"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.11.tgz#2b13a7ab797b7ed1309e3cbf69994405d2391623"
+  integrity sha512-xEqvjpe7L5xAMlbZYUxxrgo3+ZXBvdnbhDtLWE/Md5LRw/quMRebZBIbqyKCl/77i64rqVtC2/WVDuYmO/diJQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
 "@types/react@16.8.4":
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.4.tgz#134307f5266e866d5e7c25e47f31f9abd5b2ea34"
