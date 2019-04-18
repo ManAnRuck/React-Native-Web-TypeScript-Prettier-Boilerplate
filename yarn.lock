@@ -3384,15 +3384,15 @@
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-info@5.0.9":
-  version "5.0.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-5.0.9.tgz#8996409436782e4ead2a03f2a0bc024daef89395"
-  integrity sha512-R4r0H0iFGLHr84m1epmq0zN0YTv1JufKm0rkiJwVX0KJjKIBJJlYkqXcOrNtLzxguWDkn0e5mfrD9Qn3aKirPg==
+"@storybook/addon-info@5.0.10":
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-5.0.10.tgz#469fb109e49cad96181816372491bcfda72bdecd"
+  integrity sha512-pEqLuPopo42AgGVrCSmF/LLB9WrCD0BP/kdTN5FK+xHtRxMHBGMXfmKkErdeXNRWNgRlKi20iJfgX8n0ysxGEA==
   dependencies:
-    "@storybook/addons" "5.0.9"
-    "@storybook/client-logger" "5.0.9"
-    "@storybook/components" "5.0.9"
-    "@storybook/theming" "5.0.9"
+    "@storybook/addons" "5.0.10"
+    "@storybook/client-logger" "5.0.10"
+    "@storybook/components" "5.0.10"
+    "@storybook/theming" "5.0.10"
     core-js "^2.6.5"
     global "^4.3.2"
     marksy "^6.1.0"
