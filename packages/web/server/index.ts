@@ -21,10 +21,7 @@ app.prepare().then(() => {
         handle(req, res, parsedUrl);
       }
     }
-  }).listen(port, (err: any) => {
-    if (err) {
-      throw err;
-    }
+  }).listen(port, () => {
     // tslint:disable-next-line:no-console
     console.log(`> Ready on http://localhost:${port}`);
   });

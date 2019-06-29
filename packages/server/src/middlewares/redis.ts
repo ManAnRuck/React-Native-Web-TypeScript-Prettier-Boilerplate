@@ -10,9 +10,16 @@ const SESSION_SECRET = config.get('auth.sessionSecret');
 const router: Router = Router();
 const RedisStore = connectRedis(session as any);
 
+console.log(
+  "config.get('db.redisUrl')",
+  config.get('db.redisHost'),
+  config.get('db.redisPort'),
+);
+console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+
 export const redis =
   process.env.NODE_ENV === 'production'
-    ? new Redis(config.get('db.redisUrl'))
+    ? new Redis(config.get('db.redisPort'), config.get('db.redisHost'))
     : new Redis();
 
 router.use((req, _, next) => {

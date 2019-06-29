@@ -18,14 +18,16 @@ export default class RegisterResolver {
     @Ctx() ctx: IMyContext,
   ): Promise<User> {
     const hashedPassword = await bcrypt.hash(password, 12);
-
     // get user if there is an active session
-    let user = await User.findOne(
-      { id: ctx.req.session!.userId },
-      {
-        relations: ['localUsers'],
-      },
-    );
+    let user: User | undefined;
+    if (ctx.req.session) {
+      user = await User.findOne(
+        { id: ctx.req.session.userId },
+        {
+          relations: ['localUsers'],
+        },
+      );
+    }
 
     // search for existing user, login or thorw an error
     let localUser = await LocalUser.findOne(

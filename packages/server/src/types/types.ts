@@ -23,7 +23,8 @@ interface ITwitterOptions {
 
 interface IDb {
   name: string;
-  redisUrl?: string;
+  redisHost?: string;
+  redisPort?: string;
 }
 
 export { IConfig, IOAuthOptions, IDb, ITwitterOptions };

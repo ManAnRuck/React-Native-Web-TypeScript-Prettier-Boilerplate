@@ -2,7 +2,6 @@ import { ApolloServer } from 'apollo-server-express';
 import * as TypeGraphQL from 'type-graphql';
 import { Container } from 'typedi';
 import * as TypeORM from 'typeorm';
-import formatError from './formatErrors';
 
 // Enteties
 import User from '../entity/User';
@@ -24,7 +23,6 @@ export default async () => {
   const server = new ApolloServer({
     schema,
     context: ({ req, res }: any) => ({ req, res }),
-    formatError,
   });
 
   return server;

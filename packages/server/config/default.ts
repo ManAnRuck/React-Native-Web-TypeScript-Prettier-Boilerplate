@@ -25,7 +25,8 @@ const defaultConfig: IConfig = {
   },
   db: {
     name: 'my-project-dev',
-    redisUrl: process.env.REDIS_URL,
+    redisHost: process.env.REDIS_HOST,
+    redisPort: process.env.REDIS_PORT,
   },
   webUrl: 'http://localhost:3000/',
 };
