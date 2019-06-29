@@ -61,7 +61,7 @@
     "tslint": "^5.12.1",
     "tslint-immutable": "^6.0.0",
     "typescript": "3.5.2",
-    "url-loader": "1.1.2"
+    "url-loader": "2.0.1"
   },
   "bundledDependencies": [
     "@myproject/server"
