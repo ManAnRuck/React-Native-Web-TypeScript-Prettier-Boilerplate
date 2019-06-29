@@ -17,7 +17,7 @@
     "generate": "gql-gen && yarn build"
   },
   "devDependencies": {
-    "@types/node": "10.14.5",
+    "@types/node": "10.14.10",
     "@types/react": "16.8.14",
     "apollo": "2.5.3",
     "prettier": "1.16.4",
