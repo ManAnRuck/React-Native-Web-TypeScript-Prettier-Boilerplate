@@ -34,7 +34,7 @@
     "passport-twitter": "^1.0.4",
     "pg": "^7.7.1",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^0.16.0",
+    "type-graphql": "^0.17.0",
     "typedi": "^0.8.0",
     "typeorm": "^0.2.11",
     "typeorm-typedi-extensions": "^0.2.1"
