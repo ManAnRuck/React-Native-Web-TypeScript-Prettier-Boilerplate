@@ -28,7 +28,7 @@
     "graphql-tag": "2.10.1",
     "isomorphic-unfetch": "3.0.0",
     "lodash.get": "4.4.2",
-    "next": "8.0.1",
+    "next": "8.0.4",
     "next-compose-plugins": "2.1.1",
     "prop-types": "15.7.2",
     "react": "16.8.2",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@babel/core": "7.4.5",
     "@types/lodash.get": "4.4.6",
-    "@types/next": "8.0.1",
+    "@types/next": "8.0.5",
     "@types/react": "16.8.4",
     "@types/styled-components": "4.1.16",
     "@zeit/next-less": "1.0.1",
