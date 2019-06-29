@@ -50,7 +50,7 @@
     "cypress": "^3.3.2",
     "file-loader": "3.0.1",
     "graphql-code-generator": "0.16.1",
-    "graphql-codegen-typescript-client": "0.16.1",
+    "graphql-codegen-typescript-client": "0.18.2",
     "graphql-codegen-typescript-common": "0.16.1",
     "graphql-codegen-typescript-react-apollo": "0.16.1",
     "less": "3.9.0",
