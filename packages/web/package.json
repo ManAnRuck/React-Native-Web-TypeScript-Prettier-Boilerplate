@@ -59,7 +59,7 @@
     "prettier": "^1.16.4",
     "ts-node": "8.0.3",
     "tslint": "^5.12.1",
-    "tslint-immutable": "^5.1.2",
+    "tslint-immutable": "^6.0.0",
     "typescript": "3.3.4000",
     "url-loader": "1.1.2"
   },

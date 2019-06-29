@@ -19705,6 +19705,13 @@ tslint-immutable@^5.1.2:
   dependencies:
     tsutils "^2.28.0 || ^3.0.0"
 
+tslint-immutable@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/tslint-immutable/-/tslint-immutable-6.0.0.tgz#a3715a028cb130e09ef8935201d2a5299953767d"
+  integrity sha512-fWTWOs2iD/7HUHarX0Izv7lWSJ89Dr+jc1zqS1xm1PJ9D1MHuA25kiGREwGY/73+HnTTMWa9LPMnTION7LSbYg==
+  dependencies:
+    tsutils "^2.28.0 || ^3.0.0"
+
 tslint-microsoft-contrib@~5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/tslint-microsoft-contrib/-/tslint-microsoft-contrib-5.2.1.tgz#a6286839f800e2591d041ea2800c77487844ad81"
