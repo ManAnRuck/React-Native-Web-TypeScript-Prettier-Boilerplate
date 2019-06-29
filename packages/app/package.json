@@ -29,7 +29,7 @@
     "@types/styled-components": "^4.1.10",
     "babel-jest": "24.8.0",
     "babel-preset-react-native": "5.0.2",
-    "jest": "24.1.0",
+    "jest": "24.8.0",
     "metro-react-native-babel-preset": "0.51.1",
     "prettier": "1.18.2",
     "react-native-typescript-transformer": "1.2.12",
