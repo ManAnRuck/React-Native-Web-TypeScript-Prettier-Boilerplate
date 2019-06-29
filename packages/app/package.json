@@ -18,7 +18,7 @@
     "apollo-client": "2.4.13",
     "apollo-link-http": "1.5.14",
     "react": "16.6.3",
-    "react-apollo": "2.4.1",
+    "react-apollo": "2.5.8",
     "react-native": "0.58.4",
     "styled-components": "4.2.0"
   },
