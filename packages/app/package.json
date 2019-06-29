@@ -14,7 +14,7 @@
   "dependencies": {
     "@myproject/common": "1.0.0",
     "@myproject/controller": "1.0.0",
-    "apollo-cache-inmemory": "1.4.3",
+    "apollo-cache-inmemory": "1.6.2",
     "apollo-client": "2.4.13",
     "apollo-link-http": "1.5.14",
     "react": "16.6.3",
