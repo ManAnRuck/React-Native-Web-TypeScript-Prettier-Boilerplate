@@ -4831,10 +4831,10 @@
   resolved "https://registry.yarnpkg.com/@types/storybook__addon-actions/-/storybook__addon-actions-3.4.2.tgz#1d08689cc3259269ddb3479a2307c9d16944309e"
   integrity sha512-CWxGz2pXav9PHcwrtXmkuH+xJL7sAu2AmIGEbkdT3Xs5jzBPZUEDEN//ZF7o6IOPP/tdXU37K1hrVMt9TDO0Bw==
 
-"@types/storybook__addon-centered@3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@types/storybook__addon-centered/-/storybook__addon-centered-3.3.2.tgz#a677119b92709f12586dd0ace18551e5e430413a"
-  integrity sha512-dtNm1lUmQbQo8Wgf1XsoMxnY3RGPXx4INBrTPVXsIR0bGTWZRzmdC2TXRoBWQRmgDgC0TVuWBbI3d2eAHI8EDQ==
+"@types/storybook__addon-centered@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@types/storybook__addon-centered/-/storybook__addon-centered-3.4.1.tgz#2297b0ed278cd09b8f6fdde0dc70571feff46c32"
+  integrity sha512-4/09maoFsTm9zge1Q2ZJjsfwaJrXO/976SREPhznrgqG86R8rr3tN8xzEoU01k/ra2ycWr2mylTkNorZ27zQdw==
   dependencies:
     "@types/react" "*"
     "@types/storybook__react" "*"
