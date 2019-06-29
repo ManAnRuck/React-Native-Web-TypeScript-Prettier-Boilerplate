@@ -15,7 +15,7 @@
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps"
   },
   "dependencies": {
-    "formik": "1.5.0",
+    "formik": "1.5.7",
     "react": "16.8.2",
     "semantic-ui-calendar-react": "0.13.0",
     "semantic-ui-css": "2.4.1",
