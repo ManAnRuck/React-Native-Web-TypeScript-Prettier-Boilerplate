@@ -11,13 +11,13 @@ export interface IContext {
 }
 
 // register 3rd party IOC container
-TypeGraphQL.useContainer(Container);
 TypeORM.useContainer(Container);
 
 export default async () => {
   // build TypeGraphQL executable schema
   const schema = await TypeGraphQL.buildSchema({
     resolvers: [`${__dirname}/../modules/**/!(*.test).?(ts|js)`],
+    container: Container,
   });
 
   const server = new ApolloServer({

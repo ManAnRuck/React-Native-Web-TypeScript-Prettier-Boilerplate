@@ -34,7 +34,7 @@
     "passport-twitter": "^1.0.4",
     "pg": "^7.7.1",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^0.16.0",
+    "type-graphql": "^0.17.4",
     "typedi": "^0.8.0",
     "typeorm": "^0.2.11",
     "typeorm-typedi-extensions": "^0.2.1"
@@ -42,21 +42,21 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/config": "0.0.34",
-    "@types/connect-redis": "0.0.9",
+    "@types/connect-redis": "0.0.10",
     "@types/dotenv-safe": "^5.0.3",
-    "@types/express-session": "1.15.12",
-    "@types/ioredis": "4.0.10",
-    "@types/node": "10.14.5",
+    "@types/express-session": "1.15.13",
+    "@types/ioredis": "4.0.12",
+    "@types/node": "12.0.10",
     "@types/passport": "1.0.0",
     "@types/passport-oauth2": "1.4.8",
     "@types/passport-strategy": "^0.2.35",
     "@types/passport-twitter": "1.0.34",
-    "dtslint": "^0.4.2",
+    "dtslint": "^0.8.0",
     "nodemon": "^1.18.10",
     "passport-strategy": "^1.0.0",
-    "prettier": "1.16.4",
-    "ts-node": "8.0.3",
-    "ts-node-dev": "1.0.0-pre.33",
-    "typescript": "3.3.4000"
+    "prettier": "1.18.2",
+    "ts-node": "8.3.0",
+    "ts-node-dev": "1.0.0-pre.40",
+    "typescript": "3.5.2"
   }
 }
