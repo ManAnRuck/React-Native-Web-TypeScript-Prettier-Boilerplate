@@ -19,7 +19,7 @@
     "apollo-link-http": "1.5.15",
     "react": "16.6.3",
     "react-apollo": "2.5.8",
-    "react-native": "0.58.4",
+    "react-native": "0.58.6",
     "styled-components": "4.3.2"
   },
   "devDependencies": {
