@@ -4211,10 +4211,10 @@
   resolved "https://registry.yarnpkg.com/@types/config/-/config-0.0.34.tgz#123f91bdb5afdd702294b9de9ca04d9ea11137b0"
   integrity sha512-jWi9DXx77hnzN4kHCNEvP/kab+nchRLTg9yjXYxjTcMBkuc5iBb3QuwJ4sPrb+nzy1GQjrfyfMqZOdR4i7opRQ==
 
-"@types/connect-redis@0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@types/connect-redis/-/connect-redis-0.0.9.tgz#ad1db26cdb55a741fcbad6dc337b6273ddc5e064"
-  integrity sha512-LdAbC9EnQkHLMgeV0EKufPbqaRKfsAxgdWaYnDtQOKuJV2U4JpFE2EU4yKJ3G2FjVvNXyzO6rcaBBjPBztGTzg==
+"@types/connect-redis@0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@types/connect-redis/-/connect-redis-0.0.10.tgz#506963ae946ba8b094677afe97b4ee776bae4b3d"
+  integrity sha512-nDTMAHMW+FoPFRR2NxpnEf68zGUU8CninUdInGi+dz+239cKuw/3v3yqk4SWhgYFMup4gqBZdEqFyIEKZn0EAg==
   dependencies:
     "@types/express" "*"
     "@types/express-session" "*"
