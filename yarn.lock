@@ -18118,10 +18118,10 @@ select@^1.1.2:
   resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
   integrity sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
 
-semantic-ui-calendar-react@0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/semantic-ui-calendar-react/-/semantic-ui-calendar-react-0.13.0.tgz#c826827fc846641aba2d81f53744d474784bfe22"
-  integrity sha512-+DhCcj2GZBQspW2dY8Q0rKL4a1u9bCb1XP138KXbl23ZPRWbLK9+gHbbnL1fs3VlLjwoKMBaZGUs80gbGIN1CQ==
+semantic-ui-calendar-react@0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/semantic-ui-calendar-react/-/semantic-ui-calendar-react-0.15.0.tgz#1294eed17304e3428b4c39fa5a3deb85db85c22c"
+  integrity sha512-AG+XrUrpPFwc1/dYgtVnoGZgaOw5ijJiegZuhBnYsyiWux4FITvJXnUsuHyZz4qyjcrVt0tMzNAMutJesVeG1Q==
   dependencies:
     keyboard-key "^1.0.2"
     lodash "^4.17.10"
