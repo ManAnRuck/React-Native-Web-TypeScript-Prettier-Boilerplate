@@ -40,13 +40,13 @@
     "typescript-babel-jest": "1.0.6"
   },
   "devDependencies": {
-    "@babel/core": "7.2.2",
+    "@babel/core": "7.4.5",
     "@types/lodash.get": "4.4.6",
     "@types/next": "8.0.1",
     "@types/react": "16.8.4",
     "@types/styled-components": "4.1.16",
     "@zeit/next-less": "1.0.1",
-    "babel-plugin-styled-components": "1.10.0",
+    "babel-plugin-styled-components": "1.10.4",
     "cypress": "^3.3.2",
     "file-loader": "3.0.1",
     "graphql-code-generator": "0.16.1",
