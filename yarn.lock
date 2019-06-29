@@ -15420,10 +15420,10 @@ next-tick@1:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next-transpile-modules@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-2.0.0.tgz#ecbac0a5ad97ec7c0f47326bcdb64b6e11cf445c"
-  integrity sha512-W+jV3Kg+bLmGbntYfrGBloiV+ABOXt+GMI2aIUcM29yaPVDsIn2vWoyH6PA2ZXXgILm7xmyPfi30/0idbAmsaA==
+next-transpile-modules@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-2.3.1.tgz#8977c070912fbc3e927c662431fc4e91ae335b43"
+  integrity sha512-euNOBAk/CXZA6binwL47+QpcxAmK1pzH2zjF7XnRN55f2iuN/ecpUw5p3x4bikFu0yDPtSLS92nv9fcgcCo0vg==
 
 next@8.0.1:
   version "8.0.1"
