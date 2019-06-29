@@ -26,8 +26,8 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/runtime": "7.4.5",
-    "@types/react": "16.8.14",
-    "@types/react-native": "0.57.49",
+    "@types/react": "16.8.22",
+    "@types/react-native": "0.57.64",
     "@types/styled-components": "^4.1.10",
     "babel-jest": "^24.8.0",
     "babel-preset-react-native": "5.0.2",

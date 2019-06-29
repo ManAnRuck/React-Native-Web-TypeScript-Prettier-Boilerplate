@@ -43,7 +43,7 @@ export default class App extends Component {
       <ApolloProvider client={client}>
         <Container>
           <Welcome>Welcome to React Native!</Welcome>
-          <Instructions>To get started, edit App.js</Instructions>
+          <Instructions>To get started, edit App.tsx</Instructions>
           <Instructions>{instructions}</Instructions>
           <Instructions>{add(3, 9)}</Instructions>
           <UsersComponent>
