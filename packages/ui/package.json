@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "formik": "1.5.7",
-    "react": "16.8.2",
+    "react": "16.8.6",
     "semantic-ui-calendar-react": "0.15.0",
     "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "0.87.2",
@@ -37,7 +37,7 @@
     "@storybook/react": "5.0.10",
     "@types/jest": "24.0.11",
     "@types/lodash.get": "4.4.6",
-    "@types/react": "16.8.4",
+    "@types/react": "16.8.22",
     "@types/storybook__addon-a11y": "5.0.0",
     "@types/storybook__addon-actions": "3.4.2",
     "@types/storybook__addon-centered": "3.3.2",
