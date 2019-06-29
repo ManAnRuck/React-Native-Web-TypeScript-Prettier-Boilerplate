@@ -4275,10 +4275,10 @@
     "@types/express" "*"
     "@types/node" "*"
 
-"@types/express-session@1.15.12":
-  version "1.15.12"
-  resolved "https://registry.yarnpkg.com/@types/express-session/-/express-session-1.15.12.tgz#1126704826e80f8381da4fbbb35a199f550d1433"
-  integrity sha512-DHZXzWy6Nu5Ng0syXUiVFRpZ6/1DOXoTCWa6RG3itGrub2ioBYvgtDbkT6VHHNo3iOdHRROyWANsMBJVaflblQ==
+"@types/express-session@1.15.13":
+  version "1.15.13"
+  resolved "https://registry.yarnpkg.com/@types/express-session/-/express-session-1.15.13.tgz#47ae56b28b187bc2f38dc9b7050c3d1086f2c717"
+  integrity sha512-BLRzO/ZfjTTLSRakUJxB0p5I5NmBHuyHkXDyh8sezdCMYxpqXrvMljKwle81I9AeCAzdq6nfz6qafmYLQ/rU9A==
   dependencies:
     "@types/express" "*"
     "@types/node" "*"
