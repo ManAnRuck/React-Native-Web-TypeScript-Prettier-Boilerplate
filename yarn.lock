@@ -3762,9 +3762,9 @@
     warning "^3.0.0"
 
 "@react-native-community/cli@^1.2.1":
-  version "1.9.11"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli/-/cli-1.9.11.tgz#b868b17201057b9cd16a3a20c30561176071f21a"
-  integrity sha512-VVu/tmTTzODfW2xlqIz0pZgeELG2ppPAIgbBEKLgHCO9DMxNZIKSqmei/JqkAi0gEipqQoP6YPAemHPd43lyrA==
+  version "1.9.12"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli/-/cli-1.9.12.tgz#6022eafdb23fac8ab2cbdd6bf9f00452c9b7b33b"
+  integrity sha512-EGu0QadFL7dqyNlVhkZzUO36YnbT9dn99VXmT9BT7I/GZfwFGOTLpHLX9YHcrO0XNhYXEU7LYSJ854KSUB3d9A==
   dependencies:
     chalk "^1.1.1"
     commander "^2.19.0"
