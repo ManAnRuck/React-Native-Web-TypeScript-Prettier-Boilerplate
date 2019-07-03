@@ -43,7 +43,7 @@
     "@babel/core": "7.4.5",
     "@types/lodash.get": "4.4.6",
     "@types/next": "8.0.5",
-    "@types/react": "16.8.22",
+    "@types/react": "16.8.23",
     "@types/styled-components": "4.1.16",
     "@zeit/next-less": "1.0.1",
     "babel-plugin-styled-components": "1.10.6",
