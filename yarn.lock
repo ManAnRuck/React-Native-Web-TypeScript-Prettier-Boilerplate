@@ -4484,10 +4484,10 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/ioredis@4.0.12":
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/@types/ioredis/-/ioredis-4.0.12.tgz#f0d1a723a7ec2ba3d22aabe5a808e6e4548281ed"
-  integrity sha512-3Nd9RQlU7GfkiaByJQWJ4Q8brQXTpDRgwm7/oFXwDX24hw8awliKwf3cbuIHMyQPvYNEFw1LrmllZ3qTKglDGg==
+"@types/ioredis@4.0.13":
+  version "4.0.13"
+  resolved "https://registry.yarnpkg.com/@types/ioredis/-/ioredis-4.0.13.tgz#2286577c310c13bb9865e182f62b1dbffd6a6564"
+  integrity sha512-3GKQUu5DPIlERomUfhxeLZHbwY3KOANSuCu7iEcFEuCh7pzO5gnLjU4BoBJvy+uQ3TkduU8DLzJIB2iS4d4IAw==
   dependencies:
     "@types/node" "*"
 
