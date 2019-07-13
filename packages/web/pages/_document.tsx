@@ -1,7 +1,7 @@
 import Document, {
   Head,
   Main,
-  NextDocumentContext,
+  DocumentContext,
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
@@ -11,7 +11,7 @@ interface IProps {
 }
 
 export default class MyDocument extends Document<IProps> {
-  public static async getInitialProps(ctx: NextDocumentContext) {
+  public static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 

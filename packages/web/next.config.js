@@ -1,6 +1,5 @@
 const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules');
-const withTypescript = require('@zeit/next-typescript');
 const withLess = require('@zeit/next-less');
 const path = require('path');
 
@@ -48,7 +47,6 @@ module.exports = withPlugins(
         ],
       },
     ],
-    [withTypescript],
   ],
   nextConfig,
 );

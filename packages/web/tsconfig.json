@@ -1,22 +1,38 @@
 {
-    "extends": "../tsconfig.settings.json",
-    "compileOnSave": false,
-    "compilerOptions": {
-        "baseUrl": ".",
-        "jsx": "preserve",
-        "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
-        "plugins": [
-            {
-              "name": "typescript-tslint-plugin",
-              "alwaysShowRuleFailuresAsWarnings": false,
-              "ignoreDefinitionFiles": true,
-              "configFile": "../tslint.json",
-              "suppressWhileTypeErrorsPresent": false,
-              "mockTypeScriptVersion": false
-            }
-          ]
-    },
-    "exclude": [
-        "node_modules", "apollo-components.tsx"
-    ]
+  "extends": "../tsconfig.settings.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es6",
+      "es2017",
+      "esnext.asynciterable"
+    ],
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "alwaysShowRuleFailuresAsWarnings": false,
+        "ignoreDefinitionFiles": true,
+        "configFile": "../tslint.json",
+        "suppressWhileTypeErrorsPresent": false,
+        "mockTypeScriptVersion": false
+      }
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "exclude": [
+    "node_modules",
+    "apollo-components.tsx"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

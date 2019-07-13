@@ -1,7 +1,7 @@
 import { NormalizedCacheObject } from 'apollo-cache-inmemory';
 import ApolloClient from 'apollo-client';
-import { NextContext } from 'next';
+import { NextPageContext } from 'next';
 
-export interface INextContextWithApollo extends NextContext {
+export interface INextContextWithApollo extends NextPageContext {
   apolloClient: ApolloClient<NormalizedCacheObject>;
 }
