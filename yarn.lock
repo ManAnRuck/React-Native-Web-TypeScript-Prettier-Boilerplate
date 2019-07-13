@@ -2315,6 +2315,15 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@babel/types@^7.5.0":
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.5.0.tgz#e47d43840c2e7f9105bc4d3a2c371b4d0c7832ab"
+  integrity sha512-UFpDVqRABKsW01bvw7/wSUe56uy6RXM5+VJibVVAybDGxEW25jdwiFJEf7ASvSaC7sN7rbE/l3cLp2izav+CtQ==
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.17.11"
+    to-fast-properties "^2.0.0"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"
@@ -3737,13 +3746,13 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@quickbaseoss/babel-plugin-styled-components-css-namespace@1.0.0-rc2":
-  version "1.0.0-rc2"
-  resolved "https://registry.yarnpkg.com/@quickbaseoss/babel-plugin-styled-components-css-namespace/-/babel-plugin-styled-components-css-namespace-1.0.0-rc2.tgz#05d54c007d296980c7488b25fbf3e0405c777340"
-  integrity sha512-fgM217aY8/AbtyzN+0KSeUSMhwWz7vK3h9hcAMJ1RGWOVu1NlQCpGBZSfyozoZLlP1/s0KubbAsS6sFPwuSfBw==
+"@quickbaseoss/babel-plugin-styled-components-css-namespace@1.0.0-rc3":
+  version "1.0.0-rc3"
+  resolved "https://registry.yarnpkg.com/@quickbaseoss/babel-plugin-styled-components-css-namespace/-/babel-plugin-styled-components-css-namespace-1.0.0-rc3.tgz#708444870f02f6664fa799acf389b254742cf9d6"
+  integrity sha512-oKACQrnC66N78kUGfSATveTyyg1wd4p1jbWEMPnb5N+d9okOFu3c2lLILLZU5hW/FxoA+4rEYYXKMXagPFXbwA==
   dependencies:
+    "@babel/types" "^7.5.0"
     babel-plugin-styled-components "1.10.x"
-    babel-types "6.26.x"
     deasync "0.1.x"
     postcss "7.0.x"
     postcss-nested "4.1.x"
@@ -6966,7 +6975,7 @@ babel-traverse@^6.18.0, babel-traverse@^6.26.0:
     invariant "^2.2.2"
     lodash "^4.17.4"
 
-babel-types@6.26.0, babel-types@6.26.x, babel-types@^6.18.0, babel-types@^6.26.0:
+babel-types@6.26.0, babel-types@^6.18.0, babel-types@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
   integrity sha1-o7Bz+Uq0nrb6Vc1lInozQ4BjJJc=
