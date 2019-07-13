@@ -40,7 +40,7 @@
     "typescript-babel-jest": "1.0.6"
   },
   "devDependencies": {
-    "@babel/core": "7.4.5",
+    "@babel/core": "7.5.4",
     "@types/lodash.get": "4.4.6",
     "@types/next": "8.0.5",
     "@types/react": "16.8.23",
