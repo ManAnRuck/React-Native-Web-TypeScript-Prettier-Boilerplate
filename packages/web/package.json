@@ -21,7 +21,7 @@
     "@zeit/next-typescript": "1.1.1",
     "apollo-cache-inmemory": "1.6.2",
     "apollo-client": "2.6.3",
-    "apollo-link-context": "1.0.18",
+    "apollo-link-context": "1.0.20",
     "apollo-link-http": "1.5.15",
     "cookie": "0.4.0",
     "formik": "1.5.8",
