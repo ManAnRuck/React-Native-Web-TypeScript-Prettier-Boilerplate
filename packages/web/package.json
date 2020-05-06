@@ -55,7 +55,7 @@
     "less": "3.9.0",
     "next-transpile-modules": "2.3.1",
     "nodemon": "1.19.1",
-    "prettier": "^1.16.4",
+    "prettier": "^2.0.0",
     "ts-node": "8.3.0",
     "tslint": "^5.12.1",
     "tslint-immutable": "^6.0.0",
