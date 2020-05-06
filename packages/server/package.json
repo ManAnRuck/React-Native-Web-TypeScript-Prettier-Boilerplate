@@ -32,7 +32,7 @@
     "passport-github": "^1.1.0",
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4",
-    "pg": "^7.7.1",
+    "pg": "^8.0.0",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.4",
     "typedi": "^0.8.0",
