@@ -17,7 +17,7 @@
     "@myproject/controller": "1.0.0",
     "apollo-cache-inmemory": "1.6.2",
     "apollo-client": "2.6.3",
-    "apollo-link-http": "1.5.15",
+    "apollo-link-http": "1.5.17",
     "react": "16.8.6",
     "react-apollo": "2.5.8",
     "react-native": "0.59.10",
