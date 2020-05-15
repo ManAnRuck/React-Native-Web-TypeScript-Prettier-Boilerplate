@@ -16,7 +16,7 @@
     "@myproject/common": "1.0.0",
     "@myproject/controller": "1.0.0",
     "apollo-cache-inmemory": "1.6.2",
-    "apollo-client": "2.6.3",
+    "apollo-client": "2.6.10",
     "apollo-link-http": "1.5.15",
     "react": "16.8.6",
     "react-apollo": "2.5.8",
