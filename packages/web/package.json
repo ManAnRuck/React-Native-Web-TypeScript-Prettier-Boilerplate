@@ -20,7 +20,7 @@
     "@types/cookie": "0.3.3",
     "@zeit/next-typescript": "1.1.1",
     "apollo-cache-inmemory": "1.6.2",
-    "apollo-client": "2.6.3",
+    "apollo-client": "2.6.10",
     "apollo-link-context": "1.0.18",
     "apollo-link-http": "1.5.15",
     "cookie": "0.4.0",
