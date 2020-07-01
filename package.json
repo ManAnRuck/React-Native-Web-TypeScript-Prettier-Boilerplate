@@ -34,7 +34,7 @@
   },
   "name": "app",
   "devDependencies": {
-    "lerna": "3.15.0",
+    "lerna": "3.22.1",
     "prettier": "^1.16.4",
     "tslint": "^5.12.1",
     "tslint-config-airbnb": "^5.11.1",
