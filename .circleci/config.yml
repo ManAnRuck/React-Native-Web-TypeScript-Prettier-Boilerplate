@@ -13,7 +13,7 @@ jobs:
       - image: circleci/redis:alpine
 
       # PostgreSql
-      - image: circleci/postgres:9.6.14-alpine
+      - image: circleci/postgres:9.6.16-alpine
         environment:
           POSTGRES_USER: myuser
           POSTGRES_PASSWORD: mypassword
