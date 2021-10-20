@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@myproject/common": "1.0.0",
-    "apollo-server": "^2.4.0",
+    "apollo-server": "^3.0.0",
     "apollo-server-express": "^2.4.0",
     "bcryptjs": "^2.4.3",
     "config": "^3.0.1",
