@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.5.4",
-    "@types/lodash.get": "4.4.6",
+    "@types/lodash.get": "4.4.7",
     "@types/react": "16.8.23",
     "@types/styled-components": "4.1.18",
     "@zeit/next-less": "1.0.1",
