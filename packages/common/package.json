@@ -20,6 +20,6 @@
     "typescript": "3.5.3"
   },
   "dependencies": {
-    "yup": "^0.27.0"
+    "yup": "^1.0.0"
   }
 }
