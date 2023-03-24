@@ -8762,9 +8762,7 @@ cyclist@~0.2.2:
   integrity sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
 
 cypress@^3.3.2:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-3.4.0.tgz#8053ee107eb6309f26abd57e882d05578bdc3391"
-  integrity sha512-vUE+sK3l23fhs5qTN3dKpveyP0fGr37VmK3FSYaTEjbqC/qh4DbA1Ych/3bLStUpHP4rpE5KAx7i1s/tpdD9vQ==
+  version "3.4.1"
   dependencies:
     "@cypress/listr-verbose-renderer" "0.4.1"
     "@cypress/xvfb" "1.2.4"
