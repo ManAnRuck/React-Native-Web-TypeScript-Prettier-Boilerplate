@@ -8137,9 +8137,7 @@ config-chain@^1.1.11:
     proto-list "~1.2.1"
 
 config@^3.0.1:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/config/-/config-3.2.0.tgz#9dc4f74770657b583f47a1209e52f3b0d0e531db"
-  integrity sha512-ypYPOVvqIVklcu0jNXn8J5CImhaYyX/+JNN60y/rV5bfBD2YAKl1DeFstB4WlYu/TOH/VOo14MjyU5R5QpR9Qw==
+  version "3.2.6"
   dependencies:
     json5 "^1.0.1"
 
