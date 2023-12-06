@@ -43,7 +43,7 @@
     "@babel/core": "7.5.4",
     "@types/lodash.get": "4.4.6",
     "@types/react": "16.8.23",
-    "@types/styled-components": "4.1.18",
+    "@types/styled-components": "5.1.34",
     "@zeit/next-less": "1.0.1",
     "babel-plugin-styled-components": "1.10.6",
     "cypress": "^3.3.2",
