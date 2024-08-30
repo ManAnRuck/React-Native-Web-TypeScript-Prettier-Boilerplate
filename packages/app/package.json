@@ -21,7 +21,7 @@
     "react": "16.8.6",
     "react-apollo": "2.5.8",
     "react-native": "0.59.10",
-    "styled-components": "4.3.2"
+    "styled-components": "6.1.13"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
